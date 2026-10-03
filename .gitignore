@@ -1,21 +1,46 @@
-# Python Virtual Environments
-.venv/
-venv/
-env/
-ENV/
+# Environment & Secrets (CRITICAL: Never commit credentials)
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
 
-# Byte-compiled / cache files
+# Python & Caching
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
 
-# Environment Variables & Secrets
-.env
-.env.local
-.env.*
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
 
-# IDE & OS Artifacts
-.vscode/
+# IDE & OS Files
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
