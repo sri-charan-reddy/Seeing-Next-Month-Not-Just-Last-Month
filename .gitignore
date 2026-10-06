@@ -1,20 +1,39 @@
-# Python Virtual Environments
+# Python Virtual Environment
 .venv/
 venv/
 env/
-ENV/
 
-# Byte-compiled / cache files
+# Python Cache & Bytecode
 __pycache__/
+*.pyc
 *.py[cod]
 *$py.class
+
+# Jupyter Notebook Checkpoints
+.ipynb_checkpoints/
+
+# Datasets and Outputs
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+outputs/*
+!outputs/.gitkeep
+
+# Alternative whole-directory rules for datasets/outputs if contents are ignored
+# data/raw/
+# data/processed/
+# models/
+# outputs/
 
 # Environment Variables & Secrets
 .env
 .env.local
 .env.*
 
-# IDE & OS Artifacts
+# IDE / OS Artifacts
 .vscode/
 .idea/
 .DS_Store
