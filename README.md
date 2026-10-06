@@ -16,19 +16,25 @@ A forward-looking enterprise predictive platform providing SaaS subscription dyn
 ### 🔄 End-to-End Production Flow
 
 ```text
-Raw RavenStack SaaS Data (4 CSVs in data/raw/)
-  │
-  ▼ [Member 1: src/pipeline.py]
-Point-in-Time Features & Preprocessor (21 monthly cutoffs, 25 features, zero leakage)
-  │
-  ▼ [Member 2: src/inference.py -> run_member_2_pipeline()]
-Calibrated Churn Model, Ridge MRR Forecaster, Prediction Intervals, Recourse & PSI Drift
-  │
-  ▼ [Member 3: supabase_manager.py -> TelemetryLogger]
-Supabase Cloud PostgreSQL (customer_predictions & model_telemetry tables)
-  │
-  ▼ [Member 3: powerbi_setup_guide.md]
-Microsoft Power BI DirectQuery Executive Dashboard
+RavenStack SaaS Data (data/raw/)
+        │
+        ▼
+Member 1: Data Engineering (src/pipeline.py)
+        │
+        ▼
+Point-in-Time Features (21 cutoffs, 25 features, zero leakage)
+        │
+        ▼
+Member 2: ML + Recourse + Drift (src/inference.py)
+        │
+        ▼
+Predictions / Intervals / Actions / Telemetry
+        │
+        ▼
+Member 3: Supabase (supabase_manager.py -> PostgreSQL)
+        │
+        ▼
+Power BI Dashboard (DirectQuery Views & Executive DAX)
 ```
 
 ---
@@ -51,7 +57,7 @@ Microsoft hackathon project/
 │   ├── drift.py                       # Member 2: Population Stability Index (PSI) drift monitoring
 │   └── inference.py                   # Member 2: End-to-end inference & Member 3 schema alignment
 │
-├── tests/                             # Test Suites
+├── tests/                             # Automated Test Suites (27 tests)
 │   ├── test_pipeline.py               # Member 1 pipeline tests (12 tests)
 │   └── test_models.py                 # Member 2 ML, recourse, and drift tests (15 tests)
 │
@@ -59,27 +65,34 @@ Microsoft hackathon project/
 │   ├── customer_predictions.csv
 │   └── model_telemetry.json
 │
+├── schema.sql                         # Member 3: Supabase PostgreSQL DDL schema & views
+├── supabase_manager.py                # Member 3: TelemetryLogger module (Supabase & psycopg2)
+├── simulate_ingestion.py              # Member 3: Offline ingestion simulation & testing utility
+├── dashboard.py                       # Member 3: Executive Streamlit monitoring dashboard
+├── powerbi_setup_guide.md             # Member 3: Power BI DirectQuery DAX & visual specs
+├── synthetic_holdout_predictions.csv  # Member 3: Offline test inference fixture
 ├── requirements.txt                   # Unified project dependencies
 ├── README.md                          # Comprehensive project documentation
 ├── .gitignore                         # Git ignore rules
-└── main.py                            # Main project pipeline entry point
+├── .env.example                       # Environment template for cloud persistence
+└── main.py                            # Main pipeline entry point
 ```
 
 ---
 
-## ⚡ Setup & Usage
+## ⚡ Setup & Execution
 
 ### 1. Installation
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run Complete Test Suite (27 Tests)
+### 2. Run Complete Automated Test Suite (27 Tests)
 ```bash
 PYTHONPATH=. pytest -v
 ```
 
-### 3. Run Member 1 Data Pipeline
+### 3. Run Member 1 Feature Pipeline
 When raw RavenStack data is available in `data/raw/`:
 ```bash
 python -m src.pipeline
@@ -90,9 +103,35 @@ python -m src.pipeline
 python -m src.inference
 ```
 
-### 5. Run End-to-End Execution
+### 5. Run Full End-to-End Pipeline
 ```bash
 python main.py
+```
+
+### 6. Cloud Ingestion & Testing (Member 3)
+
+**Option A: Real Production Ingestion** (Requires processed SaaS data & trained models):
+```bash
+python simulate_ingestion.py --production
+```
+*Or call programmatically:*
+```python
+from src.inference import run_member_2_pipeline
+from supabase_manager import TelemetryLogger
+
+predictions_df, telemetry = run_member_2_pipeline()
+logger = TelemetryLogger()
+run_id = logger.log_run_telemetry(telemetry)
+logger.log_customer_predictions(run_id, predictions_df)
+```
+
+**Option B: Offline Mock Simulation** (Validates Supabase schemas & DirectQuery views):
+```bash
+# Offline Dry-Run & CSV Export:
+python simulate_ingestion.py --dry-run --export-csv
+
+# Live Ingestion into Supabase with mock payload:
+python simulate_ingestion.py
 ```
 
 ---
@@ -104,78 +143,51 @@ python main.py
 - **Strict Leakage Prevention:** Audits and excludes prohibited columns (`end_date`, `churn_flag`, `upgrade_flag`, `downgrade_flag`) and future-dated usage/tickets.
 - **Velocity Features:** `usage_growth_14d_vs_prior14d` captures short-term vs. prior usage momentum safely without division-by-zero errors.
 - **Service Depth:** Tracks `unique_features_30d` and `beta_feature_ratio_30d`.
-- **Scikit-Learn Preprocessing:** Unfitted `ColumnTransformer` with `StandardScaler` (18 numerical), `OneHotEncoder(handle_unknown="ignore")` (5 categorical), and boolean passthrough (2 boolean).
+- **25 Model Features:** Exactly 18 numerical, 5 categorical, and 2 boolean features.
+- **Scikit-Learn Preprocessing:** Unfitted `ColumnTransformer` with `StandardScaler` (numerical), `OneHotEncoder(handle_unknown="ignore")` (categorical), and passthrough (boolean).
 
 ---
 
 ## 🤖 Member 2: Dual ML Models, Prescriptive Recourse & Drift Governance
 
-### 1. Architecture Overview
-Member 2 consumes point-in-time snapshot features generated by Member 1's data engineering pipeline and produces granular predictions and run telemetry consumed by Member 3's Supabase PostgreSQL and Power BI infrastructure.
-
-```text
-src/
-├── models.py      # Calibrated Churn Classifier, Ridge Sales Regressor, 95% Prediction Intervals
-├── recourse.py    # Counterfactual Prescriptive Recourse Engine (mutable feature actions)
-├── drift.py       # Population Stability Index (PSI) feature drift monitoring
-└── inference.py   # End-to-end inference orchestrator and Member 3 schema alignment
-```
-
-### 2. Target Definitions
-- **Churn Target:** `churn_next_30d` (binary: 1 if subscription churns within 30 days post-cutoff, 0 otherwise).
-- **Revenue Target:** `mrr_amount` (Monthly Recurring Revenue billed for active subscriptions).
-
-### 3. Temporal Validation (No Future Leakage)
-- Implemented in `temporal_train_test_split()`.
-- Splits multi-cohort datasets strictly chronologically by `cutoff_date`.
-- Training partition contains historical cutoffs ($T \le T_{split}$); holdout test partition contains future cutoffs ($T > T_{split}$). Future data is never shuffled into training.
-
-### 4. Dual ML Models
 - **Calibrated Churn Classifier (`ChurnModel`):**
   - Base Estimator: `HistGradientBoostingClassifier(learning_rate=0.08, max_leaf_nodes=31)`
   - Calibration: `CalibratedClassifierCV(method="sigmoid", cv=3)`
-  - Output: `churn_probability` strictly in $[0.0000, 1.0000]$
+  - Output: `churn_probability` strictly bounded in $[0.0000, 1.0000]$
   - Evaluation: ROC-AUC (primary metric), precision, recall, F1, Brier score
 - **Sales / MRR Regressor (`SalesModel`):**
-  - Model: `Ridge(alpha=1.0)` with $L_2$ shrinkage regularization
+  - Model: `Ridge(alpha=1.0)` with $L_2$ regularization predicting `mrr_amount`
   - Output: `predicted_sales` with non-negative projection ($\max(0.0, \hat{y})$)
   - Evaluation: MAPE and RMSE
+- **95% Residual Prediction Intervals:**
+  - Bounds: $[\max(0.0, \hat{y} - 1.96\sigma), \hat{y} + 1.96\sigma]$ based on holdout residual standard deviation $\sigma$.
+- **Temporal Validation:** `temporal_train_test_split()` enforces strict chronological snapshot splitting across cutoff dates (no future snapshots in training).
+- **Prescriptive Counterfactual Recourse Engine (`RecourseEngine`):**
+  - Triggers for high-risk accounts ($P(\text{churn}) > 0.60$).
+  - Modifies strictly mutable subscription fields (`billing_frequency`, `auto_renew_flag`, `plan_tier`, `is_trial`).
+  - Preserves all immutable features (demographics, tenure, historical usage, past tickets).
+  - Recalculates churn probability through the fitted pipeline targeting risk $< 0.35$.
+- **Population Stability Index (PSI) Drift Monitor (`DriftMonitor`):**
+  - Evaluates feature-level PSI across all 25 features between training baseline and holdout/production cohorts.
+  - Governance thresholds: Stable ($< 0.10$), Moderate Shift ($0.10 - 0.20$), Critical Drift ($> 0.20 \rightarrow \text{drift\_flag} = \text{True}$).
 
-### 5. 95% Residual Prediction Intervals
-- Residual: $e = y_{actual} - y_{pred}$
-- Residual Standard Deviation: $\sigma = \text{std}(e, \text{ddof}=1)$
-- Bounds:
-  - $\text{sales\_lower\_bound} = \max(0.0, y_{pred} - 1.96\sigma)$
-  - $\text{sales\_upper\_bound} = y_{pred} + 1.96\sigma$
-- Enforces non-negativity and interval consistency: $\text{sales\_upper\_bound} \ge \text{sales\_lower\_bound} \ge 0.0$.
+---
 
-### 6. Prescriptive Counterfactual Recourse Engine (`RecourseEngine`)
-- Triggered for high-risk accounts with $P(\text{churn}) > 0.60$.
-- **Strict Mutable vs. Immutable Partitioning:**
-  - *Mutable Features Only:* `billing_frequency` (annual switch), `auto_renew_flag` (automated renewal enrollment), `plan_tier` (tier optimization), `is_trial` (conversion).
-  - *Immutable Features Untouched:* All customer demographics, account tenure, historical usage patterns, and support ticket history are strictly preserved.
-- **Counterfactual Re-evaluation:** Each candidate intervention is evaluated through the fitted model pipeline. If post-intervention simulated risk drops below $0.35$, the minimal intervention is prescribed.
-- Fallback: If no intervention achieves $< 0.35$, reports `"No validated intervention found"`.
+## ☁️ Member 3: Cloud Persistence & Power BI Infrastructure
 
-### 7. Population Stability Index (PSI) Drift Monitor (`DriftMonitor`)
-- Measures distribution shift between baseline training data and holdout/production cohorts across all 25 features.
-- Uses quantile decile binning with Laplace $\epsilon$-smoothing ($10^{-4}$) to prevent numerical zero-frequency errors.
-- **Governance Thresholds:**
-  - $\text{PSI} < 0.10$: `Stable (No Shift)` $\rightarrow$ `drift_flag = False`
-  - $0.10 \le \text{PSI} \le 0.20$: `Moderate Shift (Monitor)` $\rightarrow$ `drift_flag = False`
-  - $\text{PSI} > 0.20$: `Critical Drift (Action Required)` $\rightarrow$ `drift_flag = True`
-
-### 8. Member 3 Contract & Integration Compatibility
-Outputs directly conform to Member 3's Supabase schema (`schema.sql`) and `TelemetryLogger`:
-- **`customer_predictions` DataFrame Columns:**
-  `customer_id`, `actual_churn`, `churn_probability`, `actual_sales`, `predicted_sales`, `sales_lower_bound`, `sales_upper_bound`, `prescriptive_action`, `prescribed_risk_drop`
-- **`model_telemetry` Dictionary:**
-  `model_version`, `churn_auc`, `sales_mape`, `sales_rmse`, `psi_score`, `drift_flag`, `test_sample_count`, `notes`, `created_at`
+- **PostgreSQL DDL Schema (`schema.sql`):** Creates `model_telemetry` and `customer_predictions` tables with B-tree indexes, foreign keys, check constraints, and RLS policies.
+- **Analytical Views:**
+  - `vw_latest_customer_predictions`: Joins latest model run with customer-level predictions, risk tiers, and recoverable revenue flags.
+  - `vw_model_drift_governance`: Tracks run-level AUC, MAPE, RMSE, PSI score, and drift labels.
+  - `vw_high_risk_retention_queue`: Prioritizes accounts with $P \ge 0.50$ by expected revenue loss.
+- **Telemetry Logger (`supabase_manager.py`):** Dual-engine client supporting both Supabase PostgREST API and psycopg2 direct pooler bulk ingestion.
+- **Power BI DAX Specifications (`powerbi_setup_guide.md`):** Core DAX measures for Total Expected Sales, Total Revenue At Risk, Total Recoverable Revenue, and Drift Status Text.
+- **Uncertainty & Disclosure Cards:** Dedicated dashboard cards for model accuracy metrics (AUC, MAPE, RMSE) and prediction interval ranges.
 
 ---
 
 ## 📊 Limitations & Real-Data Availability Disclosure
 
-- **Data Availability:** The raw RavenStack SaaS CSV tables (`ravenstack_accounts.csv`, `ravenstack_subscriptions.csv`, `ravenstack_feature_usage.csv`, `ravenstack_support_tickets.csv`) are omitted from this repository in accordance with data privacy guidelines.
-- **Performance Metrics Disclosure:** Real-data model performance metrics (e.g. final production ROC-AUC, MAPE, RMSE) have **not** been computed and remain pending until the proprietary raw RavenStack dataset is provided in `data/raw/` and processed.
+- **Data Availability:** The proprietary raw RavenStack SaaS CSV tables (`ravenstack_accounts.csv`, `ravenstack_subscriptions.csv`, `ravenstack_feature_usage.csv`, `ravenstack_support_tickets.csv`) are omitted from this repository in accordance with data privacy guidelines.
+- **Performance Metrics Disclosure:** Real-data model performance metrics (e.g. production ROC-AUC, MAPE, RMSE) have **not** been computed and remain pending until the raw RavenStack dataset is provided in `data/raw/` and processed.
 - **Deterministic Validation:** All 27 automated unit and integration tests are executed and validated against deterministic test fixtures conforming exactly to the Member 1 schema.

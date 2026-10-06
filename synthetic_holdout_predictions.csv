@@ -1,0 +1,1410 @@
+customer_id,actual_churn,churn_probability,actual_sales,predicted_sales,sales_lower_bound,sales_upper_bound,prescriptive_action,prescribed_risk_drop
+acc_1000-MYNBI,0,0.3168,54.21,52.23,48.95,55.51,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2168
+acc_1007-TRWLS,0,0.2923,83.37,83.42,81.18,85.66,Standard Engagement (Low Risk),0.2923
+acc_1014-YBUJT,0,0.4543,92.2,90.98,88.72,93.24,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3543
+acc_1021-BMUEG,0,0.3867,107.25,109.3,105.32,113.28,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2867
+acc_1028-OVWIT,0,0.045,78.26,77.04,73.32,80.76,Standard Engagement (Low Risk),0.045
+acc_1035-JMMYL,0,0.5402,43.24,44.25,40.48,48.02,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4402
+acc_1042-BLWGU,0,0.6162,78.43,80.61,77.39,83.83,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 62% -> 26%),0.256
+acc_1049-MHGDI,0,0.579,49.36,49.56,47.29,51.83,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.479
+acc_1056-FBYOO,1,0.6914,101.78,101.34,98.37,104.31,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 69% -> 28%),0.2842
+acc_1063-XZVGB,0,0.3837,43.63,44.71,41.64,47.78,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2837
+acc_1070-YIWWY,1,0.1389,93.85,91.58,87.56,95.6,Standard Engagement (Low Risk),0.1389
+acc_1077-FRXZT,1,0.2243,79.26,77.98,75.57,80.39,Standard Engagement (Low Risk),0.2243
+acc_1084-YYRKL,0,0.1801,55.38,55.68,52.08,59.28,Standard Engagement (Low Risk),0.1801
+acc_1091-DZCUS,0,0.496,98.96,97.83,95.52,100.14,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.396
+acc_1098-DWJVT,0,0.5431,69.75,71.48,67.55,75.41,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4431
+acc_1105-BPVJW,0,0.2453,62.27,63.07,61.0,65.14,Standard Engagement (Low Risk),0.2453
+acc_1112-EHHWC,0,0.064,35.86,36.73,33.36,40.1,Standard Engagement (Low Risk),0.064
+acc_1119-HMMRS,0,0.3234,66.61,65.81,63.45,68.17,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2234
+acc_1126-KOEKF,0,0.211,55.39,55.1,52.69,57.51,Standard Engagement (Low Risk),0.211
+acc_1133-IJJCG,0,0.1207,88.64,88.19,85.91,90.47,Standard Engagement (Low Risk),0.1207
+acc_1140-YHVCR,0,0.2199,62.98,63.28,60.99,65.57,Standard Engagement (Low Risk),0.2199
+acc_1147-QNOVP,0,0.265,80.7,77.77,74.15,81.39,Standard Engagement (Low Risk),0.265
+acc_1154-WHXTY,0,0.2857,58.24,60.85,56.9,64.8,Standard Engagement (Low Risk),0.2857
+acc_1161-DEROS,0,0.2273,86.6,86.18,84.12,88.24,Standard Engagement (Low Risk),0.2273
+acc_1168-KRMSZ,0,0.4186,42.26,40.43,37.43,43.43,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3186
+acc_1175-SJLTY,1,0.4889,95.3,94.87,91.49,98.25,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.3889
+acc_1182-XKYKI,1,0.1339,59.17,57.67,54.35,60.99,Standard Engagement (Low Risk),0.1339
+acc_1189-RIMOF,1,0.6416,78.73,79.14,76.23,82.05,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 64% -> 21%),0.207
+acc_1196-QZXXD,1,0.3995,90.15,90.7,87.41,93.99,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2995
+acc_1203-DPBUR,0,0.0656,55.38,55.62,53.04,58.2,Standard Engagement (Low Risk),0.0656
+acc_1210-KAIIH,1,0.2145,35.44,37.78,34.37,41.19,Standard Engagement (Low Risk),0.2145
+acc_1217-TMYCR,0,0.1736,90.58,89.74,85.72,93.76,Standard Engagement (Low Risk),0.1736
+acc_1224-EJFKN,0,0.402,53.2,52.48,49.36,55.6,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.302
+acc_1231-OBDAL,1,0.1454,86.71,86.17,83.79,88.55,Standard Engagement (Low Risk),0.1454
+acc_1238-XLGHU,0,0.3135,83.31,84.14,81.64,86.64,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2135
+acc_1245-BQSDW,1,0.2205,48.94,49.79,46.83,52.75,Standard Engagement (Low Risk),0.2205
+acc_1252-WFRRC,0,0.0573,51.42,52.43,50.19,54.67,Standard Engagement (Low Risk),0.0573
+acc_1259-VGULF,0,0.1705,73.8,73.54,71.47,75.61,Standard Engagement (Low Risk),0.1705
+acc_1266-KYREK,0,0.4042,61.82,62.6,59.73,65.47,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3042
+acc_1273-RHDUQ,0,0.2114,57.42,57.11,54.93,59.29,Standard Engagement (Low Risk),0.2114
+acc_1280-WZCGU,0,0.1406,99.47,99.13,95.96,102.3,Standard Engagement (Low Risk),0.1406
+acc_1287-IRZGY,0,0.1807,86.51,84.96,81.28,88.64,Standard Engagement (Low Risk),0.1807
+acc_1294-VYZQY,1,0.4496,116.19,117.33,113.66,121.0,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3496
+acc_1301-EKVZU,0,0.1407,54.13,53.68,50.08,57.28,Standard Engagement (Low Risk),0.1407
+acc_1308-HHLFW,1,0.3273,72.74,73.42,70.26,76.58,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2273
+acc_1315-KOOMP,0,0.3131,95.19,94.39,90.39,98.39,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2131
+acc_1322-GDKGG,1,0.2379,76.35,77.34,74.69,79.99,Standard Engagement (Low Risk),0.2379
+acc_1329-KATXG,0,0.2588,58.38,56.58,53.07,60.09,Standard Engagement (Low Risk),0.2588
+acc_1336-BMHFX,0,0.5914,93.79,93.04,89.74,96.34,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4914
+acc_1343-QNRGY,0,0.174,57.57,56.24,53.61,58.87,Standard Engagement (Low Risk),0.174
+acc_1350-TQZSB,1,0.8527,96.99,95.84,92.45,99.23,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 85% -> 21%),0.2051
+acc_1357-HIETD,1,0.5665,106.16,106.63,103.84,109.42,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4665
+acc_1364-GYWTZ,0,0.1823,38.63,38.17,35.78,40.56,Standard Engagement (Low Risk),0.1823
+acc_1371-XVYSM,0,0.5235,41.59,41.01,38.9,43.12,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4235
+acc_1378-ZYNVQ,0,0.136,43.22,42.12,39.6,44.64,Standard Engagement (Low Risk),0.136
+acc_1385-XXZHR,1,0.1086,120.34,118.75,116.35,121.15,Standard Engagement (Low Risk),0.1086
+acc_1392-DJAED,1,0.5049,64.43,65.49,62.52,68.46,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4049
+acc_1399-SVFGT,0,0.1878,59.33,61.44,57.82,65.06,Standard Engagement (Low Risk),0.1878
+acc_1406-KYKHI,0,0.3113,89.3,88.28,85.5,91.06,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2113
+acc_1413-YJCDM,0,0.7821,34.2,32.92,30.18,35.66,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 78% -> 17%),0.1744
+acc_1420-ZQGJR,0,0.0709,115.41,115.16,112.96,117.36,Standard Engagement (Low Risk),0.0709
+acc_1427-OGRFD,0,0.0728,23.19,22.38,19.14,25.62,Standard Engagement (Low Risk),0.0728
+acc_1434-GITWZ,1,0.3928,105.84,105.61,103.12,108.1,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2928
+acc_1441-LENPF,1,0.3851,80.08,79.05,75.22,82.88,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2851
+acc_1448-MMHUF,0,0.3658,86.62,89.1,86.51,91.69,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2658
+acc_1455-ZEBJG,1,0.313,65.35,65.14,62.01,68.27,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.213
+acc_1462-ZZRQM,0,0.176,97.54,98.43,96.24,100.62,Standard Engagement (Low Risk),0.176
+acc_1469-CONAG,0,0.0622,68.91,70.85,68.21,73.49,Standard Engagement (Low Risk),0.0622
+acc_1476-KTUUL,0,0.1135,69.29,70.39,66.45,74.33,Standard Engagement (Low Risk),0.1135
+acc_1483-UJSYJ,0,0.084,38.32,37.98,34.51,41.45,Standard Engagement (Low Risk),0.084
+acc_1490-UQKJR,0,0.0586,85.29,85.76,83.54,87.98,Standard Engagement (Low Risk),0.0586
+acc_1497-UYEAQ,0,0.3411,93.49,93.63,91.25,96.01,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2411
+acc_1504-YFKJA,0,0.2119,78.4,75.39,71.69,79.09,Standard Engagement (Low Risk),0.2119
+acc_1511-STBEZ,1,0.272,29.28,28.65,25.65,31.65,Standard Engagement (Low Risk),0.272
+acc_1518-GGNEA,1,0.1242,60.9,59.44,55.94,62.94,Standard Engagement (Low Risk),0.1242
+acc_1525-IOUVP,0,0.045,54.84,50.54,46.88,54.2,Standard Engagement (Low Risk),0.045
+acc_1532-BUWVZ,1,0.5755,78.98,81.19,77.2,85.18,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4755
+acc_1539-VTLPH,1,0.3913,23.01,23.32,19.83,26.81,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2913
+acc_1546-XNAZZ,0,0.045,34.65,31.85,29.5,34.2,Standard Engagement (Low Risk),0.045
+acc_1553-GNVLN,0,0.4158,79.79,80.5,76.96,84.04,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3158
+acc_1560-TXVEI,1,0.5026,116.72,116.56,113.98,119.14,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4026
+acc_1567-BFIEZ,0,0.4403,63.3,64.13,61.87,66.39,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3403
+acc_1574-IZDRR,0,0.2769,85.5,85.0,82.24,87.76,Standard Engagement (Low Risk),0.2769
+acc_1581-NAOLC,1,0.5137,82.92,84.3,80.43,88.17,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4137
+acc_1588-OQYDE,0,0.1757,31.12,30.42,27.28,33.56,Standard Engagement (Low Risk),0.1757
+acc_1595-ZCRKS,0,0.0747,68.17,64.73,61.36,68.1,Standard Engagement (Low Risk),0.0747
+acc_1602-KDYOA,0,0.2086,80.62,81.22,77.4,85.04,Standard Engagement (Low Risk),0.2086
+acc_1609-IAKMT,0,0.1654,67.05,65.6,61.75,69.45,Standard Engagement (Low Risk),0.1654
+acc_1616-JNOAN,0,0.4898,73.51,72.83,68.88,76.78,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.3898
+acc_1623-BJAQW,1,0.3573,65.66,64.18,61.2,67.16,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2573
+acc_1630-IXARD,0,0.295,73.5,73.55,70.04,77.06,Standard Engagement (Low Risk),0.295
+acc_1637-RWRSC,0,0.2308,76.83,73.98,70.41,77.55,Standard Engagement (Low Risk),0.2308
+acc_1644-ZAUZM,1,0.4758,19.86,20.0,17.05,22.95,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3758
+acc_1651-WUINA,1,0.4721,91.15,90.09,86.43,93.75,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3721
+acc_1658-ZDLJN,0,0.0654,57.84,60.62,58.03,63.21,Standard Engagement (Low Risk),0.0654
+acc_1665-XBLAK,1,0.2039,42.59,39.73,37.16,42.3,Standard Engagement (Low Risk),0.2039
+acc_1672-NYKGE,1,0.3058,62.22,62.77,59.42,66.12,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2058
+acc_1679-SRMQA,0,0.1443,61.33,62.52,60.09,64.95,Standard Engagement (Low Risk),0.1443
+acc_1686-OITBF,1,0.3685,78.51,79.4,75.92,82.88,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2685
+acc_1693-UCFZY,1,0.1302,70.04,72.31,68.76,75.86,Standard Engagement (Low Risk),0.1302
+acc_1700-NYWDW,0,0.1602,34.39,34.88,30.9,38.86,Standard Engagement (Low Risk),0.1602
+acc_1707-WUXFN,0,0.2271,38.63,36.81,34.69,38.93,Standard Engagement (Low Risk),0.2271
+acc_1714-LEOZC,0,0.2253,84.93,83.8,80.85,86.75,Standard Engagement (Low Risk),0.2253
+acc_1721-GPLFI,0,0.1058,82.1,80.36,77.84,82.88,Standard Engagement (Low Risk),0.1058
+acc_1728-LSEBS,1,0.5666,66.92,66.54,64.03,69.05,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4666
+acc_1735-KBOHA,0,0.1963,110.28,109.91,105.91,113.91,Standard Engagement (Low Risk),0.1963
+acc_1742-QFTOE,0,0.045,35.06,33.39,29.47,37.31,Standard Engagement (Low Risk),0.045
+acc_1749-SVWWE,1,0.6401,43.64,39.83,36.43,43.23,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 64% -> 25%),0.2455
+acc_1756-DYVPM,0,0.2372,53.38,54.29,52.06,56.52,Standard Engagement (Low Risk),0.2372
+acc_1763-ZVSFF,0,0.1332,93.93,94.53,92.22,96.84,Standard Engagement (Low Risk),0.1332
+acc_1770-ACFLW,0,0.1225,94.59,95.59,93.18,98.0,Standard Engagement (Low Risk),0.1225
+acc_1777-NCEEE,1,0.363,73.88,72.17,69.21,75.13,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.263
+acc_1784-ZFPLA,0,0.8498,72.54,78.18,74.54,81.82,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 85% -> 26%),0.2625
+acc_1791-HQWCN,0,0.3976,65.71,66.71,63.43,69.99,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2976
+acc_1798-OKAAI,1,0.1397,91.66,91.93,89.18,94.68,Standard Engagement (Low Risk),0.1397
+acc_1805-BKQDK,0,0.4063,83.26,83.15,80.83,85.47,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3063
+acc_1812-OFKWN,0,0.0861,85.08,87.71,84.77,90.65,Standard Engagement (Low Risk),0.0861
+acc_1819-QMEMT,0,0.1955,65.75,65.42,62.88,67.96,Standard Engagement (Low Risk),0.1955
+acc_1826-GFPYV,0,0.3323,50.03,49.26,46.77,51.75,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2323
+acc_1833-GQQBZ,0,0.5303,111.99,111.52,108.29,114.75,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4303
+acc_1840-ZDSNA,0,0.3483,80.31,78.71,75.18,82.24,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2483
+acc_1847-UHEWD,0,0.3416,104.59,101.54,97.84,105.24,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2416
+acc_1854-HMUYV,0,0.0729,77.01,75.9,72.42,79.38,Standard Engagement (Low Risk),0.0729
+acc_1861-SDRLI,0,0.1242,59.88,60.38,57.57,63.19,Standard Engagement (Low Risk),0.1242
+acc_1868-VCXRV,0,0.497,58.7,58.88,56.69,61.07,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.397
+acc_1875-MEVKY,0,0.0794,61.26,59.36,56.38,62.34,Standard Engagement (Low Risk),0.0794
+acc_1882-VOHXQ,1,0.4199,70.68,71.0,68.31,73.69,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3199
+acc_1889-OOKIG,0,0.045,51.73,53.48,50.3,56.66,Standard Engagement (Low Risk),0.045
+acc_1896-FWPNV,0,0.1917,68.23,66.73,64.51,68.95,Standard Engagement (Low Risk),0.1917
+acc_1903-OQTHF,0,0.4364,56.94,57.55,55.13,59.97,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3364
+acc_1910-XEXUJ,1,0.4507,42.48,44.66,42.26,47.06,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3507
+acc_1917-GRNGM,0,0.3139,44.76,44.98,42.77,47.19,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2139
+acc_1924-XFLTL,0,0.318,52.31,53.72,50.41,57.03,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.218
+acc_1931-PSJAS,0,0.045,33.11,33.11,30.77,35.45,Standard Engagement (Low Risk),0.045
+acc_1938-DFKHQ,0,0.4105,69.14,68.48,64.6,72.36,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3105
+acc_1945-CAFEN,0,0.2484,73.92,74.39,71.23,77.55,Standard Engagement (Low Risk),0.2484
+acc_1952-UXKHC,1,0.491,61.16,60.64,57.73,63.55,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.391
+acc_1959-VQGZJ,0,0.0921,83.94,84.76,82.3,87.22,Standard Engagement (Low Risk),0.0921
+acc_1966-ELROM,0,0.0651,63.72,64.76,62.45,67.07,Standard Engagement (Low Risk),0.0651
+acc_1973-IQQCG,0,0.0754,40.25,39.44,36.65,42.23,Standard Engagement (Low Risk),0.0754
+acc_1980-NZROZ,0,0.5188,88.95,88.51,86.04,90.98,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4188
+acc_1987-OQPOR,0,0.1031,83.12,84.46,80.63,88.29,Standard Engagement (Low Risk),0.1031
+acc_1994-ASGPG,0,0.0897,98.18,97.59,95.17,100.01,Standard Engagement (Low Risk),0.0897
+acc_2001-UALBP,0,0.1014,56.98,58.96,55.28,62.64,Standard Engagement (Low Risk),0.1014
+acc_2008-NJJXD,0,0.2383,90.26,90.76,87.53,93.99,Standard Engagement (Low Risk),0.2383
+acc_2015-CMRDQ,0,0.3311,70.98,69.67,65.86,73.48,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2311
+acc_2022-GJEFQ,1,0.2493,52.31,53.4,50.35,56.45,Standard Engagement (Low Risk),0.2493
+acc_2029-YIVNU,0,0.045,112.98,112.07,108.18,115.96,Standard Engagement (Low Risk),0.045
+acc_2036-PRUPR,0,0.1568,72.82,71.3,68.71,73.89,Standard Engagement (Low Risk),0.1568
+acc_2043-DFLQA,0,0.3388,88.26,87.49,84.82,90.16,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2388
+acc_2050-HCCNF,1,0.3919,63.72,61.97,59.08,64.86,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2919
+acc_2057-VSELX,0,0.0983,106.12,106.68,104.43,108.93,Standard Engagement (Low Risk),0.0983
+acc_2064-RVUUI,0,0.5539,30.93,31.92,29.13,34.71,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4539
+acc_2071-GJYKR,0,0.045,65.93,65.29,62.82,67.76,Standard Engagement (Low Risk),0.045
+acc_2078-KYFQT,0,0.07,75.25,73.97,71.02,76.92,Standard Engagement (Low Risk),0.07
+acc_2085-NSTZO,0,0.25,63.91,65.13,61.33,68.93,Standard Engagement (Low Risk),0.25
+acc_2092-ADCGF,0,0.2322,18.68,20.0,16.8,23.2,Standard Engagement (Low Risk),0.2322
+acc_2099-SQTYI,0,0.0476,102.19,102.88,100.62,105.14,Standard Engagement (Low Risk),0.0476
+acc_2106-DEROR,1,0.6047,89.4,88.18,84.59,91.77,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 60% -> 20%),0.2008
+acc_2113-JJDNC,0,0.3726,60.61,62.8,59.12,66.48,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2726
+acc_2120-JBWDU,0,0.2831,36.32,39.47,35.5,43.44,Standard Engagement (Low Risk),0.2831
+acc_2127-LRCPL,0,0.1264,76.04,74.53,70.94,78.12,Standard Engagement (Low Risk),0.1264
+acc_2134-FNPHZ,0,0.5087,103.54,100.93,97.68,104.18,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4087
+acc_2141-CNLOY,0,0.5251,32.56,32.91,30.78,35.04,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4251
+acc_2148-CNAAY,1,0.5845,55.41,58.44,54.49,62.39,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4845
+acc_2155-MEIUX,0,0.0468,62.52,60.62,57.06,64.18,Standard Engagement (Low Risk),0.0468
+acc_2162-BRMMY,1,0.2371,74.07,78.06,74.41,81.71,Standard Engagement (Low Risk),0.2371
+acc_2169-IJMRC,0,0.1948,53.72,57.36,53.64,61.08,Standard Engagement (Low Risk),0.1948
+acc_2176-GJBCA,1,0.545,95.71,96.61,93.31,99.91,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 44%),0.445
+acc_2183-SDMVB,1,0.266,74.56,74.32,72.15,76.49,Standard Engagement (Low Risk),0.266
+acc_2190-GRLQM,0,0.4719,79.6,79.79,77.68,81.9,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3719
+acc_2197-XNDBY,0,0.1543,50.04,50.51,46.71,54.31,Standard Engagement (Low Risk),0.1543
+acc_2204-MRBFG,1,0.3505,78.28,77.95,74.33,81.57,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2505
+acc_2211-SASWD,0,0.2923,73.61,74.36,71.29,77.43,Standard Engagement (Low Risk),0.2923
+acc_2218-EJNZA,0,0.045,50.44,51.28,48.5,54.06,Standard Engagement (Low Risk),0.045
+acc_2225-IPXVK,0,0.1831,56.64,55.35,52.26,58.44,Standard Engagement (Low Risk),0.1831
+acc_2232-BCGVB,0,0.5902,111.29,112.44,109.94,114.94,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4902
+acc_2239-DYJVF,1,0.4086,37.55,37.71,34.37,41.05,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3086
+acc_2246-WZODD,0,0.2366,90.69,90.85,87.01,94.69,Standard Engagement (Low Risk),0.2366
+acc_2253-MSQHZ,0,0.1365,66.16,64.55,62.41,66.69,Standard Engagement (Low Risk),0.1365
+acc_2260-UQQSE,0,0.2817,34.49,33.58,29.63,37.53,Standard Engagement (Low Risk),0.2817
+acc_2267-TIVQH,1,0.149,36.53,35.95,33.62,38.28,Standard Engagement (Low Risk),0.149
+acc_2274-KHHKS,0,0.1354,24.48,26.38,23.33,29.43,Standard Engagement (Low Risk),0.1354
+acc_2281-FODFR,1,0.2702,67.45,67.84,65.4,70.28,Standard Engagement (Low Risk),0.2702
+acc_2288-KYXJW,0,0.3406,25.56,25.42,22.71,28.13,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2406
+acc_2295-HCFFT,1,0.7423,79.95,79.65,76.18,83.12,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 74% -> 30%),0.2999
+acc_2302-CIVUJ,1,0.3364,49.93,47.47,43.48,51.46,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2364
+acc_2309-WLTQP,0,0.1513,98.87,97.43,94.94,99.92,Standard Engagement (Low Risk),0.1513
+acc_2316-BFJLT,1,0.3082,91.42,90.76,88.29,93.23,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2082
+acc_2323-EXGHG,0,0.2351,74.47,70.8,67.04,74.56,Standard Engagement (Low Risk),0.2351
+acc_2330-HHMMI,1,0.3236,48.98,48.69,45.25,52.13,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2236
+acc_2337-JFAQF,0,0.213,70.9,71.59,68.03,75.15,Standard Engagement (Low Risk),0.213
+acc_2344-ONMWC,0,0.4062,88.86,87.88,84.92,90.84,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3062
+acc_2351-IKMZH,1,0.2436,47.74,45.31,42.35,48.27,Standard Engagement (Low Risk),0.2436
+acc_2358-MVJLB,0,0.1216,72.97,74.62,71.71,77.53,Standard Engagement (Low Risk),0.1216
+acc_2365-UDOKA,0,0.0608,76.34,76.2,72.31,80.09,Standard Engagement (Low Risk),0.0608
+acc_2372-BISZB,0,0.1069,19.37,20.0,17.81,22.19,Standard Engagement (Low Risk),0.1069
+acc_2379-YFAQJ,0,0.4225,94.29,94.49,91.01,97.97,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3225
+acc_2386-UWROR,0,0.3505,64.52,65.42,62.21,68.63,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2505
+acc_2393-TITFG,0,0.0586,47.64,48.23,45.65,50.81,Standard Engagement (Low Risk),0.0586
+acc_2400-VCCFP,0,0.2541,93.66,92.91,89.92,95.9,Standard Engagement (Low Risk),0.2541
+acc_2407-RWRZW,0,0.1929,86.12,90.3,86.54,94.06,Standard Engagement (Low Risk),0.1929
+acc_2414-TYEXS,0,0.2055,114.87,113.8,111.31,116.29,Standard Engagement (Low Risk),0.2055
+acc_2421-JSCFB,0,0.2373,87.0,86.48,84.13,88.83,Standard Engagement (Low Risk),0.2373
+acc_2428-BAZMX,0,0.2496,75.88,73.66,70.7,76.62,Standard Engagement (Low Risk),0.2496
+acc_2435-ZUVQM,0,0.045,66.01,65.74,62.33,69.15,Standard Engagement (Low Risk),0.045
+acc_2442-VNIMX,0,0.066,64.98,62.61,60.05,65.17,Standard Engagement (Low Risk),0.066
+acc_2449-RWDRV,0,0.3132,100.31,97.62,94.06,101.18,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2132
+acc_2456-WEXEF,0,0.1909,86.62,85.76,83.24,88.28,Standard Engagement (Low Risk),0.1909
+acc_2463-QCBOY,0,0.1094,66.53,66.52,64.29,68.75,Standard Engagement (Low Risk),0.1094
+acc_2470-UFOML,0,0.6608,73.05,71.69,68.83,74.55,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 66% -> 27%),0.269
+acc_2477-OXBZA,0,0.5324,79.26,81.86,78.26,85.46,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4324
+acc_2484-XICSA,0,0.045,65.27,65.02,62.63,67.41,Standard Engagement (Low Risk),0.045
+acc_2491-JRSRP,1,0.5097,58.19,58.19,54.67,61.71,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4097
+acc_2498-TKYGO,1,0.1814,63.68,63.1,60.04,66.16,Standard Engagement (Low Risk),0.1814
+acc_2505-ZUTAA,0,0.6844,39.66,40.23,37.16,43.3,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 68% -> 26%),0.2603
+acc_2512-BXOJH,0,0.504,45.57,44.42,41.74,47.1,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.404
+acc_2519-CLQDL,1,0.1699,76.16,77.13,75.0,79.26,Standard Engagement (Low Risk),0.1699
+acc_2526-CDBSB,0,0.2657,70.73,71.62,69.27,73.97,Standard Engagement (Low Risk),0.2657
+acc_2533-XFWIH,0,0.1545,68.29,70.59,66.87,74.31,Standard Engagement (Low Risk),0.1545
+acc_2540-HSWHE,0,0.045,106.1,105.13,101.86,108.4,Standard Engagement (Low Risk),0.045
+acc_2547-PTGZE,0,0.2003,38.53,38.18,34.18,42.18,Standard Engagement (Low Risk),0.2003
+acc_2554-GLCUU,0,0.4188,80.56,79.8,77.59,82.01,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3188
+acc_2561-NLUET,0,0.1099,91.35,90.3,86.42,94.18,Standard Engagement (Low Risk),0.1099
+acc_2568-YBRHK,1,0.2897,121.18,118.75,115.09,122.41,Standard Engagement (Low Risk),0.2897
+acc_2575-SLPIE,1,0.3873,78.43,78.17,75.86,80.48,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2873
+acc_2582-YCXQT,0,0.2571,45.98,42.7,38.89,46.51,Standard Engagement (Low Risk),0.2571
+acc_2589-RAGHF,0,0.3,60.32,62.27,59.72,64.82,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2
+acc_2596-BUDOY,0,0.2078,47.58,46.33,43.77,48.89,Standard Engagement (Low Risk),0.2078
+acc_2603-YYTQN,0,0.0751,109.12,109.69,106.33,113.05,Standard Engagement (Low Risk),0.0751
+acc_2610-OEKHL,1,0.1857,56.25,55.19,51.63,58.75,Standard Engagement (Low Risk),0.1857
+acc_2617-OPQNF,0,0.5344,67.27,66.12,62.2,70.04,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4344
+acc_2624-VLHLW,0,0.0729,103.68,103.51,101.3,105.72,Standard Engagement (Low Risk),0.0729
+acc_2631-PZRWI,1,0.5354,60.19,57.12,53.41,60.83,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4354
+acc_2638-WPKJM,0,0.0938,101.25,99.01,95.66,102.36,Standard Engagement (Low Risk),0.0938
+acc_2645-XQEVT,1,0.3006,27.4,25.89,22.52,29.26,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2006
+acc_2652-SZSCJ,0,0.5175,74.61,74.69,72.55,76.83,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4175
+acc_2659-WRZIX,1,0.3754,88.35,88.17,85.71,90.63,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2754
+acc_2666-QEMSI,1,0.3688,42.79,42.4,40.3,44.5,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2688
+acc_2673-KWIYR,1,0.4038,55.65,53.65,51.16,56.14,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3038
+acc_2680-WUMTG,1,0.508,36.1,37.06,33.98,40.14,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.408
+acc_2687-DWDMB,0,0.3306,23.85,21.04,17.66,24.42,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2306
+acc_2694-TMNZQ,1,0.2413,112.76,114.02,110.63,117.41,Standard Engagement (Low Risk),0.2413
+acc_2701-UYMCD,0,0.045,70.33,66.92,63.76,70.08,Standard Engagement (Low Risk),0.045
+acc_2708-SIPUO,0,0.045,40.97,45.11,41.64,48.58,Standard Engagement (Low Risk),0.045
+acc_2715-YWBUY,0,0.2968,79.24,80.53,77.74,83.32,Standard Engagement (Low Risk),0.2968
+acc_2722-ZXOHC,0,0.0648,57.84,58.78,56.71,60.85,Standard Engagement (Low Risk),0.0648
+acc_2729-ODTTH,0,0.088,56.81,58.78,56.6,60.96,Standard Engagement (Low Risk),0.088
+acc_2736-MEPFF,0,0.2915,50.96,52.63,48.66,56.6,Standard Engagement (Low Risk),0.2915
+acc_2743-TAONA,0,0.045,56.77,56.92,53.21,60.63,Standard Engagement (Low Risk),0.045
+acc_2750-CCHOO,1,0.5878,101.38,102.09,98.67,105.51,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4878
+acc_2757-EWZXO,0,0.1369,100.26,101.55,99.14,103.96,Standard Engagement (Low Risk),0.1369
+acc_2764-KGPJE,1,0.4585,85.18,83.3,80.19,86.41,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3585
+acc_2771-AFVRH,0,0.3393,74.6,74.06,71.27,76.85,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2393
+acc_2778-GPKFR,0,0.2967,70.06,70.6,68.21,72.99,Standard Engagement (Low Risk),0.2967
+acc_2785-XPJIY,0,0.3115,64.53,66.04,62.17,69.91,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2115
+acc_2792-IDNSE,0,0.0609,39.44,40.93,37.21,44.65,Standard Engagement (Low Risk),0.0609
+acc_2799-OVABE,1,0.5147,93.71,91.34,88.39,94.29,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4147
+acc_2806-VISVS,0,0.233,77.97,78.47,75.17,81.77,Standard Engagement (Low Risk),0.233
+acc_2813-BPXDP,0,0.125,86.05,89.72,86.15,93.29,Standard Engagement (Low Risk),0.125
+acc_2820-CTGXD,1,0.4163,42.9,43.82,40.62,47.02,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3163
+acc_2827-MDYEV,1,0.2541,90.21,91.33,88.48,94.18,Standard Engagement (Low Risk),0.2541
+acc_2834-KTIZG,0,0.5686,56.68,56.47,53.28,59.66,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4686
+acc_2841-HZPXD,0,0.045,30.83,31.25,28.82,33.68,Standard Engagement (Low Risk),0.045
+acc_2848-GQBQV,0,0.3577,39.42,39.95,37.08,42.82,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2577
+acc_2855-HRTBL,0,0.5664,40.22,41.48,39.23,43.73,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4664
+acc_2862-UOUXY,1,0.374,89.26,88.64,84.8,92.48,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.274
+acc_2869-WRSKS,0,0.1478,76.64,76.74,73.62,79.86,Standard Engagement (Low Risk),0.1478
+acc_2876-PWDDX,0,0.3669,100.14,100.16,97.36,102.96,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2669
+acc_2883-TGXJC,0,0.4264,71.04,70.62,67.86,73.38,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3264
+acc_2890-YJDSF,1,0.2985,58.36,57.9,54.64,61.16,Standard Engagement (Low Risk),0.2985
+acc_2897-OROCF,0,0.1212,35.2,34.47,32.29,36.65,Standard Engagement (Low Risk),0.1212
+acc_2904-LKEDV,0,0.1865,60.53,59.72,55.98,63.46,Standard Engagement (Low Risk),0.1865
+acc_2911-PJMEP,0,0.1937,41.15,41.05,37.77,44.33,Standard Engagement (Low Risk),0.1937
+acc_2918-KWHTM,1,0.7313,72.29,72.07,69.57,74.57,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 73% -> 28%),0.2762
+acc_2925-IAXZB,0,0.0749,86.04,85.39,81.83,88.95,Standard Engagement (Low Risk),0.0749
+acc_2932-YPUDH,0,0.1963,55.44,54.11,51.76,56.46,Standard Engagement (Low Risk),0.1963
+acc_2939-ZQXKZ,0,0.1231,81.37,82.05,78.44,85.66,Standard Engagement (Low Risk),0.1231
+acc_2946-PWTCL,0,0.1363,95.33,93.44,90.99,95.89,Standard Engagement (Low Risk),0.1363
+acc_2953-CKMNZ,0,0.236,54.35,54.83,50.88,58.78,Standard Engagement (Low Risk),0.236
+acc_2960-LPDBD,1,0.3284,86.27,88.5,85.15,91.85,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2284
+acc_2967-NAXKS,1,0.1272,50.95,52.58,48.64,56.52,Standard Engagement (Low Risk),0.1272
+acc_2974-HNQJI,0,0.1345,82.79,83.32,80.14,86.5,Standard Engagement (Low Risk),0.1345
+acc_2981-FNPTH,0,0.1439,36.47,38.48,35.37,41.59,Standard Engagement (Low Risk),0.1439
+acc_2988-CYNOP,0,0.1817,89.31,88.48,85.91,91.05,Standard Engagement (Low Risk),0.1817
+acc_2995-DYFAJ,0,0.149,74.63,74.08,71.73,76.43,Standard Engagement (Low Risk),0.149
+acc_3002-JRCZE,0,0.0451,25.17,25.56,23.03,28.09,Standard Engagement (Low Risk),0.0451
+acc_3009-QBVOU,0,0.109,32.17,31.35,28.98,33.72,Standard Engagement (Low Risk),0.109
+acc_3016-LVRXT,1,0.2412,50.16,51.0,48.93,53.07,Standard Engagement (Low Risk),0.2412
+acc_3023-PWSUC,0,0.327,66.34,66.47,63.02,69.92,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.227
+acc_3030-EKCIX,1,0.5773,80.88,82.46,79.3,85.62,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4773
+acc_3037-DCPXL,1,0.477,88.95,86.19,82.95,89.43,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.377
+acc_3044-ARGKU,0,0.2422,51.15,51.99,49.72,54.26,Standard Engagement (Low Risk),0.2422
+acc_3051-RCHLV,0,0.1777,55.79,57.78,55.3,60.26,Standard Engagement (Low Risk),0.1777
+acc_3058-QNMNU,0,0.293,87.2,85.93,82.98,88.88,Standard Engagement (Low Risk),0.293
+acc_3065-LAYBM,1,0.3348,53.97,53.34,51.08,55.6,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2348
+acc_3072-VYYWK,0,0.1826,65.12,64.93,62.58,67.28,Standard Engagement (Low Risk),0.1826
+acc_3079-GWTVJ,0,0.1731,66.38,67.86,65.24,70.48,Standard Engagement (Low Risk),0.1731
+acc_3086-HCDJP,0,0.0886,24.94,24.52,21.35,27.69,Standard Engagement (Low Risk),0.0886
+acc_3093-DNNIM,0,0.1817,68.73,67.01,63.59,70.43,Standard Engagement (Low Risk),0.1817
+acc_3100-TKNHQ,0,0.1992,65.62,65.34,62.62,68.06,Standard Engagement (Low Risk),0.1992
+acc_3107-AWGCV,0,0.1955,34.01,36.3,33.71,38.89,Standard Engagement (Low Risk),0.1955
+acc_3114-GGMUT,0,0.1984,83.06,84.12,81.0,87.24,Standard Engagement (Low Risk),0.1984
+acc_3121-PGMXO,1,0.381,54.87,53.32,49.48,57.16,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.281
+acc_3128-LMYYW,0,0.2217,88.36,88.07,85.03,91.11,Standard Engagement (Low Risk),0.2217
+acc_3135-DJCGX,0,0.079,52.71,55.27,52.41,58.13,Standard Engagement (Low Risk),0.079
+acc_3142-QSJKF,0,0.1283,80.56,79.53,75.98,83.08,Standard Engagement (Low Risk),0.1283
+acc_3149-KKYPG,1,0.3185,77.04,76.0,73.9,78.1,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2185
+acc_3156-YZBJJ,0,0.4235,57.11,57.58,54.81,60.35,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3235
+acc_3163-IZXDQ,0,0.1057,66.23,66.1,63.49,68.71,Standard Engagement (Low Risk),0.1057
+acc_3170-HRRAC,0,0.3761,76.33,73.93,70.79,77.07,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2761
+acc_3177-FRUWC,1,0.2645,77.94,79.09,76.87,81.31,Standard Engagement (Low Risk),0.2645
+acc_3184-XOABV,0,0.5406,74.16,75.41,72.54,78.28,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4406
+acc_3191-HEKEZ,0,0.2319,82.43,81.65,78.91,84.39,Standard Engagement (Low Risk),0.2319
+acc_3198-FGJPX,0,0.1465,77.85,80.43,77.21,83.65,Standard Engagement (Low Risk),0.1465
+acc_3205-LFYTF,1,0.3014,72.12,72.2,69.17,75.23,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2014
+acc_3212-ZYHBW,0,0.3491,60.38,57.18,54.24,60.12,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2491
+acc_3219-PXTIT,0,0.3875,113.46,111.16,108.18,114.14,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2875
+acc_3226-PJHOI,1,0.4027,90.65,89.46,85.54,93.38,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3027
+acc_3233-NGUGW,0,0.1762,69.17,68.78,65.99,71.57,Standard Engagement (Low Risk),0.1762
+acc_3240-PUAQU,0,0.1996,99.14,97.6,94.09,101.11,Standard Engagement (Low Risk),0.1996
+acc_3247-EFBMN,1,0.1944,75.37,74.31,72.0,76.62,Standard Engagement (Low Risk),0.1944
+acc_3254-HHWXY,1,0.3674,97.98,97.29,93.35,101.23,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2674
+acc_3261-BVBQU,0,0.3295,20.3,20.0,17.6,22.4,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2295
+acc_3268-PWIWH,1,0.2104,78.65,78.45,74.66,82.24,Standard Engagement (Low Risk),0.2104
+acc_3275-WLXHG,0,0.4081,58.38,58.12,54.67,61.57,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3081
+acc_3282-CFTED,1,0.1759,63.8,63.5,60.67,66.33,Standard Engagement (Low Risk),0.1759
+acc_3289-VQLTW,1,0.6499,51.5,51.08,48.36,53.8,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 65% -> 27%),0.2679
+acc_3296-AHCPP,1,0.7655,66.28,64.81,62.42,67.2,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 77% -> 23%),0.2344
+acc_3303-IKMSL,1,0.4047,42.17,43.45,39.52,47.38,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3047
+acc_3310-SCMAQ,1,0.1763,59.11,60.53,57.4,63.66,Standard Engagement (Low Risk),0.1763
+acc_3317-GFWGP,1,0.5089,71.25,70.11,66.57,73.65,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4089
+acc_3324-GVRAV,0,0.2555,34.78,35.22,32.6,37.84,Standard Engagement (Low Risk),0.2555
+acc_3331-ACFFI,0,0.1714,63.42,62.15,59.05,65.25,Standard Engagement (Low Risk),0.1714
+acc_3338-TZHIN,0,0.1954,57.14,59.13,55.39,62.87,Standard Engagement (Low Risk),0.1954
+acc_3345-UAWZI,0,0.1396,90.34,89.76,87.54,91.98,Standard Engagement (Low Risk),0.1396
+acc_3352-EOYQH,0,0.2373,21.15,20.0,16.2,23.8,Standard Engagement (Low Risk),0.2373
+acc_3359-EBTMZ,1,0.1975,67.82,70.18,67.28,73.08,Standard Engagement (Low Risk),0.1975
+acc_3366-EGSJT,0,0.1715,119.54,118.75,114.84,122.66,Standard Engagement (Low Risk),0.1715
+acc_3373-SZLML,0,0.082,19.67,20.0,16.41,23.59,Standard Engagement (Low Risk),0.082
+acc_3380-BRFEU,0,0.4387,67.72,71.32,67.62,75.02,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3387
+acc_3387-BOUGW,0,0.0713,73.41,72.45,70.12,74.78,Standard Engagement (Low Risk),0.0713
+acc_3394-BCAMS,0,0.8252,54.12,53.32,50.59,56.05,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 83% -> 32%),0.3238
+acc_3401-OXYQN,0,0.0488,68.75,68.78,65.4,72.16,Standard Engagement (Low Risk),0.0488
+acc_3408-AYQIZ,0,0.5494,61.85,64.42,60.97,67.87,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4494
+acc_3415-IDTOA,0,0.2312,70.56,71.53,69.06,74.0,Standard Engagement (Low Risk),0.2312
+acc_3422-FVCFO,0,0.6369,88.24,86.83,83.77,89.89,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 64% -> 22%),0.2212
+acc_3429-MWWWF,0,0.1088,75.8,76.98,73.54,80.42,Standard Engagement (Low Risk),0.1088
+acc_3436-SVLAD,0,0.2464,87.09,89.81,86.64,92.98,Standard Engagement (Low Risk),0.2464
+acc_3443-CXEHF,0,0.045,70.83,70.52,66.86,74.18,Standard Engagement (Low Risk),0.045
+acc_3450-RHQSJ,1,0.2723,29.58,28.88,25.18,32.58,Standard Engagement (Low Risk),0.2723
+acc_3457-DNPSF,0,0.045,81.55,84.27,80.82,87.72,Standard Engagement (Low Risk),0.045
+acc_3464-GAPLA,0,0.045,41.53,39.81,36.13,43.49,Standard Engagement (Low Risk),0.045
+acc_3471-SYUFG,0,0.201,84.91,81.57,78.35,84.79,Standard Engagement (Low Risk),0.201
+acc_3478-EYFRV,0,0.4473,95.07,94.39,92.05,96.73,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3473
+acc_3485-UKIBW,1,0.6025,92.8,93.42,89.76,97.08,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 60% -> 24%),0.2382
+acc_3492-GWAHN,0,0.045,75.04,73.43,71.19,75.67,Standard Engagement (Low Risk),0.045
+acc_3499-QGDHK,0,0.5986,69.1,67.97,65.65,70.29,Automated Loyalty Perk Notification (Simulated Risk: 60% -> 50%),0.4986
+acc_3506-JDMJS,0,0.1177,46.12,46.35,43.14,49.56,Standard Engagement (Low Risk),0.1177
+acc_3513-WUREF,1,0.7203,82.73,85.99,82.57,89.41,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 72% -> 17%),0.1654
+acc_3520-DAFGP,0,0.2713,43.18,44.16,40.46,47.86,Standard Engagement (Low Risk),0.2713
+acc_3527-LNGBY,0,0.2139,86.33,84.13,80.26,88.0,Standard Engagement (Low Risk),0.2139
+acc_3534-YIAQO,0,0.1399,63.37,62.87,60.19,65.55,Standard Engagement (Low Risk),0.1399
+acc_3541-HNYTY,1,0.2335,61.03,62.95,59.86,66.04,Standard Engagement (Low Risk),0.2335
+acc_3548-LXAXM,0,0.0521,70.33,70.73,67.27,74.19,Standard Engagement (Low Risk),0.0521
+acc_3555-VADDD,1,0.2167,75.83,78.07,75.76,80.38,Standard Engagement (Low Risk),0.2167
+acc_3562-VIGUG,0,0.147,68.81,70.57,67.66,73.48,Standard Engagement (Low Risk),0.147
+acc_3569-JAFQJ,1,0.4352,54.41,52.94,50.07,55.81,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3352
+acc_3576-XNEZE,0,0.0659,49.68,42.39,38.46,46.32,Standard Engagement (Low Risk),0.0659
+acc_3583-NUHBZ,0,0.3908,53.01,49.61,46.04,53.18,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2908
+acc_3590-JZRLS,0,0.1862,33.51,34.46,32.26,36.66,Standard Engagement (Low Risk),0.1862
+acc_3597-ACOCF,1,0.5966,104.92,103.01,100.26,105.76,Automated Loyalty Perk Notification (Simulated Risk: 60% -> 50%),0.4966
+acc_3604-UTAXS,0,0.2417,41.23,41.8,37.92,45.68,Standard Engagement (Low Risk),0.2417
+acc_3611-RSTNQ,0,0.2131,93.46,93.17,91.03,95.31,Standard Engagement (Low Risk),0.2131
+acc_3618-UBRYP,0,0.045,72.41,72.31,68.4,76.22,Standard Engagement (Low Risk),0.045
+acc_3625-KJXYE,0,0.0745,88.76,86.72,83.0,90.44,Standard Engagement (Low Risk),0.0745
+acc_3632-JKRLD,0,0.045,88.22,85.65,81.73,89.57,Standard Engagement (Low Risk),0.045
+acc_3639-RPMJC,0,0.4117,95.91,95.5,92.32,98.68,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3117
+acc_3646-CUWXK,0,0.0571,29.61,28.8,25.5,32.1,Standard Engagement (Low Risk),0.0571
+acc_3653-BOBMM,1,0.2953,20.97,20.0,16.2,23.8,Standard Engagement (Low Risk),0.2953
+acc_3660-OJTJB,0,0.3504,44.32,43.26,41.11,45.41,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2504
+acc_3667-HGOTO,0,0.3916,120.2,118.75,115.91,121.59,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2916
+acc_3674-BROFD,0,0.3612,79.52,79.0,76.63,81.37,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2612
+acc_3681-DANJN,0,0.4501,76.32,75.36,72.97,77.75,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3501
+acc_3688-RYSNA,0,0.5652,76.86,79.37,75.74,83.0,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4652
+acc_3695-GYQTZ,0,0.0528,66.49,68.04,65.92,70.16,Standard Engagement (Low Risk),0.0528
+acc_3702-QIDRV,0,0.2641,68.64,68.1,64.93,71.27,Standard Engagement (Low Risk),0.2641
+acc_3709-DBGPI,0,0.0628,21.66,20.0,17.22,22.78,Standard Engagement (Low Risk),0.0628
+acc_3716-WTDFW,0,0.2599,41.44,42.69,38.83,46.55,Standard Engagement (Low Risk),0.2599
+acc_3723-CEOVT,0,0.0907,65.59,64.99,62.89,67.09,Standard Engagement (Low Risk),0.0907
+acc_3730-EXQOB,0,0.4291,91.64,91.84,88.88,94.8,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3291
+acc_3737-YNRTM,0,0.2559,87.67,88.49,86.39,90.59,Standard Engagement (Low Risk),0.2559
+acc_3744-OKLAT,1,0.5033,91.21,90.38,87.19,93.57,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4033
+acc_3751-LETTD,0,0.6441,69.47,69.81,67.17,72.45,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 64% -> 21%),0.212
+acc_3758-DTNFI,0,0.3443,55.12,55.42,52.65,58.19,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2443
+acc_3765-TRJRB,0,0.3309,86.46,86.97,84.1,89.84,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2309
+acc_3772-TVVOT,0,0.5058,49.92,49.37,45.89,52.85,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4058
+acc_3779-AQEVL,0,0.3369,100.83,99.45,95.8,103.1,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2369
+acc_3786-KSMNR,0,0.045,57.58,57.86,55.55,60.17,Standard Engagement (Low Risk),0.045
+acc_3793-YJZCC,0,0.3852,118.19,118.75,114.98,122.52,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2852
+acc_3800-MOZEE,0,0.1243,80.43,82.58,79.17,85.99,Standard Engagement (Low Risk),0.1243
+acc_3807-ETZYA,0,0.1702,93.45,91.69,89.12,94.26,Standard Engagement (Low Risk),0.1702
+acc_3814-GMPOR,0,0.1136,60.86,59.37,57.24,61.5,Standard Engagement (Low Risk),0.1136
+acc_3821-ZPUAU,0,0.4203,67.23,67.46,63.97,70.95,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3203
+acc_3828-EKPWB,0,0.2931,77.56,77.14,73.57,80.71,Standard Engagement (Low Risk),0.2931
+acc_3835-KVSDF,0,0.0468,21.45,25.31,22.22,28.4,Standard Engagement (Low Risk),0.0468
+acc_3842-GLTPN,0,0.045,76.43,75.82,72.11,79.53,Standard Engagement (Low Risk),0.045
+acc_3849-UCWSZ,0,0.045,63.6,60.77,57.28,64.26,Standard Engagement (Low Risk),0.045
+acc_3856-ZDDOX,0,0.2327,117.21,118.75,116.33,121.17,Standard Engagement (Low Risk),0.2327
+acc_3863-NVLZE,0,0.193,69.05,69.55,66.3,72.8,Standard Engagement (Low Risk),0.193
+acc_3870-ZTSVK,0,0.4039,59.16,59.13,56.55,61.71,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3039
+acc_3877-WRCVG,0,0.148,37.7,33.36,30.42,36.3,Standard Engagement (Low Risk),0.148
+acc_3884-OAWCL,1,0.5519,119.72,118.75,114.74,122.76,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4519
+acc_3891-TQRLG,1,0.5887,78.22,79.85,77.5,82.2,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4887
+acc_3898-PHACA,1,0.4077,101.26,103.07,99.42,106.72,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3077
+acc_3905-RWUGS,0,0.102,70.27,68.06,64.95,71.17,Standard Engagement (Low Risk),0.102
+acc_3912-BTNXV,1,0.4419,62.99,64.67,61.84,67.5,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3419
+acc_3919-FPGFE,1,0.3326,83.81,85.78,82.23,89.33,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2326
+acc_3926-NZZED,0,0.2513,76.92,76.81,74.62,79.0,Standard Engagement (Low Risk),0.2513
+acc_3933-VLICW,1,0.5239,50.36,51.48,48.36,54.6,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4239
+acc_3940-ZJFDE,1,0.2154,50.47,50.87,47.03,54.71,Standard Engagement (Low Risk),0.2154
+acc_3947-GEGDI,0,0.1138,93.12,93.27,89.83,96.71,Standard Engagement (Low Risk),0.1138
+acc_3954-EVPGK,1,0.6311,23.47,22.1,18.87,25.33,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 63% -> 19%),0.1904
+acc_3961-NXKRQ,0,0.6738,96.81,96.89,94.22,99.56,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 67% -> 18%),0.1839
+acc_3968-TQSUL,1,0.3785,46.92,46.49,44.12,48.86,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2785
+acc_3975-ERCVJ,0,0.181,112.7,113.4,109.72,117.08,Standard Engagement (Low Risk),0.181
+acc_3982-KPWYU,0,0.4745,47.32,48.18,44.27,52.09,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3745
+acc_3989-PLEFE,1,0.1331,19.88,20.0,16.38,23.62,Standard Engagement (Low Risk),0.1331
+acc_3996-WKZIW,1,0.2044,56.43,57.69,54.91,60.47,Standard Engagement (Low Risk),0.2044
+acc_4003-NKOMG,0,0.1929,82.96,82.38,80.07,84.69,Standard Engagement (Low Risk),0.1929
+acc_4010-HMXJA,0,0.2824,75.68,75.74,73.14,78.34,Standard Engagement (Low Risk),0.2824
+acc_4017-IZKZQ,0,0.0979,97.6,94.78,92.06,97.5,Standard Engagement (Low Risk),0.0979
+acc_4024-QKPOU,0,0.0682,70.53,74.28,71.31,77.25,Standard Engagement (Low Risk),0.0682
+acc_4031-AFIOJ,1,0.0827,32.79,28.67,25.06,32.28,Standard Engagement (Low Risk),0.0827
+acc_4038-ESXBD,0,0.4087,74.69,73.0,70.63,75.37,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3087
+acc_4045-FMBEX,0,0.2819,29.66,30.88,27.2,34.56,Standard Engagement (Low Risk),0.2819
+acc_4052-BTEGC,0,0.2188,85.56,84.47,81.94,87.0,Standard Engagement (Low Risk),0.2188
+acc_4059-ZZTSD,0,0.1425,22.34,22.67,19.46,25.88,Standard Engagement (Low Risk),0.1425
+acc_4066-AHEHN,1,0.2703,48.68,47.48,44.09,50.87,Standard Engagement (Low Risk),0.2703
+acc_4073-PNJSG,1,0.2989,103.43,102.59,99.54,105.64,Standard Engagement (Low Risk),0.2989
+acc_4080-MWMGD,0,0.0693,72.35,71.76,68.55,74.97,Standard Engagement (Low Risk),0.0693
+acc_4087-ZANKW,0,0.1083,82.49,82.08,79.36,84.8,Standard Engagement (Low Risk),0.1083
+acc_4094-RDVWE,0,0.1426,71.68,70.92,68.65,73.19,Standard Engagement (Low Risk),0.1426
+acc_4101-OAWYE,0,0.1534,90.49,91.2,87.32,95.08,Standard Engagement (Low Risk),0.1534
+acc_4108-FZUTS,0,0.2778,55.95,56.15,53.42,58.88,Standard Engagement (Low Risk),0.2778
+acc_4115-NRUUW,0,0.1156,48.21,48.72,46.45,50.99,Standard Engagement (Low Risk),0.1156
+acc_4122-HYLKE,1,0.2644,81.37,79.96,75.96,83.96,Standard Engagement (Low Risk),0.2644
+acc_4129-UUZSV,0,0.5419,79.81,80.6,76.72,84.48,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4419
+acc_4136-MPIEP,0,0.1327,108.43,107.91,105.38,110.44,Standard Engagement (Low Risk),0.1327
+acc_4143-PXBGX,1,0.2829,68.2,68.0,64.23,71.77,Standard Engagement (Low Risk),0.2829
+acc_4150-WIAHU,0,0.0717,19.81,20.53,16.86,24.2,Standard Engagement (Low Risk),0.0717
+acc_4157-OQSRR,0,0.3249,44.5,44.72,41.65,47.79,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2249
+acc_4164-WEZSF,0,0.2268,69.88,70.45,68.07,72.83,Standard Engagement (Low Risk),0.2268
+acc_4171-KALGK,1,0.3019,52.29,52.27,49.05,55.49,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2019
+acc_4178-JUIPP,0,0.2271,88.48,86.48,82.76,90.2,Standard Engagement (Low Risk),0.2271
+acc_4185-HDPHK,0,0.1794,68.42,67.2,64.78,69.62,Standard Engagement (Low Risk),0.1794
+acc_4192-BILPG,0,0.1882,67.91,68.38,66.18,70.58,Standard Engagement (Low Risk),0.1882
+acc_4199-RVDVH,0,0.0729,72.57,72.51,70.43,74.59,Standard Engagement (Low Risk),0.0729
+acc_4206-NWXQP,0,0.283,85.51,86.72,84.26,89.18,Standard Engagement (Low Risk),0.283
+acc_4213-YJSWA,0,0.0826,84.03,83.73,80.0,87.46,Standard Engagement (Low Risk),0.0826
+acc_4220-JCRKW,1,0.5683,44.49,43.84,40.9,46.78,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4683
+acc_4227-UCXPI,0,0.4487,43.12,43.97,41.68,46.26,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3487
+acc_4234-HEGUU,1,0.3717,64.0,65.23,62.27,68.19,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2717
+acc_4241-BGFUK,1,0.4202,78.84,74.73,70.88,78.58,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3202
+acc_4248-TWLXA,0,0.1692,85.57,86.98,84.74,89.22,Standard Engagement (Low Risk),0.1692
+acc_4255-EBFWK,1,0.1909,106.63,107.08,103.99,110.17,Standard Engagement (Low Risk),0.1909
+acc_4262-KOVCS,0,0.0787,60.91,61.52,57.91,65.13,Standard Engagement (Low Risk),0.0787
+acc_4269-HFMPX,0,0.552,79.41,79.9,76.63,83.17,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.452
+acc_4276-WPTPR,0,0.0603,86.42,85.68,83.49,87.87,Standard Engagement (Low Risk),0.0603
+acc_4283-ESTRT,1,0.4072,51.44,52.79,50.02,55.56,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3072
+acc_4290-GMCPM,0,0.2607,88.27,87.97,85.71,90.23,Standard Engagement (Low Risk),0.2607
+acc_4297-HIEXL,0,0.169,44.7,44.84,42.08,47.6,Standard Engagement (Low Risk),0.169
+acc_4304-XLUBC,0,0.1473,103.56,104.38,101.97,106.79,Standard Engagement (Low Risk),0.1473
+acc_4311-TEIYN,0,0.1703,100.5,99.05,95.71,102.39,Standard Engagement (Low Risk),0.1703
+acc_4318-HORDH,1,0.3975,53.35,51.2,48.71,53.69,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2975
+acc_4325-JLRRR,0,0.2101,58.33,59.77,56.67,62.87,Standard Engagement (Low Risk),0.2101
+acc_4332-SFBQY,1,0.3951,77.8,77.82,75.41,80.23,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2951
+acc_4339-DDNWB,0,0.3154,55.5,55.03,51.97,58.09,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2154
+acc_4346-EBORN,0,0.2192,56.51,56.97,54.01,59.93,Standard Engagement (Low Risk),0.2192
+acc_4353-GNPIW,0,0.0752,41.84,41.84,39.41,44.27,Standard Engagement (Low Risk),0.0752
+acc_4360-EZNFA,0,0.1414,118.42,116.14,113.82,118.46,Standard Engagement (Low Risk),0.1414
+acc_4367-BZANW,1,0.0836,56.17,57.64,55.13,60.15,Standard Engagement (Low Risk),0.0836
+acc_4374-HIYOE,0,0.5404,71.26,70.12,67.01,73.23,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4404
+acc_4381-CFCIL,1,0.4528,122.49,118.75,115.55,121.95,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3528
+acc_4388-AFLVJ,0,0.2052,85.76,84.95,82.55,87.35,Standard Engagement (Low Risk),0.2052
+acc_4395-BRWCR,0,0.0835,90.52,89.12,85.29,92.95,Standard Engagement (Low Risk),0.0835
+acc_4402-DJGSE,0,0.154,36.85,39.11,35.53,42.69,Standard Engagement (Low Risk),0.154
+acc_4409-BSSAL,0,0.2198,67.4,67.18,63.39,70.97,Standard Engagement (Low Risk),0.2198
+acc_4416-UBCGA,0,0.3523,67.8,67.97,64.8,71.14,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2523
+acc_4423-FJSEO,0,0.0616,64.21,64.82,62.43,67.21,Standard Engagement (Low Risk),0.0616
+acc_4430-MGXRX,1,0.5315,83.85,82.6,79.79,85.41,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4315
+acc_4437-QIUYI,0,0.1547,68.5,68.15,65.52,70.78,Standard Engagement (Low Risk),0.1547
+acc_4444-EWTHK,0,0.0845,49.54,50.13,47.72,52.54,Standard Engagement (Low Risk),0.0845
+acc_4451-FHBSX,0,0.2234,83.83,82.72,80.56,84.88,Standard Engagement (Low Risk),0.2234
+acc_4458-AQEZQ,0,0.1402,99.69,102.0,98.65,105.35,Standard Engagement (Low Risk),0.1402
+acc_4465-DEQHO,0,0.5824,76.79,77.52,73.92,81.12,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4824
+acc_4472-GRQBX,0,0.7433,72.27,69.34,66.09,72.59,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 74% -> 26%),0.2622
+acc_4479-BZBQL,0,0.267,67.21,64.25,60.58,67.92,Standard Engagement (Low Risk),0.267
+acc_4486-ULARK,0,0.2535,60.01,57.78,55.38,60.18,Standard Engagement (Low Risk),0.2535
+acc_4493-KNHVH,0,0.1478,70.12,70.81,68.22,73.4,Standard Engagement (Low Risk),0.1478
+acc_4500-OVFNM,1,0.5062,68.07,65.73,61.89,69.57,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4062
+acc_4507-WWQBB,1,0.2225,68.52,67.69,65.45,69.93,Standard Engagement (Low Risk),0.2225
+acc_4514-EJANJ,0,0.2046,117.39,118.75,114.88,122.62,Standard Engagement (Low Risk),0.2046
+acc_4521-LUWBE,1,0.6747,54.7,55.41,52.11,58.71,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 67% -> 19%),0.1908
+acc_4528-VNNNQ,0,0.2084,72.73,72.59,70.3,74.88,Standard Engagement (Low Risk),0.2084
+acc_4535-GMIES,1,0.0809,79.41,79.69,76.73,82.65,Standard Engagement (Low Risk),0.0809
+acc_4542-BKMMB,1,0.2528,76.3,77.52,75.13,79.91,Standard Engagement (Low Risk),0.2528
+acc_4549-PDTSM,0,0.4142,82.27,82.18,80.1,84.26,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3142
+acc_4556-QKOGD,0,0.2244,88.62,89.51,87.29,91.73,Standard Engagement (Low Risk),0.2244
+acc_4563-EEOLQ,0,0.1221,85.57,84.84,81.74,87.94,Standard Engagement (Low Risk),0.1221
+acc_4570-UGRYG,0,0.1569,81.99,80.11,77.11,83.11,Standard Engagement (Low Risk),0.1569
+acc_4577-RSZNV,0,0.0811,70.1,69.27,66.44,72.1,Standard Engagement (Low Risk),0.0811
+acc_4584-KJDSF,0,0.3278,75.92,76.29,73.94,78.64,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2278
+acc_4591-ALNFK,0,0.2582,45.34,46.91,42.97,50.85,Standard Engagement (Low Risk),0.2582
+acc_4598-LJJPQ,1,0.2721,59.99,60.03,57.65,62.41,Standard Engagement (Low Risk),0.2721
+acc_4605-RBVYZ,0,0.1064,78.41,77.21,74.28,80.14,Standard Engagement (Low Risk),0.1064
+acc_4612-NDDVM,1,0.4485,116.22,116.05,112.95,119.15,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3485
+acc_4619-QGRTY,1,0.6065,61.93,60.23,57.06,63.4,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 61% -> 27%),0.2688
+acc_4626-IIMCM,1,0.1008,68.42,66.54,62.66,70.42,Standard Engagement (Low Risk),0.1008
+acc_4633-UKIRO,0,0.3022,89.8,93.17,89.75,96.59,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2022
+acc_4640-SWWTP,1,0.5398,42.36,40.17,37.16,43.18,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4398
+acc_4647-LEWNL,0,0.1067,74.62,72.87,70.08,75.66,Standard Engagement (Low Risk),0.1067
+acc_4654-APYGS,1,0.158,40.12,41.16,38.9,43.42,Standard Engagement (Low Risk),0.158
+acc_4661-KIZAB,0,0.0971,30.89,32.81,29.51,36.11,Standard Engagement (Low Risk),0.0971
+acc_4668-YGLDS,0,0.2153,42.52,37.63,34.56,40.7,Standard Engagement (Low Risk),0.2153
+acc_4675-VPDEI,1,0.6183,62.65,62.74,60.33,65.15,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 62% -> 32%),0.3209
+acc_4682-WHRLN,0,0.0557,82.01,82.35,80.26,84.44,Standard Engagement (Low Risk),0.0557
+acc_4689-BSIUQ,1,0.3846,83.3,82.94,79.12,86.76,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2846
+acc_4696-LQXIC,0,0.2191,79.66,76.0,72.87,79.13,Standard Engagement (Low Risk),0.2191
+acc_4703-QDYKP,0,0.2101,83.36,85.62,81.98,89.26,Standard Engagement (Low Risk),0.2101
+acc_4710-LBGQI,0,0.1494,60.38,62.94,59.85,66.03,Standard Engagement (Low Risk),0.1494
+acc_4717-UVUFI,0,0.045,67.56,69.4,65.39,73.41,Standard Engagement (Low Risk),0.045
+acc_4724-QWECT,1,0.5202,20.38,20.0,16.94,23.06,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4202
+acc_4731-FYXSK,0,0.3856,67.65,67.84,64.69,70.99,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2856
+acc_4738-JWPFL,1,0.2491,67.74,67.53,65.39,69.67,Standard Engagement (Low Risk),0.2491
+acc_4745-JNXKY,0,0.3351,73.63,73.92,71.62,76.22,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2351
+acc_4752-TJRJO,1,0.209,24.78,26.32,23.69,28.95,Standard Engagement (Low Risk),0.209
+acc_4759-EPVYV,0,0.045,58.19,55.93,52.93,58.93,Standard Engagement (Low Risk),0.045
+acc_4766-XNOVI,0,0.4058,100.86,103.6,100.27,106.93,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3058
+acc_4773-FTBJC,0,0.3201,64.41,60.75,57.17,64.33,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2201
+acc_4780-XLBIM,0,0.1523,47.09,48.66,44.98,52.34,Standard Engagement (Low Risk),0.1523
+acc_4787-IQAFE,0,0.1576,45.34,44.86,42.46,47.26,Standard Engagement (Low Risk),0.1576
+acc_4794-BXTOC,0,0.1737,84.01,83.48,80.35,86.61,Standard Engagement (Low Risk),0.1737
+acc_4801-SXVCK,0,0.0911,107.36,110.66,107.14,114.18,Standard Engagement (Low Risk),0.0911
+acc_4808-EUIJG,0,0.2246,35.51,33.84,31.27,36.41,Standard Engagement (Low Risk),0.2246
+acc_4815-BNKVD,0,0.2756,66.32,65.19,62.5,67.88,Standard Engagement (Low Risk),0.2756
+acc_4822-UFHGY,0,0.6182,19.08,20.0,17.11,22.89,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 62% -> 28%),0.2759
+acc_4829-CYHDU,1,0.5372,65.13,66.36,63.63,69.09,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4372
+acc_4836-CNFTD,0,0.6172,68.04,69.47,66.09,72.85,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 62% -> 19%),0.1882
+acc_4843-MRXPH,0,0.4927,73.47,72.95,70.64,75.26,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.3927
+acc_4850-WVIVM,0,0.1891,62.91,61.67,59.22,64.12,Standard Engagement (Low Risk),0.1891
+acc_4857-NPTBP,0,0.2938,62.17,61.42,58.09,64.75,Standard Engagement (Low Risk),0.2938
+acc_4864-MGMYU,1,0.5861,49.43,47.52,45.07,49.97,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4861
+acc_4871-SAMWL,0,0.474,117.56,118.75,115.17,122.33,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.374
+acc_4878-PVGCY,0,0.3771,62.71,66.22,63.42,69.02,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2771
+acc_4885-PGUEZ,0,0.0629,95.26,95.96,93.34,98.58,Standard Engagement (Low Risk),0.0629
+acc_4892-UKOKA,1,0.7613,84.59,84.36,82.02,86.7,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 76% -> 21%),0.2131
+acc_4899-TYQBX,0,0.5407,29.97,32.58,28.94,36.22,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4407
+acc_4906-MFGSK,0,0.1263,67.11,68.66,64.68,72.64,Standard Engagement (Low Risk),0.1263
+acc_4913-MUZZD,0,0.045,46.79,46.19,44.09,48.29,Standard Engagement (Low Risk),0.045
+acc_4920-CTLPZ,0,0.0672,62.1,62.69,59.03,66.35,Standard Engagement (Low Risk),0.0672
+acc_4927-KUORJ,1,0.4728,52.68,54.66,52.04,57.28,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3728
+acc_4934-UKXPH,0,0.3652,40.17,39.24,36.56,41.92,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2652
+acc_4941-QIJXF,0,0.2152,75.08,76.54,74.44,78.64,Standard Engagement (Low Risk),0.2152
+acc_4948-TYJPJ,0,0.3689,96.3,98.83,95.77,101.89,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2689
+acc_4955-LOCGN,0,0.3501,65.36,66.36,62.37,70.35,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2501
+acc_4962-PHOIO,1,0.045,52.94,50.13,47.53,52.73,Standard Engagement (Low Risk),0.045
+acc_4969-NDSKI,0,0.3557,63.32,62.68,59.98,65.38,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2557
+acc_4976-XGGBD,0,0.0595,71.74,72.72,69.44,76.0,Standard Engagement (Low Risk),0.0595
+acc_4983-TFJQE,0,0.1368,61.64,60.12,57.76,62.48,Standard Engagement (Low Risk),0.1368
+acc_4990-WSFIT,0,0.2353,55.57,55.85,53.25,58.45,Standard Engagement (Low Risk),0.2353
+acc_4997-TFXGR,0,0.1019,38.15,38.58,36.15,41.01,Standard Engagement (Low Risk),0.1019
+acc_5004-IJCML,0,0.1175,71.38,71.85,68.42,75.28,Standard Engagement (Low Risk),0.1175
+acc_5011-XUIKF,1,0.3711,90.82,90.9,87.3,94.5,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2711
+acc_5018-AOMAL,0,0.045,74.92,78.98,75.42,82.54,Standard Engagement (Low Risk),0.045
+acc_5025-FQIPV,1,0.3176,94.21,92.37,88.52,96.22,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2176
+acc_5032-UBSDN,0,0.2337,67.44,70.44,67.89,72.99,Standard Engagement (Low Risk),0.2337
+acc_5039-NBVEX,0,0.2254,37.25,37.07,33.86,40.28,Standard Engagement (Low Risk),0.2254
+acc_5046-PBWMU,0,0.3313,40.53,41.28,37.79,44.77,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2313
+acc_5053-QJBOJ,0,0.4394,78.78,78.56,75.6,81.52,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3394
+acc_5060-SEUYX,0,0.17,43.34,44.86,42.52,47.2,Standard Engagement (Low Risk),0.17
+acc_5067-WAONX,0,0.1182,49.87,51.8,49.14,54.46,Standard Engagement (Low Risk),0.1182
+acc_5074-MQQAU,0,0.0485,56.06,54.97,51.15,58.79,Standard Engagement (Low Risk),0.0485
+acc_5081-FECWZ,0,0.1149,53.85,53.05,49.98,56.12,Standard Engagement (Low Risk),0.1149
+acc_5088-ACUKK,0,0.2378,25.69,24.59,21.07,28.11,Standard Engagement (Low Risk),0.2378
+acc_5095-ZYWAS,1,0.5751,107.43,109.44,106.62,112.26,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4751
+acc_5102-NVXDW,0,0.2229,117.69,118.75,115.71,121.79,Standard Engagement (Low Risk),0.2229
+acc_5109-XHNBP,0,0.5628,67.83,69.14,66.92,71.36,Automated Loyalty Perk Notification (Simulated Risk: 56% -> 46%),0.4628
+acc_5116-ERLTK,1,0.1827,47.18,48.01,44.85,51.17,Standard Engagement (Low Risk),0.1827
+acc_5123-LNNUQ,0,0.3647,99.05,100.56,96.96,104.16,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2647
+acc_5130-MZTBQ,0,0.0647,75.98,75.69,73.37,78.01,Standard Engagement (Low Risk),0.0647
+acc_5137-PKPVR,0,0.1423,30.93,32.71,30.03,35.39,Standard Engagement (Low Risk),0.1423
+acc_5144-MDDQV,0,0.2269,83.25,83.14,80.16,86.12,Standard Engagement (Low Risk),0.2269
+acc_5151-ENVFQ,1,0.5831,94.96,95.74,92.35,99.13,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4831
+acc_5158-VXWIE,0,0.2003,85.76,84.57,81.9,87.24,Standard Engagement (Low Risk),0.2003
+acc_5165-GHDWO,1,0.8129,38.23,39.97,37.78,42.16,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 81% -> 27%),0.2713
+acc_5172-CHAFA,0,0.045,32.98,34.1,30.51,37.69,Standard Engagement (Low Risk),0.045
+acc_5179-HCNQX,0,0.1503,82.75,82.39,78.75,86.03,Standard Engagement (Low Risk),0.1503
+acc_5186-MLEIU,1,0.3612,103.52,104.63,102.14,107.12,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2612
+acc_5193-NCQZX,0,0.2016,33.84,35.19,31.67,38.71,Standard Engagement (Low Risk),0.2016
+acc_5200-MITKB,0,0.2468,89.82,91.37,87.91,94.83,Standard Engagement (Low Risk),0.2468
+acc_5207-DDDHP,0,0.7465,54.61,53.66,50.65,56.67,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 75% -> 20%),0.2005
+acc_5214-WLYNP,1,0.5801,65.84,65.13,61.75,68.51,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4801
+acc_5221-RTTIH,1,0.2291,20.07,20.0,16.61,23.39,Standard Engagement (Low Risk),0.2291
+acc_5228-PLNSJ,0,0.5461,64.34,63.96,61.7,66.22,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4461
+acc_5235-VWMKC,0,0.045,56.92,58.39,54.9,61.88,Standard Engagement (Low Risk),0.045
+acc_5242-NKIZJ,0,0.045,78.8,78.53,75.27,81.79,Standard Engagement (Low Risk),0.045
+acc_5249-UJYYE,1,0.2393,74.35,75.26,71.4,79.12,Standard Engagement (Low Risk),0.2393
+acc_5256-PWSSB,0,0.1689,65.4,66.38,62.92,69.84,Standard Engagement (Low Risk),0.1689
+acc_5263-UAWLA,1,0.8131,83.73,82.07,79.72,84.42,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 81% -> 25%),0.248
+acc_5270-HWUWW,0,0.1283,46.06,46.51,43.23,49.79,Standard Engagement (Low Risk),0.1283
+acc_5277-UGRIZ,1,0.4334,41.21,41.66,39.05,44.27,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3334
+acc_5284-FMJYF,1,0.4467,74.51,73.06,70.45,75.67,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3467
+acc_5291-UTMZO,1,0.2758,68.22,68.31,65.02,71.6,Standard Engagement (Low Risk),0.2758
+acc_5298-AVLLU,1,0.0889,68.46,67.8,65.0,70.6,Standard Engagement (Low Risk),0.0889
+acc_5305-BPGNX,1,0.2249,83.58,83.85,80.29,87.41,Standard Engagement (Low Risk),0.2249
+acc_5312-ZJMDM,1,0.109,48.03,49.14,45.3,52.98,Standard Engagement (Low Risk),0.109
+acc_5319-UTKFR,1,0.6182,67.18,66.9,62.9,70.9,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 62% -> 25%),0.2474
+acc_5326-YBSWI,1,0.4755,48.89,48.03,44.85,51.21,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3755
+acc_5333-FHMCH,0,0.045,60.09,61.57,58.24,64.9,Standard Engagement (Low Risk),0.045
+acc_5340-AAGMH,0,0.3944,98.22,98.91,95.91,101.91,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2944
+acc_5347-IREPK,0,0.2647,90.7,88.02,85.87,90.17,Standard Engagement (Low Risk),0.2647
+acc_5354-IXUMW,1,0.6381,71.52,72.49,68.86,76.12,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 64% -> 21%),0.2083
+acc_5361-OZWHA,0,0.7588,64.6,64.74,61.05,68.43,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 76% -> 19%),0.186
+acc_5368-BJEES,0,0.2325,71.85,71.62,69.48,73.76,Standard Engagement (Low Risk),0.2325
+acc_5375-JJRPZ,0,0.1596,61.67,62.23,58.42,66.04,Standard Engagement (Low Risk),0.1596
+acc_5382-OIGSX,0,0.1366,38.94,38.31,34.46,42.16,Standard Engagement (Low Risk),0.1366
+acc_5389-ZWRIU,0,0.0846,68.63,67.09,64.14,70.04,Standard Engagement (Low Risk),0.0846
+acc_5396-XWRRB,1,0.3593,37.21,41.4,37.72,45.08,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2593
+acc_5403-JJWYC,0,0.7506,63.79,62.72,59.91,65.53,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 75% -> 26%),0.2616
+acc_5410-DKYGQ,0,0.1616,22.31,21.51,18.19,24.83,Standard Engagement (Low Risk),0.1616
+acc_5417-YOLWA,0,0.089,76.8,77.06,73.15,80.97,Standard Engagement (Low Risk),0.089
+acc_5424-FCUGV,0,0.0949,35.22,34.27,31.94,36.6,Standard Engagement (Low Risk),0.0949
+acc_5431-DWUEQ,0,0.0765,95.6,97.99,95.22,100.76,Standard Engagement (Low Risk),0.0765
+acc_5438-GHQJB,0,0.1641,77.56,78.97,76.69,81.25,Standard Engagement (Low Risk),0.1641
+acc_5445-DEMHO,0,0.283,36.91,37.88,35.37,40.39,Standard Engagement (Low Risk),0.283
+acc_5452-NCLGN,0,0.1034,91.66,94.91,91.03,98.79,Standard Engagement (Low Risk),0.1034
+acc_5459-TMXMC,0,0.1342,83.31,81.69,77.83,85.55,Standard Engagement (Low Risk),0.1342
+acc_5466-GCOOY,1,0.55,41.67,41.3,38.79,43.81,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.45
+acc_5473-IVWRT,0,0.0987,88.05,87.89,85.51,90.27,Standard Engagement (Low Risk),0.0987
+acc_5480-JGKMC,0,0.5071,48.72,47.61,45.03,50.19,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4071
+acc_5487-OSEMM,0,0.1029,44.49,46.76,43.86,49.66,Standard Engagement (Low Risk),0.1029
+acc_5494-NBQYF,0,0.0795,42.91,42.54,39.92,45.16,Standard Engagement (Low Risk),0.0795
+acc_5501-RFVZF,0,0.045,71.02,73.59,70.34,76.84,Standard Engagement (Low Risk),0.045
+acc_5508-ICMVG,1,0.2591,58.55,59.18,55.77,62.59,Standard Engagement (Low Risk),0.2591
+acc_5515-AHCGO,0,0.83,92.83,94.13,91.17,97.09,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 83% -> 24%),0.2417
+acc_5522-JZQRT,1,0.6964,21.2,20.97,18.28,23.66,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 70% -> 21%),0.2082
+acc_5529-XFUON,0,0.0881,78.69,76.1,73.19,79.01,Standard Engagement (Low Risk),0.0881
+acc_5536-QXXOT,1,0.2305,37.61,34.44,31.28,37.6,Standard Engagement (Low Risk),0.2305
+acc_5543-ODUCY,0,0.0797,97.41,96.66,94.02,99.3,Standard Engagement (Low Risk),0.0797
+acc_5550-FPUSN,0,0.2752,65.61,66.0,63.04,68.96,Standard Engagement (Low Risk),0.2752
+acc_5557-EVUPH,0,0.5164,38.77,38.64,35.99,41.29,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4164
+acc_5564-HUOYA,0,0.0627,47.55,46.24,43.74,48.74,Standard Engagement (Low Risk),0.0627
+acc_5571-RSIOW,0,0.0534,72.91,73.65,71.14,76.16,Standard Engagement (Low Risk),0.0534
+acc_5578-UAACZ,1,0.2978,89.06,87.34,83.7,90.98,Standard Engagement (Low Risk),0.2978
+acc_5585-MLWGQ,0,0.1397,64.86,61.66,57.81,65.51,Standard Engagement (Low Risk),0.1397
+acc_5592-YAWJD,1,0.045,87.79,89.54,86.4,92.68,Standard Engagement (Low Risk),0.045
+acc_5599-QXVSX,0,0.3905,82.42,82.13,78.37,85.89,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2905
+acc_5606-JZENB,0,0.1657,74.28,72.42,69.09,75.75,Standard Engagement (Low Risk),0.1657
+acc_5613-DRTQE,0,0.0669,35.48,32.83,28.96,36.7,Standard Engagement (Low Risk),0.0669
+acc_5620-HWRMY,0,0.2225,57.76,57.43,54.47,60.39,Standard Engagement (Low Risk),0.2225
+acc_5627-UAQAN,0,0.0692,65.28,64.66,60.95,68.37,Standard Engagement (Low Risk),0.0692
+acc_5634-KXZJD,0,0.1544,28.6,30.14,27.75,32.53,Standard Engagement (Low Risk),0.1544
+acc_5641-ZUZSI,0,0.4248,82.74,82.65,80.4,84.9,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3248
+acc_5648-LVRET,1,0.2504,118.22,118.75,116.43,121.07,Standard Engagement (Low Risk),0.2504
+acc_5655-AGQKZ,0,0.114,42.84,42.42,40.28,44.56,Standard Engagement (Low Risk),0.114
+acc_5662-KTVAU,0,0.1203,69.21,72.73,70.34,75.12,Standard Engagement (Low Risk),0.1203
+acc_5669-LUDHY,1,0.1428,57.99,62.21,59.16,65.26,Standard Engagement (Low Risk),0.1428
+acc_5676-EMBMT,0,0.208,25.22,25.4,23.0,27.8,Standard Engagement (Low Risk),0.208
+acc_5683-YVHXH,0,0.205,53.7,52.07,48.83,55.31,Standard Engagement (Low Risk),0.205
+acc_5690-IEYEX,0,0.1909,25.36,26.08,23.34,28.82,Standard Engagement (Low Risk),0.1909
+acc_5697-VKGVP,0,0.045,61.86,61.21,59.13,63.29,Standard Engagement (Low Risk),0.045
+acc_5704-NEVDT,0,0.5243,97.28,97.66,95.38,99.94,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4243
+acc_5711-KKJBZ,0,0.1183,46.67,44.69,41.58,47.8,Standard Engagement (Low Risk),0.1183
+acc_5718-BDSDJ,0,0.0924,37.99,36.81,34.03,39.59,Standard Engagement (Low Risk),0.0924
+acc_5725-GYNVQ,0,0.0955,82.89,78.98,75.02,82.94,Standard Engagement (Low Risk),0.0955
+acc_5732-BVLKG,0,0.1943,67.77,65.66,62.77,68.55,Standard Engagement (Low Risk),0.1943
+acc_5739-UYNAI,1,0.2478,91.12,90.07,87.81,92.33,Standard Engagement (Low Risk),0.2478
+acc_5746-GPHPX,0,0.045,62.59,64.75,62.36,67.14,Standard Engagement (Low Risk),0.045
+acc_5753-PCOHI,0,0.0877,71.66,75.19,72.05,78.33,Standard Engagement (Low Risk),0.0877
+acc_5760-IIWYH,1,0.2419,108.41,108.67,106.15,111.19,Standard Engagement (Low Risk),0.2419
+acc_5767-HVLIZ,0,0.0584,71.23,68.23,64.98,71.48,Standard Engagement (Low Risk),0.0584
+acc_5774-KOWYP,0,0.1174,54.03,52.41,49.37,55.45,Standard Engagement (Low Risk),0.1174
+acc_5781-BVZEZ,0,0.0574,51.64,51.89,48.83,54.95,Standard Engagement (Low Risk),0.0574
+acc_5788-LNUTT,1,0.213,73.39,71.52,69.44,73.6,Standard Engagement (Low Risk),0.213
+acc_5795-IEUTX,0,0.1968,57.95,59.2,56.09,62.31,Standard Engagement (Low Risk),0.1968
+acc_5802-MCAKJ,0,0.0909,54.86,54.87,52.37,57.37,Standard Engagement (Low Risk),0.0909
+acc_5809-XIVEO,0,0.1894,50.29,48.26,44.79,51.73,Standard Engagement (Low Risk),0.1894
+acc_5816-NJWGK,0,0.1302,73.96,76.37,72.62,80.12,Standard Engagement (Low Risk),0.1302
+acc_5823-WBOPQ,0,0.2388,50.42,48.25,45.8,50.7,Standard Engagement (Low Risk),0.2388
+acc_5830-CYCCV,0,0.1354,68.57,69.55,66.52,72.58,Standard Engagement (Low Risk),0.1354
+acc_5837-UPUWL,0,0.171,59.21,59.5,56.86,62.14,Standard Engagement (Low Risk),0.171
+acc_5844-RGTWM,1,0.1902,103.41,101.09,97.99,104.19,Standard Engagement (Low Risk),0.1902
+acc_5851-ONEWP,1,0.2326,58.94,58.9,56.03,61.77,Standard Engagement (Low Risk),0.2326
+acc_5858-ROOLD,0,0.2392,99.89,100.37,97.61,103.13,Standard Engagement (Low Risk),0.2392
+acc_5865-HQDMP,0,0.1359,66.29,66.17,63.45,68.89,Standard Engagement (Low Risk),0.1359
+acc_5872-JEVQY,0,0.3876,95.64,93.37,89.64,97.1,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2876
+acc_5879-LCMOA,0,0.1683,98.45,99.25,96.74,101.76,Standard Engagement (Low Risk),0.1683
+acc_5886-VUSVO,0,0.2045,41.54,42.89,39.87,45.91,Standard Engagement (Low Risk),0.2045
+acc_5893-UFICZ,0,0.2128,119.1,118.75,116.29,121.21,Standard Engagement (Low Risk),0.2128
+acc_5900-CLCMF,0,0.0565,54.24,55.11,52.92,57.3,Standard Engagement (Low Risk),0.0565
+acc_5907-UGDHX,1,0.2402,113.5,116.05,112.29,119.81,Standard Engagement (Low Risk),0.2402
+acc_5914-JXZBZ,0,0.1058,57.81,58.31,55.94,60.68,Standard Engagement (Low Risk),0.1058
+acc_5921-NLWMA,0,0.0925,71.27,70.18,67.92,72.44,Standard Engagement (Low Risk),0.0925
+acc_5928-GOLGX,0,0.2226,73.29,72.01,68.61,75.41,Standard Engagement (Low Risk),0.2226
+acc_5935-DKXPE,1,0.1072,49.48,48.05,45.43,50.67,Standard Engagement (Low Risk),0.1072
+acc_5942-GTVLF,1,0.0929,76.34,75.21,71.93,78.49,Standard Engagement (Low Risk),0.0929
+acc_5949-HPHVK,0,0.2768,70.51,71.77,69.55,73.99,Standard Engagement (Low Risk),0.2768
+acc_5956-UPEHT,0,0.1252,58.0,57.71,54.62,60.8,Standard Engagement (Low Risk),0.1252
+acc_5963-VIMDI,0,0.1833,119.59,118.75,115.45,122.05,Standard Engagement (Low Risk),0.1833
+acc_5970-QOSYT,0,0.1499,118.23,118.75,115.72,121.78,Standard Engagement (Low Risk),0.1499
+acc_5977-MUIDK,0,0.0665,89.78,89.9,86.92,92.88,Standard Engagement (Low Risk),0.0665
+acc_5984-GLPMH,1,0.2894,96.94,97.32,94.93,99.71,Standard Engagement (Low Risk),0.2894
+acc_5991-CRFXH,1,0.4271,96.77,97.12,95.04,99.2,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3271
+acc_5998-JHFXZ,0,0.3164,65.16,66.82,63.15,70.49,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2164
+acc_6005-FGAMT,0,0.045,85.09,85.07,82.82,87.32,Standard Engagement (Low Risk),0.045
+acc_6012-OEESD,1,0.045,64.12,64.71,61.4,68.02,Standard Engagement (Low Risk),0.045
+acc_6019-FGKEK,0,0.1714,54.63,52.43,49.11,55.75,Standard Engagement (Low Risk),0.1714
+acc_6026-EQNFU,0,0.2576,90.44,89.81,86.5,93.12,Standard Engagement (Low Risk),0.2576
+acc_6033-ESWGN,0,0.5837,25.17,24.89,21.15,28.63,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4837
+acc_6040-OVUUZ,0,0.5467,103.66,101.36,97.61,105.11,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4467
+acc_6047-UGKVF,0,0.2252,77.86,79.29,76.44,82.14,Standard Engagement (Low Risk),0.2252
+acc_6054-FLZGJ,0,0.2558,31.13,33.21,29.97,36.45,Standard Engagement (Low Risk),0.2558
+acc_6061-PBXGY,0,0.4544,89.26,87.51,84.07,90.95,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3544
+acc_6068-SYUXQ,0,0.3467,56.54,55.66,52.8,58.52,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2467
+acc_6075-WBVVH,0,0.2943,93.31,93.22,90.64,95.8,Standard Engagement (Low Risk),0.2943
+acc_6082-TYBNG,0,0.045,51.7,52.78,49.39,56.17,Standard Engagement (Low Risk),0.045
+acc_6089-GLYVZ,0,0.2136,39.92,39.18,35.84,42.52,Standard Engagement (Low Risk),0.2136
+acc_6096-WKZZP,0,0.4642,45.35,46.44,43.03,49.85,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3642
+acc_6103-DWWPU,1,0.476,59.5,59.54,57.1,61.98,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.376
+acc_6110-DGNUX,0,0.2992,69.4,71.23,67.81,74.65,Standard Engagement (Low Risk),0.2992
+acc_6117-RSWTA,0,0.1658,89.26,86.96,83.92,90.0,Standard Engagement (Low Risk),0.1658
+acc_6124-VOUFL,0,0.3431,89.02,88.39,85.32,91.46,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2431
+acc_6131-GXKXV,0,0.2438,29.88,29.25,26.2,32.3,Standard Engagement (Low Risk),0.2438
+acc_6138-AYAUN,0,0.1046,62.64,65.45,61.7,69.2,Standard Engagement (Low Risk),0.1046
+acc_6145-MYWZC,0,0.2053,93.28,94.57,91.11,98.03,Standard Engagement (Low Risk),0.2053
+acc_6152-ZZJZH,0,0.045,60.43,61.17,58.63,63.71,Standard Engagement (Low Risk),0.045
+acc_6159-YFFIO,0,0.1672,30.61,29.62,26.33,32.91,Standard Engagement (Low Risk),0.1672
+acc_6166-PNZLQ,0,0.6621,27.25,25.61,22.62,28.6,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 66% -> 18%),0.1816
+acc_6173-DJXPL,0,0.1879,62.49,64.14,60.29,67.99,Standard Engagement (Low Risk),0.1879
+acc_6180-TJMLI,1,0.5166,74.61,73.47,71.21,75.73,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4166
+acc_6187-WSKRC,0,0.2931,64.25,62.57,60.01,65.13,Standard Engagement (Low Risk),0.2931
+acc_6194-UNLTN,1,0.576,84.99,87.59,84.21,90.97,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.476
+acc_6201-XVHVW,0,0.4335,74.86,73.49,69.9,77.08,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3335
+acc_6208-UXXRA,0,0.2128,54.16,57.23,53.69,60.77,Standard Engagement (Low Risk),0.2128
+acc_6215-MWONU,0,0.5036,85.16,81.43,77.92,84.94,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4036
+acc_6222-BOTYZ,0,0.059,18.48,20.0,16.6,23.4,Standard Engagement (Low Risk),0.059
+acc_6229-YXDKS,0,0.2861,99.89,97.43,93.57,101.29,Standard Engagement (Low Risk),0.2861
+acc_6236-OGKQB,0,0.045,59.25,58.04,54.64,61.44,Standard Engagement (Low Risk),0.045
+acc_6243-WEMBR,1,0.4212,85.05,84.71,82.4,87.02,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3212
+acc_6250-JHXRB,1,0.4969,69.0,69.77,66.97,72.57,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.3969
+acc_6257-YQMVN,0,0.1828,48.28,48.56,44.58,52.54,Standard Engagement (Low Risk),0.1828
+acc_6264-FKLGK,1,0.4268,53.62,54.18,51.82,56.54,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3268
+acc_6271-PDAIO,0,0.4221,81.45,81.55,78.88,84.22,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3221
+acc_6278-OUNBN,0,0.0487,93.17,94.86,92.51,97.21,Standard Engagement (Low Risk),0.0487
+acc_6285-YKUQN,0,0.1726,44.57,45.41,42.44,48.38,Standard Engagement (Low Risk),0.1726
+acc_6292-MONNY,0,0.2027,71.41,72.93,70.84,75.02,Standard Engagement (Low Risk),0.2027
+acc_6299-HTBEF,0,0.126,52.84,53.14,50.19,56.09,Standard Engagement (Low Risk),0.126
+acc_6306-DWUYC,1,0.3814,82.13,81.79,78.03,85.55,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2814
+acc_6313-BKHRH,1,0.377,34.0,33.87,31.64,36.1,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.277
+acc_6320-GBDCD,0,0.2435,109.11,109.58,107.05,112.11,Standard Engagement (Low Risk),0.2435
+acc_6327-FTCTD,0,0.045,50.97,50.94,47.42,54.46,Standard Engagement (Low Risk),0.045
+acc_6334-FYTIL,0,0.0935,60.4,62.63,59.65,65.61,Standard Engagement (Low Risk),0.0935
+acc_6341-HTEVR,0,0.2249,33.39,31.16,28.16,34.16,Standard Engagement (Low Risk),0.2249
+acc_6348-VABXI,0,0.236,61.96,65.73,62.07,69.39,Standard Engagement (Low Risk),0.236
+acc_6355-GKKYF,0,0.1173,82.93,81.03,77.73,84.33,Standard Engagement (Low Risk),0.1173
+acc_6362-UNUJZ,0,0.7208,63.39,61.93,59.49,64.37,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 72% -> 29%),0.293
+acc_6369-HRRPI,0,0.3355,78.85,77.26,74.99,79.53,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2355
+acc_6376-UBUMR,0,0.242,21.18,20.0,17.47,22.53,Standard Engagement (Low Risk),0.242
+acc_6383-XMJJA,0,0.2134,75.03,74.11,70.63,77.59,Standard Engagement (Low Risk),0.2134
+acc_6390-FAAFM,0,0.2298,72.08,77.2,73.84,80.56,Standard Engagement (Low Risk),0.2298
+acc_6397-AXDHR,1,0.1294,24.51,25.86,22.6,29.12,Standard Engagement (Low Risk),0.1294
+acc_6404-UUIFZ,0,0.1284,96.13,96.54,93.84,99.24,Standard Engagement (Low Risk),0.1284
+acc_6411-IZHVX,0,0.0859,70.9,72.32,70.14,74.5,Standard Engagement (Low Risk),0.0859
+acc_6418-OIYUZ,0,0.3499,72.16,71.54,67.66,75.42,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2499
+acc_6425-QEOVH,0,0.2326,62.47,61.55,58.93,64.17,Standard Engagement (Low Risk),0.2326
+acc_6432-VUSIM,0,0.5673,54.2,55.37,53.18,57.56,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4673
+acc_6439-TBCQJ,0,0.1945,59.89,58.91,56.5,61.32,Standard Engagement (Low Risk),0.1945
+acc_6446-SHXAR,0,0.151,84.22,83.48,81.35,85.61,Standard Engagement (Low Risk),0.151
+acc_6453-PYEMT,0,0.1665,61.46,59.89,57.22,62.56,Standard Engagement (Low Risk),0.1665
+acc_6460-FQZYU,0,0.4813,87.13,85.22,82.4,88.04,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3813
+acc_6467-GRQUW,0,0.5651,51.14,51.49,48.78,54.2,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4651
+acc_6474-XZVYG,0,0.5456,29.48,28.7,24.98,32.42,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4456
+acc_6481-ZLYMQ,0,0.1345,56.67,55.77,51.84,59.7,Standard Engagement (Low Risk),0.1345
+acc_6488-BCGDN,0,0.1066,68.59,67.88,65.46,70.3,Standard Engagement (Low Risk),0.1066
+acc_6495-YGMWX,0,0.3293,62.83,65.48,62.58,68.38,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2293
+acc_6502-LJTRT,0,0.097,48.6,48.73,45.67,51.79,Standard Engagement (Low Risk),0.097
+acc_6509-EJSKN,1,0.3266,86.62,86.33,83.44,89.22,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2266
+acc_6516-PLVZB,0,0.1185,83.62,83.68,80.43,86.93,Standard Engagement (Low Risk),0.1185
+acc_6523-CWTAE,1,0.2304,53.81,54.68,50.93,58.43,Standard Engagement (Low Risk),0.2304
+acc_6530-XIHSP,1,0.5942,100.39,101.87,98.84,104.9,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4942
+acc_6537-PTNDB,0,0.1184,40.06,40.59,38.33,42.85,Standard Engagement (Low Risk),0.1184
+acc_6544-PERAA,1,0.6053,103.46,101.58,98.52,104.64,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 61% -> 19%),0.188
+acc_6551-DRHQX,0,0.0483,96.58,96.38,94.31,98.45,Standard Engagement (Low Risk),0.0483
+acc_6558-LIQXU,0,0.4333,59.6,62.02,59.01,65.03,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3333
+acc_6565-DIWIC,0,0.045,52.28,51.66,48.48,54.84,Standard Engagement (Low Risk),0.045
+acc_6572-WVWUC,0,0.045,42.37,41.07,37.57,44.57,Standard Engagement (Low Risk),0.045
+acc_6579-ETYYK,0,0.0804,67.22,71.33,67.86,74.8,Standard Engagement (Low Risk),0.0804
+acc_6586-LTFEZ,0,0.5011,68.34,67.37,64.52,70.22,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4011
+acc_6593-NKQNX,0,0.1616,82.93,84.66,81.93,87.39,Standard Engagement (Low Risk),0.1616
+acc_6600-CKQNF,1,0.3608,30.41,30.5,27.67,33.33,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2608
+acc_6607-SHPGO,0,0.3048,83.05,85.43,82.04,88.82,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2048
+acc_6614-REVTR,0,0.045,43.66,42.02,39.15,44.89,Standard Engagement (Low Risk),0.045
+acc_6621-ACKIH,1,0.6015,89.4,89.37,85.76,92.98,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 60% -> 21%),0.2085
+acc_6628-TLIWJ,0,0.1299,92.24,94.45,91.8,97.1,Standard Engagement (Low Risk),0.1299
+acc_6635-IBLVZ,0,0.1543,53.83,54.29,50.6,57.98,Standard Engagement (Low Risk),0.1543
+acc_6642-LKLCQ,1,0.2868,55.87,53.62,49.64,57.6,Standard Engagement (Low Risk),0.2868
+acc_6649-FTCIS,0,0.1701,94.18,94.13,90.85,97.41,Standard Engagement (Low Risk),0.1701
+acc_6656-HITTK,0,0.0641,86.36,85.19,82.14,88.24,Standard Engagement (Low Risk),0.0641
+acc_6663-CUFKU,0,0.1678,65.22,63.45,61.31,65.59,Standard Engagement (Low Risk),0.1678
+acc_6670-EKZHD,0,0.4831,48.3,49.27,47.1,51.44,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3831
+acc_6677-DUKER,1,0.401,71.9,72.16,68.61,75.71,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.301
+acc_6684-JFICM,0,0.2077,83.24,80.47,77.28,83.66,Standard Engagement (Low Risk),0.2077
+acc_6691-VGMNC,0,0.045,63.44,68.6,64.9,72.3,Standard Engagement (Low Risk),0.045
+acc_6698-BKUVT,1,0.3278,80.9,79.78,77.56,82.0,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2278
+acc_6705-MRRBI,0,0.0835,48.28,49.8,47.2,52.4,Standard Engagement (Low Risk),0.0835
+acc_6712-SBHGP,0,0.1583,25.43,26.24,23.72,28.76,Standard Engagement (Low Risk),0.1583
+acc_6719-TPPYY,0,0.0577,85.26,85.23,81.65,88.81,Standard Engagement (Low Risk),0.0577
+acc_6726-AVBHE,0,0.0642,20.21,20.0,17.3,22.7,Standard Engagement (Low Risk),0.0642
+acc_6733-LIJDU,0,0.1268,74.05,76.92,73.27,80.57,Standard Engagement (Low Risk),0.1268
+acc_6740-RLWEZ,1,0.8458,73.29,74.55,71.58,77.52,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 85% -> 28%),0.2816
+acc_6747-UQFCL,0,0.416,62.18,61.21,57.59,64.83,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.316
+acc_6754-GJNMR,1,0.1741,62.01,63.67,60.94,66.4,Standard Engagement (Low Risk),0.1741
+acc_6761-BHNAG,0,0.3404,80.67,79.19,76.85,81.53,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2404
+acc_6768-WWYYC,0,0.0713,21.67,20.0,16.36,23.64,Standard Engagement (Low Risk),0.0713
+acc_6775-JQFHN,0,0.4622,63.74,66.84,64.18,69.5,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3622
+acc_6782-JAHZQ,0,0.0473,87.27,88.31,84.98,91.64,Standard Engagement (Low Risk),0.0473
+acc_6789-EGYEW,0,0.0797,45.87,45.74,42.81,48.67,Standard Engagement (Low Risk),0.0797
+acc_6796-QXTYP,0,0.3915,88.32,89.08,86.76,91.4,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2915
+acc_6803-EYEHR,0,0.3954,86.82,86.44,84.19,88.69,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2954
+acc_6810-TCXBA,0,0.0721,66.45,65.86,63.56,68.16,Standard Engagement (Low Risk),0.0721
+acc_6817-OUXKK,1,0.841,94.22,95.8,93.73,97.87,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 84% -> 24%),0.2429
+acc_6824-VLQOR,0,0.1116,55.18,52.17,49.94,54.4,Standard Engagement (Low Risk),0.1116
+acc_6831-WGSVT,0,0.0469,67.02,69.29,67.07,71.51,Standard Engagement (Low Risk),0.0469
+acc_6838-UHKHC,0,0.0638,57.73,55.01,52.89,57.13,Standard Engagement (Low Risk),0.0638
+acc_6845-FNGTK,0,0.045,63.24,64.93,61.75,68.11,Standard Engagement (Low Risk),0.045
+acc_6852-RUKUP,0,0.1712,89.98,87.47,83.77,91.17,Standard Engagement (Low Risk),0.1712
+acc_6859-RBGWK,0,0.1708,69.01,70.33,66.52,74.14,Standard Engagement (Low Risk),0.1708
+acc_6866-JDSAO,1,0.3858,104.11,105.16,101.34,108.98,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2858
+acc_6873-IJIEF,0,0.3789,86.24,86.96,83.45,90.47,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2789
+acc_6880-EUXRH,0,0.3988,102.78,101.94,99.48,104.4,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2988
+acc_6887-BOKSO,0,0.098,102.31,102.78,99.41,106.15,Standard Engagement (Low Risk),0.098
+acc_6894-OEVJG,0,0.045,55.76,58.38,54.39,62.37,Standard Engagement (Low Risk),0.045
+acc_6901-QGJJB,1,0.2448,89.06,89.73,85.8,93.66,Standard Engagement (Low Risk),0.2448
+acc_6908-QWTSL,0,0.1511,52.63,51.91,49.28,54.54,Standard Engagement (Low Risk),0.1511
+acc_6915-AGSCH,0,0.4557,64.58,67.25,65.02,69.48,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3557
+acc_6922-WPPRB,0,0.2405,90.22,88.72,86.29,91.15,Standard Engagement (Low Risk),0.2405
+acc_6929-MOAYU,0,0.3855,69.53,70.54,67.93,73.15,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2855
+acc_6936-EHSOG,0,0.269,64.33,61.04,58.3,63.78,Standard Engagement (Low Risk),0.269
+acc_6943-SBSUP,0,0.045,81.58,82.27,79.72,84.82,Standard Engagement (Low Risk),0.045
+acc_6950-HVTOT,1,0.3129,104.65,104.46,101.85,107.07,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2129
+acc_6957-ZTFSO,0,0.1757,90.5,88.52,85.42,91.62,Standard Engagement (Low Risk),0.1757
+acc_6964-HNRYU,0,0.1935,33.42,34.62,32.21,37.03,Standard Engagement (Low Risk),0.1935
+acc_6971-FJSXC,0,0.3906,28.85,28.29,24.66,31.92,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2906
+acc_6978-QNSME,0,0.2296,47.82,48.02,45.25,50.79,Standard Engagement (Low Risk),0.2296
+acc_6985-CRJVO,0,0.3033,85.16,83.34,79.57,87.11,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2033
+acc_6992-BIDBT,0,0.0943,34.58,36.18,33.12,39.24,Standard Engagement (Low Risk),0.0943
+acc_6999-THIYH,1,0.3443,68.45,65.14,61.41,68.87,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2443
+acc_7006-VMCWW,1,0.6939,67.06,67.69,65.56,69.82,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 69% -> 26%),0.2619
+acc_7013-IPEXZ,0,0.1154,58.45,59.57,55.68,63.46,Standard Engagement (Low Risk),0.1154
+acc_7020-UJTKF,1,0.537,97.91,97.92,95.82,100.02,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.437
+acc_7027-SLMDK,1,0.3659,80.86,78.85,76.5,81.2,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2659
+acc_7034-QNBOE,0,0.1796,34.59,34.36,31.42,37.3,Standard Engagement (Low Risk),0.1796
+acc_7041-LAZEC,0,0.4933,66.82,67.29,64.76,69.82,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.3933
+acc_7048-MLDOZ,1,0.3088,52.63,49.7,47.11,52.29,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2088
+acc_7055-PMMUM,0,0.1466,67.65,68.95,65.85,72.05,Standard Engagement (Low Risk),0.1466
+acc_7062-HIWAS,0,0.1987,84.95,83.4,80.54,86.26,Standard Engagement (Low Risk),0.1987
+acc_7069-VMZIZ,0,0.088,58.19,61.84,58.28,65.4,Standard Engagement (Low Risk),0.088
+acc_7076-CKGMQ,0,0.1622,74.4,75.59,72.71,78.47,Standard Engagement (Low Risk),0.1622
+acc_7083-CHRNS,1,0.4976,109.59,108.84,106.01,111.67,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.3976
+acc_7090-THNOU,0,0.2353,68.12,66.67,63.54,69.8,Standard Engagement (Low Risk),0.2353
+acc_7097-KNILC,0,0.4675,91.31,93.12,89.45,96.79,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3675
+acc_7104-NHPPU,0,0.2344,122.0,118.75,114.91,122.59,Standard Engagement (Low Risk),0.2344
+acc_7111-XMYGV,1,0.4598,32.15,31.56,28.15,34.97,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3598
+acc_7118-DQNWH,0,0.045,43.61,41.81,39.72,43.9,Standard Engagement (Low Risk),0.045
+acc_7125-HBTGT,1,0.2978,66.02,66.51,64.19,68.83,Standard Engagement (Low Risk),0.2978
+acc_7132-UCBSP,0,0.0864,118.16,118.75,116.14,121.36,Standard Engagement (Low Risk),0.0864
+acc_7139-LKRYO,0,0.2596,71.47,67.62,64.7,70.54,Standard Engagement (Low Risk),0.2596
+acc_7146-JYCBF,0,0.2923,44.5,46.07,42.44,49.7,Standard Engagement (Low Risk),0.2923
+acc_7153-YPIIN,0,0.2282,60.72,63.22,60.02,66.42,Standard Engagement (Low Risk),0.2282
+acc_7160-CRQHU,1,0.3032,63.23,61.74,58.22,65.26,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2032
+acc_7167-WIVKQ,0,0.6295,92.33,91.62,89.36,93.88,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 63% -> 24%),0.2426
+acc_7174-NRGYT,0,0.0679,97.17,96.55,94.04,99.06,Standard Engagement (Low Risk),0.0679
+acc_7181-OVAMI,0,0.2781,54.03,55.31,52.38,58.24,Standard Engagement (Low Risk),0.2781
+acc_7188-CHFCV,1,0.4464,42.61,42.51,39.12,45.9,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3464
+acc_7195-XAZPZ,0,0.1676,77.69,75.56,72.43,78.69,Standard Engagement (Low Risk),0.1676
+acc_7202-IWISZ,1,0.4764,116.26,118.07,114.95,121.19,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3764
+acc_7209-ZUMYD,0,0.3442,55.81,55.34,51.56,59.12,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2442
+acc_7216-MODEK,0,0.2977,93.34,91.87,88.89,94.85,Standard Engagement (Low Risk),0.2977
+acc_7223-LIYOQ,0,0.045,93.97,92.98,90.59,95.37,Standard Engagement (Low Risk),0.045
+acc_7230-AGSTR,0,0.0533,64.94,67.62,65.13,70.11,Standard Engagement (Low Risk),0.0533
+acc_7237-TYWQD,0,0.0956,19.38,20.0,17.56,22.44,Standard Engagement (Low Risk),0.0956
+acc_7244-IBTRN,0,0.4603,88.17,88.82,85.77,91.87,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3603
+acc_7251-KGREK,0,0.4572,72.86,71.84,68.47,75.21,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3572
+acc_7258-OPDAB,1,0.2251,46.2,43.04,40.14,45.94,Standard Engagement (Low Risk),0.2251
+acc_7265-ANIEN,1,0.1277,92.81,92.57,90.28,94.86,Standard Engagement (Low Risk),0.1277
+acc_7272-DBFWG,0,0.3525,88.32,87.01,83.14,90.88,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2525
+acc_7279-JXGDH,0,0.0792,86.18,89.08,86.34,91.82,Standard Engagement (Low Risk),0.0792
+acc_7286-LQKGH,0,0.2239,85.48,86.42,83.05,89.79,Standard Engagement (Low Risk),0.2239
+acc_7293-YFRTJ,0,0.1173,32.5,32.56,30.14,34.98,Standard Engagement (Low Risk),0.1173
+acc_7300-QKXHO,0,0.1817,99.77,100.1,96.68,103.52,Standard Engagement (Low Risk),0.1817
+acc_7307-YJTVJ,0,0.1301,22.29,20.0,17.15,22.85,Standard Engagement (Low Risk),0.1301
+acc_7314-DACLL,0,0.0946,42.65,35.95,31.97,39.93,Standard Engagement (Low Risk),0.0946
+acc_7321-ZAZWF,0,0.1528,60.74,60.54,56.78,64.3,Standard Engagement (Low Risk),0.1528
+acc_7328-EGNQO,0,0.2312,106.69,107.21,103.86,110.56,Standard Engagement (Low Risk),0.2312
+acc_7335-NKDTV,1,0.2029,73.73,73.95,71.86,76.04,Standard Engagement (Low Risk),0.2029
+acc_7342-RRTJQ,0,0.2508,105.79,101.75,98.22,105.28,Standard Engagement (Low Risk),0.2508
+acc_7349-DANTR,0,0.3473,118.99,118.75,115.42,122.08,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2473
+acc_7356-AISGE,0,0.1286,48.32,46.66,44.43,48.89,Standard Engagement (Low Risk),0.1286
+acc_7363-ZXAMP,0,0.0981,42.56,43.31,40.92,45.7,Standard Engagement (Low Risk),0.0981
+acc_7370-IICCJ,0,0.1453,62.1,62.25,59.59,64.91,Standard Engagement (Low Risk),0.1453
+acc_7377-CNDQK,0,0.1877,65.94,64.57,61.09,68.05,Standard Engagement (Low Risk),0.1877
+acc_7384-RIHFT,0,0.2207,64.35,65.08,62.39,67.77,Standard Engagement (Low Risk),0.2207
+acc_7391-REMAY,0,0.5006,50.94,53.03,49.82,56.24,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4006
+acc_7398-JNVWD,0,0.6676,60.51,61.92,58.48,65.36,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 67% -> 33%),0.3284
+acc_7405-JRPRR,0,0.1016,100.8,101.19,98.92,103.46,Standard Engagement (Low Risk),0.1016
+acc_7412-CDTJE,0,0.6218,100.22,99.04,95.24,102.84,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 62% -> 22%),0.2164
+acc_7419-JHDHR,0,0.1589,44.27,45.46,43.37,47.55,Standard Engagement (Low Risk),0.1589
+acc_7426-LFWKT,0,0.049,59.31,58.72,56.42,61.02,Standard Engagement (Low Risk),0.049
+acc_7433-VUCRR,1,0.4499,115.32,118.75,115.19,122.31,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3499
+acc_7440-KSKFT,0,0.045,84.22,81.69,78.58,84.8,Standard Engagement (Low Risk),0.045
+acc_7447-YJEKH,0,0.3838,48.37,49.46,45.75,53.17,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2838
+acc_7454-QCQMG,0,0.1597,45.92,43.73,40.98,46.48,Standard Engagement (Low Risk),0.1597
+acc_7461-BEIQW,1,0.251,18.88,20.0,16.3,23.7,Standard Engagement (Low Risk),0.251
+acc_7468-SMPTK,0,0.1902,62.5,65.9,62.16,69.64,Standard Engagement (Low Risk),0.1902
+acc_7475-ZHVLG,0,0.3048,69.84,69.16,66.56,71.76,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2048
+acc_7482-OVTWW,1,0.6234,79.65,81.63,77.94,85.32,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 62% -> 27%),0.2652
+acc_7489-CYULK,0,0.1448,108.3,110.14,107.16,113.12,Standard Engagement (Low Risk),0.1448
+acc_7496-GJFJE,1,0.7063,69.09,67.67,63.82,71.52,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 71% -> 22%),0.2248
+acc_7503-DZYSJ,1,0.2227,23.12,25.34,22.34,28.34,Standard Engagement (Low Risk),0.2227
+acc_7510-WJHQC,1,0.3693,51.18,53.47,51.31,55.63,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2693
+acc_7517-GNNQD,0,0.2374,90.61,92.18,88.77,95.59,Standard Engagement (Low Risk),0.2374
+acc_7524-OAXQI,1,0.5753,95.29,95.4,92.26,98.54,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4753
+acc_7531-CMDJV,0,0.045,73.63,72.21,69.83,74.59,Standard Engagement (Low Risk),0.045
+acc_7538-UMGRJ,1,0.6688,54.36,55.28,51.52,59.04,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 67% -> 17%),0.1688
+acc_7545-AKZQZ,0,0.2778,93.21,93.11,89.46,96.76,Standard Engagement (Low Risk),0.2778
+acc_7552-MQZQM,0,0.0907,96.36,93.89,90.75,97.03,Standard Engagement (Low Risk),0.0907
+acc_7559-NIWJY,0,0.1574,55.18,54.56,51.64,57.48,Standard Engagement (Low Risk),0.1574
+acc_7566-KIZOH,0,0.3159,46.02,49.06,46.18,51.94,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2159
+acc_7573-FEITJ,1,0.3131,62.33,64.17,60.42,67.92,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2131
+acc_7580-PPHUV,1,0.1282,67.12,69.12,65.5,72.74,Standard Engagement (Low Risk),0.1282
+acc_7587-YHGRI,0,0.1883,48.55,48.73,44.88,52.58,Standard Engagement (Low Risk),0.1883
+acc_7594-XDZJK,0,0.3252,21.77,20.0,17.78,22.22,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2252
+acc_7601-ESGDV,1,0.1529,40.61,40.91,38.21,43.61,Standard Engagement (Low Risk),0.1529
+acc_7608-EYERC,0,0.045,32.96,31.19,28.68,33.7,Standard Engagement (Low Risk),0.045
+acc_7615-PVWYH,0,0.0466,66.12,65.46,62.07,68.85,Standard Engagement (Low Risk),0.0466
+acc_7622-IAACY,0,0.3942,44.49,44.34,41.59,47.09,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2942
+acc_7629-GFPIU,0,0.1027,70.46,71.92,68.75,75.09,Standard Engagement (Low Risk),0.1027
+acc_7636-QEMHJ,0,0.2871,56.15,56.71,52.92,60.5,Standard Engagement (Low Risk),0.2871
+acc_7643-WNFSP,0,0.3119,92.34,90.83,88.33,93.33,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2119
+acc_7650-AIWTD,0,0.177,26.96,27.15,23.28,31.02,Standard Engagement (Low Risk),0.177
+acc_7657-LXBZD,0,0.1005,75.69,77.26,73.94,80.58,Standard Engagement (Low Risk),0.1005
+acc_7664-YWHMX,0,0.1423,85.1,84.61,81.43,87.79,Standard Engagement (Low Risk),0.1423
+acc_7671-AEXTE,0,0.1554,66.25,62.6,59.57,65.63,Standard Engagement (Low Risk),0.1554
+acc_7678-QMDOO,1,0.543,101.86,100.42,96.85,103.99,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.443
+acc_7685-ISROW,1,0.2489,112.95,114.13,110.9,117.36,Standard Engagement (Low Risk),0.2489
+acc_7692-HPXQI,0,0.1889,58.29,57.47,54.92,60.02,Standard Engagement (Low Risk),0.1889
+acc_7699-UQVNT,0,0.15,18.0,20.0,17.44,22.56,Standard Engagement (Low Risk),0.15
+acc_7706-NTAHC,0,0.2104,71.97,75.75,72.74,78.76,Standard Engagement (Low Risk),0.2104
+acc_7713-HQABN,0,0.0513,23.07,24.59,21.27,27.91,Standard Engagement (Low Risk),0.0513
+acc_7720-KBJEP,0,0.045,23.12,21.91,19.55,24.27,Standard Engagement (Low Risk),0.045
+acc_7727-MEKUU,0,0.3752,105.56,106.7,103.75,109.65,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2752
+acc_7734-XSDNK,1,0.4805,47.18,50.03,46.31,53.75,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3805
+acc_7741-RFCGY,1,0.342,82.43,81.02,77.69,84.35,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.242
+acc_7748-ONSTQ,0,0.1423,79.14,78.84,76.41,81.27,Standard Engagement (Low Risk),0.1423
+acc_7755-KRYFU,0,0.2771,37.08,39.61,35.91,43.31,Standard Engagement (Low Risk),0.2771
+acc_7762-RXDPQ,0,0.44,42.72,40.23,36.71,43.75,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.34
+acc_7769-OEOYG,0,0.0625,60.26,59.81,56.62,63.0,Standard Engagement (Low Risk),0.0625
+acc_7776-BJYJK,0,0.045,77.43,78.22,74.45,81.99,Standard Engagement (Low Risk),0.045
+acc_7783-JVTQM,0,0.1906,31.03,30.69,27.79,33.59,Standard Engagement (Low Risk),0.1906
+acc_7790-CZQGI,0,0.0553,25.01,25.55,23.44,27.66,Standard Engagement (Low Risk),0.0553
+acc_7797-EUUIM,0,0.1224,90.39,90.14,87.82,92.46,Standard Engagement (Low Risk),0.1224
+acc_7804-MZJXJ,0,0.3113,47.05,46.97,44.69,49.25,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2113
+acc_7811-ZTSGC,0,0.1172,56.75,58.49,56.13,60.85,Standard Engagement (Low Risk),0.1172
+acc_7818-NPQTV,1,0.2355,65.56,63.78,61.45,66.11,Standard Engagement (Low Risk),0.2355
+acc_7825-ICBLM,0,0.2792,101.72,102.72,100.53,104.91,Standard Engagement (Low Risk),0.2792
+acc_7832-QIFSQ,0,0.045,38.53,38.14,35.67,40.61,Standard Engagement (Low Risk),0.045
+acc_7839-BAWRX,0,0.2369,80.92,83.12,79.23,87.01,Standard Engagement (Low Risk),0.2369
+acc_7846-WIREJ,0,0.1692,86.34,84.77,82.39,87.15,Standard Engagement (Low Risk),0.1692
+acc_7853-BLXUP,0,0.0485,74.43,74.04,71.76,76.32,Standard Engagement (Low Risk),0.0485
+acc_7860-SHVPP,0,0.2685,64.58,67.19,63.64,70.74,Standard Engagement (Low Risk),0.2685
+acc_7867-GAMWB,1,0.4321,66.08,65.96,62.77,69.15,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3321
+acc_7874-RSBQK,0,0.2149,43.67,45.71,43.48,47.94,Standard Engagement (Low Risk),0.2149
+acc_7881-PWOZB,0,0.272,38.26,36.71,33.42,40.0,Standard Engagement (Low Risk),0.272
+acc_7888-QOVKT,0,0.1247,19.86,20.0,16.79,23.21,Standard Engagement (Low Risk),0.1247
+acc_7895-FWIKN,0,0.5754,29.95,30.46,28.39,32.53,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4754
+acc_7902-YQPTD,0,0.0729,34.69,34.07,30.1,38.04,Standard Engagement (Low Risk),0.0729
+acc_7909-SHRDZ,0,0.1891,38.15,36.02,33.92,38.12,Standard Engagement (Low Risk),0.1891
+acc_7916-ETSQA,0,0.045,112.0,110.52,107.06,113.98,Standard Engagement (Low Risk),0.045
+acc_7923-MRWFX,0,0.35,43.83,46.17,42.16,50.18,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.25
+acc_7930-BXOSQ,1,0.2063,95.5,94.82,92.74,96.9,Standard Engagement (Low Risk),0.2063
+acc_7937-PBBAE,0,0.1687,81.66,82.58,78.95,86.21,Standard Engagement (Low Risk),0.1687
+acc_7944-HMEYA,0,0.1913,96.67,97.62,93.65,101.59,Standard Engagement (Low Risk),0.1913
+acc_7951-RBOIO,0,0.681,39.77,40.49,36.85,44.13,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 68% -> 24%),0.2446
+acc_7958-RJFIU,0,0.3717,91.17,92.18,88.45,95.91,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2717
+acc_7965-WSAFI,0,0.1869,54.19,51.02,47.4,54.64,Standard Engagement (Low Risk),0.1869
+acc_7972-JKQYG,1,0.3044,47.47,49.07,45.34,52.8,Automated Loyalty Perk Notification (Simulated Risk: 30% -> 20%),0.2044
+acc_7979-LVRCS,0,0.3688,98.52,97.32,94.64,100.0,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2688
+acc_7986-BHOPJ,1,0.3995,96.41,98.57,95.4,101.74,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2995
+acc_7993-VSZCT,0,0.1471,65.04,63.6,60.85,66.35,Standard Engagement (Low Risk),0.1471
+acc_8000-FTMYX,0,0.5791,45.25,45.94,43.21,48.67,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4791
+acc_8007-RWVLG,0,0.1019,25.61,22.85,19.7,26.0,Standard Engagement (Low Risk),0.1019
+acc_8014-FQSVA,0,0.045,64.33,64.52,61.78,67.26,Standard Engagement (Low Risk),0.045
+acc_8021-EJSOV,1,0.1868,63.48,63.85,61.52,66.18,Standard Engagement (Low Risk),0.1868
+acc_8028-BFWZZ,0,0.5041,69.78,71.64,68.56,74.72,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4041
+acc_8035-FNSLJ,0,0.2059,70.84,73.11,69.15,77.07,Standard Engagement (Low Risk),0.2059
+acc_8042-UAKAD,0,0.1111,72.09,72.6,70.25,74.95,Standard Engagement (Low Risk),0.1111
+acc_8049-JOTPX,0,0.0482,55.16,54.27,50.55,57.99,Standard Engagement (Low Risk),0.0482
+acc_8056-EWSJD,0,0.1926,48.04,46.95,43.95,49.95,Standard Engagement (Low Risk),0.1926
+acc_8063-WOYNM,0,0.2597,76.81,72.31,68.67,75.95,Standard Engagement (Low Risk),0.2597
+acc_8070-KHTMQ,0,0.1674,42.07,41.26,38.21,44.31,Standard Engagement (Low Risk),0.1674
+acc_8077-TFNSS,0,0.045,87.48,86.82,83.57,90.07,Standard Engagement (Low Risk),0.045
+acc_8084-EHPSZ,0,0.2819,70.98,70.28,66.68,73.88,Standard Engagement (Low Risk),0.2819
+acc_8091-MQJJU,0,0.3287,74.7,74.58,70.87,78.29,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2287
+acc_8098-RJGWF,0,0.4667,72.7,74.84,71.32,78.36,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3667
+acc_8105-JFBHL,0,0.045,76.12,74.8,70.81,78.79,Standard Engagement (Low Risk),0.045
+acc_8112-ZSBBO,0,0.1735,84.01,84.54,82.39,86.69,Standard Engagement (Low Risk),0.1735
+acc_8119-XBVOQ,1,0.4922,56.98,56.84,54.21,59.47,Automated Loyalty Perk Notification (Simulated Risk: 49% -> 39%),0.3922
+acc_8126-HTKBQ,0,0.1374,56.06,55.12,52.94,57.3,Standard Engagement (Low Risk),0.1374
+acc_8133-OGJRZ,0,0.3748,45.73,45.03,42.85,47.21,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2748
+acc_8140-QQGVX,0,0.1117,92.41,94.12,90.22,98.02,Standard Engagement (Low Risk),0.1117
+acc_8147-HONFA,0,0.2758,43.5,39.82,35.95,43.69,Standard Engagement (Low Risk),0.2758
+acc_8154-OBCHL,1,0.0894,107.08,106.64,104.0,109.28,Standard Engagement (Low Risk),0.0894
+acc_8161-CYAPE,1,0.3365,80.06,78.97,76.64,81.3,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2365
+acc_8168-DVDNO,1,0.2198,63.76,66.23,63.76,68.7,Standard Engagement (Low Risk),0.2198
+acc_8175-KCXXC,0,0.3111,21.49,20.0,16.19,23.81,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2111
+acc_8182-HOEZR,0,0.1997,69.46,69.11,66.62,71.6,Standard Engagement (Low Risk),0.1997
+acc_8189-FQOYF,0,0.1874,51.59,51.71,48.45,54.97,Standard Engagement (Low Risk),0.1874
+acc_8196-NEFON,0,0.2806,65.03,66.04,62.54,69.54,Standard Engagement (Low Risk),0.2806
+acc_8203-HKVZD,0,0.057,80.34,79.8,77.11,82.49,Standard Engagement (Low Risk),0.057
+acc_8210-KVFCS,0,0.1698,65.45,66.01,63.6,68.42,Standard Engagement (Low Risk),0.1698
+acc_8217-ZLSKD,0,0.2494,51.35,47.14,43.83,50.45,Standard Engagement (Low Risk),0.2494
+acc_8224-KWHGK,0,0.2467,119.59,118.75,115.92,121.58,Standard Engagement (Low Risk),0.2467
+acc_8231-HTGJL,0,0.3962,100.72,103.15,99.14,107.16,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2962
+acc_8238-OJFTK,0,0.2676,89.72,90.07,86.71,93.43,Standard Engagement (Low Risk),0.2676
+acc_8245-UMWTJ,0,0.05,116.17,115.14,112.79,117.49,Standard Engagement (Low Risk),0.05
+acc_8252-BSTIK,0,0.1746,62.18,64.45,61.82,67.08,Standard Engagement (Low Risk),0.1746
+acc_8259-QXBPO,1,0.4315,101.45,103.3,100.71,105.89,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3315
+acc_8266-UBPRE,0,0.4308,87.64,87.79,85.6,89.98,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3308
+acc_8273-EATNG,0,0.1148,24.59,23.53,20.72,26.34,Standard Engagement (Low Risk),0.1148
+acc_8280-FYWWM,1,0.5099,99.52,100.73,98.1,103.36,Automated Loyalty Perk Notification (Simulated Risk: 51% -> 41%),0.4099
+acc_8287-NBIWT,0,0.2514,55.58,57.8,55.17,60.43,Standard Engagement (Low Risk),0.2514
+acc_8294-JPRKM,0,0.1477,96.71,96.97,93.67,100.27,Standard Engagement (Low Risk),0.1477
+acc_8301-HHEUH,1,0.1554,31.64,30.41,28.28,32.54,Standard Engagement (Low Risk),0.1554
+acc_8308-TKLQO,0,0.2373,103.11,100.77,96.97,104.57,Standard Engagement (Low Risk),0.2373
+acc_8315-MHUWB,0,0.2534,40.16,42.21,39.78,44.64,Standard Engagement (Low Risk),0.2534
+acc_8322-YFJXH,0,0.0631,55.46,54.74,51.66,57.82,Standard Engagement (Low Risk),0.0631
+acc_8329-UCBQW,0,0.3296,90.8,91.96,88.99,94.93,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2296
+acc_8336-PXXJP,0,0.4107,93.82,93.27,89.82,96.72,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3107
+acc_8343-PONNR,0,0.1193,55.65,52.67,49.2,56.14,Standard Engagement (Low Risk),0.1193
+acc_8350-IRBAR,1,0.5735,73.55,73.67,69.66,77.68,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4735
+acc_8357-GSKTR,1,0.5685,63.09,63.0,59.27,66.73,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4685
+acc_8364-ZHRUR,0,0.4666,92.81,94.45,92.2,96.7,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3666
+acc_8371-XSTZV,0,0.2783,104.82,108.3,104.99,111.61,Standard Engagement (Low Risk),0.2783
+acc_8378-HGSKD,0,0.3487,49.86,49.99,47.47,52.51,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2487
+acc_8385-LJHQC,0,0.2642,68.14,66.17,63.64,68.7,Standard Engagement (Low Risk),0.2642
+acc_8392-TZUSX,0,0.234,68.3,69.58,66.13,73.03,Standard Engagement (Low Risk),0.234
+acc_8399-PFAGX,0,0.0915,80.77,79.02,75.15,82.89,Standard Engagement (Low Risk),0.0915
+acc_8406-GNFZJ,0,0.045,93.89,95.55,92.61,98.49,Standard Engagement (Low Risk),0.045
+acc_8413-NFLCV,0,0.3589,88.48,87.84,84.12,91.56,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2589
+acc_8420-KBLBA,1,0.5939,52.45,54.56,51.22,57.9,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4939
+acc_8427-VYHCF,0,0.0563,78.34,79.71,76.14,83.28,Standard Engagement (Low Risk),0.0563
+acc_8434-VJSZS,0,0.2234,86.3,86.37,82.92,89.82,Standard Engagement (Low Risk),0.2234
+acc_8441-QJMKC,0,0.045,82.5,81.43,78.09,84.77,Standard Engagement (Low Risk),0.045
+acc_8448-MDNMW,1,0.2115,78.79,79.19,75.62,82.76,Standard Engagement (Low Risk),0.2115
+acc_8455-IIGXN,0,0.0647,106.56,109.67,106.12,113.22,Standard Engagement (Low Risk),0.0647
+acc_8462-DAVUT,0,0.0462,65.03,66.75,63.05,70.45,Standard Engagement (Low Risk),0.0462
+acc_8469-NIWSX,1,0.6883,97.81,96.2,93.81,98.59,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 69% -> 19%),0.1948
+acc_8476-HPHEZ,0,0.5249,37.38,37.84,35.17,40.51,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4249
+acc_8483-PIAMS,0,0.1048,22.24,20.85,17.93,23.77,Standard Engagement (Low Risk),0.1048
+acc_8490-FNPEE,0,0.3926,51.06,52.9,49.67,56.13,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2926
+acc_8497-EAIGC,0,0.2155,87.85,87.23,84.51,89.95,Standard Engagement (Low Risk),0.2155
+acc_8504-RYUMR,0,0.5244,70.18,67.28,63.39,71.17,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4244
+acc_8511-VFZYT,1,0.2033,58.21,62.24,58.28,66.2,Standard Engagement (Low Risk),0.2033
+acc_8518-ELSSO,1,0.2815,58.65,57.17,53.27,61.07,Standard Engagement (Low Risk),0.2815
+acc_8525-FSAXO,1,0.1529,79.57,78.85,75.23,82.47,Standard Engagement (Low Risk),0.1529
+acc_8532-GYZTG,0,0.2491,97.66,97.34,94.1,100.58,Standard Engagement (Low Risk),0.2491
+acc_8539-JUQST,1,0.4243,61.0,60.51,58.4,62.62,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3243
+acc_8546-FXGDN,1,0.3074,86.76,84.89,81.36,88.42,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2074
+acc_8553-MMTPA,0,0.1566,82.84,81.06,78.09,84.03,Standard Engagement (Low Risk),0.1566
+acc_8560-BEJLX,0,0.0554,61.78,62.75,60.4,65.1,Standard Engagement (Low Risk),0.0554
+acc_8567-WEYAJ,0,0.1137,58.26,58.62,55.46,61.78,Standard Engagement (Low Risk),0.1137
+acc_8574-RYCLP,1,0.504,61.62,63.13,61.03,65.23,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.404
+acc_8581-YORKW,0,0.3321,66.25,66.87,63.79,69.95,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2321
+acc_8588-WZCXT,0,0.1705,94.74,92.92,88.99,96.85,Standard Engagement (Low Risk),0.1705
+acc_8595-GLULX,0,0.4498,53.55,54.65,52.42,56.88,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3498
+acc_8602-XEHIE,0,0.5677,97.75,96.9,93.98,99.82,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4677
+acc_8609-XBMWM,0,0.3778,119.18,118.75,114.89,122.61,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2778
+acc_8616-MLODD,0,0.3364,45.93,45.3,42.91,47.69,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2364
+acc_8623-AJHCK,0,0.2089,85.26,85.02,81.57,88.47,Standard Engagement (Low Risk),0.2089
+acc_8630-QPKRV,0,0.2145,18.29,20.0,16.52,23.48,Standard Engagement (Low Risk),0.2145
+acc_8637-SHISI,0,0.045,64.02,61.79,58.83,64.75,Standard Engagement (Low Risk),0.045
+acc_8644-NUYKU,0,0.045,81.98,83.67,80.98,86.36,Standard Engagement (Low Risk),0.045
+acc_8651-EDVBC,1,0.6095,75.55,74.18,71.12,77.24,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 61% -> 27%),0.2705
+acc_8658-KSRFV,1,0.4324,60.5,61.91,59.7,64.12,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3324
+acc_8665-TJRXF,0,0.2871,99.9,104.05,100.05,108.05,Standard Engagement (Low Risk),0.2871
+acc_8672-UFICT,1,0.2019,63.51,66.61,63.05,70.17,Standard Engagement (Low Risk),0.2019
+acc_8679-GGHDA,0,0.122,25.57,26.23,22.86,29.6,Standard Engagement (Low Risk),0.122
+acc_8686-PKBFV,1,0.3713,61.89,62.42,59.03,65.81,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2713
+acc_8693-OGASC,0,0.1332,34.97,33.52,30.1,36.94,Standard Engagement (Low Risk),0.1332
+acc_8700-PGDFH,1,0.1075,96.06,94.84,92.75,96.93,Standard Engagement (Low Risk),0.1075
+acc_8707-GNUJI,0,0.3059,93.28,91.37,88.84,93.9,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2059
+acc_8714-PKPTJ,0,0.5866,77.96,77.58,75.03,80.13,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4866
+acc_8721-CWPWJ,1,0.4604,110.96,109.29,106.01,112.57,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3604
+acc_8728-KBBMF,0,0.4466,66.79,65.45,61.8,69.1,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3466
+acc_8735-YMAYV,0,0.4395,48.81,48.27,45.93,50.61,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3395
+acc_8742-DHUSW,1,0.6852,119.13,118.75,115.47,122.03,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 69% -> 29%),0.2924
+acc_8749-JNLXN,1,0.1077,66.39,66.97,64.51,69.43,Standard Engagement (Low Risk),0.1077
+acc_8756-LOXGL,0,0.1624,91.58,89.41,86.08,92.74,Standard Engagement (Low Risk),0.1624
+acc_8763-ISWLL,1,0.6438,60.18,62.48,59.33,65.63,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 64% -> 28%),0.2776
+acc_8770-XCZDC,0,0.5219,42.97,40.47,37.37,43.57,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4219
+acc_8777-PKLYZ,0,0.2867,60.98,62.76,60.6,64.92,Standard Engagement (Low Risk),0.2867
+acc_8784-BNUET,0,0.5179,19.53,20.0,17.74,22.26,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4179
+acc_8791-JXGWT,0,0.1459,118.65,118.75,114.91,122.59,Standard Engagement (Low Risk),0.1459
+acc_8798-LOUPM,0,0.2228,98.13,97.39,94.89,99.89,Standard Engagement (Low Risk),0.2228
+acc_8805-GXTXM,0,0.2596,54.05,55.41,52.83,57.99,Standard Engagement (Low Risk),0.2596
+acc_8812-FHPHC,0,0.0753,57.67,59.86,55.91,63.81,Standard Engagement (Low Risk),0.0753
+acc_8819-YJRUH,1,0.045,54.56,53.39,51.18,55.6,Standard Engagement (Low Risk),0.045
+acc_8826-SCJEW,1,0.4213,51.05,51.07,47.48,54.66,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3213
+acc_8833-SJXHS,0,0.5442,89.29,87.42,84.65,90.19,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4442
+acc_8840-AKJAI,0,0.6483,92.94,98.24,94.37,102.11,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 65% -> 25%),0.2534
+acc_8847-HZMGG,0,0.3273,101.04,102.54,100.41,104.67,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2273
+acc_8854-WIHNL,0,0.4425,72.82,74.17,71.49,76.85,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3425
+acc_8861-VYBSX,0,0.2272,66.14,67.11,64.69,69.53,Standard Engagement (Low Risk),0.2272
+acc_8868-TDKJB,1,0.2306,80.12,80.14,76.47,83.81,Standard Engagement (Low Risk),0.2306
+acc_8875-UQOWH,0,0.1636,57.77,60.5,57.49,63.51,Standard Engagement (Low Risk),0.1636
+acc_8882-CHRLF,0,0.1876,56.8,55.81,52.83,58.79,Standard Engagement (Low Risk),0.1876
+acc_8889-SKAAK,1,0.5565,59.73,59.88,56.59,63.17,Automated Loyalty Perk Notification (Simulated Risk: 56% -> 46%),0.4565
+acc_8896-QQXMX,0,0.045,69.6,69.53,65.87,73.19,Standard Engagement (Low Risk),0.045
+acc_8903-FOJIG,0,0.0988,83.55,81.13,78.01,84.25,Standard Engagement (Low Risk),0.0988
+acc_8910-JONTP,0,0.3493,70.09,68.83,66.33,71.33,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2493
+acc_8917-TYFUY,1,0.439,72.83,73.18,71.08,75.28,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.339
+acc_8924-WGCHA,0,0.2166,57.06,57.24,53.44,61.04,Standard Engagement (Low Risk),0.2166
+acc_8931-OEOAY,0,0.1071,65.65,66.31,63.1,69.52,Standard Engagement (Low Risk),0.1071
+acc_8938-WOPWM,1,0.3956,55.94,54.18,50.85,57.51,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.2956
+acc_8945-FYDCE,1,0.5801,64.93,63.37,60.48,66.26,Automated Loyalty Perk Notification (Simulated Risk: 58% -> 48%),0.4801
+acc_8952-HCUWY,0,0.2481,104.8,105.02,102.32,107.72,Standard Engagement (Low Risk),0.2481
+acc_8959-BFBWR,0,0.5652,40.87,41.28,39.12,43.44,Automated Loyalty Perk Notification (Simulated Risk: 57% -> 47%),0.4652
+acc_8966-NFGRO,1,0.3663,68.69,68.59,64.89,72.29,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2663
+acc_8973-WNTUP,0,0.2568,60.49,59.07,55.72,62.42,Standard Engagement (Low Risk),0.2568
+acc_8980-VMBJY,1,0.7631,66.3,66.77,63.47,70.07,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 76% -> 23%),0.2277
+acc_8987-TXTZE,0,0.3433,93.53,91.47,87.48,95.46,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2433
+acc_8994-LNFKK,0,0.2245,85.89,86.57,84.44,88.7,Standard Engagement (Low Risk),0.2245
+acc_9001-TUAEU,0,0.3301,79.33,78.54,75.55,81.53,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2301
+acc_9008-OKNKH,0,0.2035,73.76,75.64,71.84,79.44,Standard Engagement (Low Risk),0.2035
+acc_9015-LQJUY,0,0.0611,59.64,57.07,53.75,60.39,Standard Engagement (Low Risk),0.0611
+acc_9022-BRAHO,0,0.2845,76.12,75.56,73.41,77.71,Standard Engagement (Low Risk),0.2845
+acc_9029-QMOLC,0,0.3415,102.37,100.76,97.89,103.63,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2415
+acc_9036-MQNVZ,0,0.1617,75.06,73.6,69.96,77.24,Standard Engagement (Low Risk),0.1617
+acc_9043-CZXQL,0,0.2008,56.71,57.66,54.4,60.92,Standard Engagement (Low Risk),0.2008
+acc_9050-BSNPO,0,0.5524,52.7,53.24,50.76,55.72,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4524
+acc_9057-YZNOU,1,0.4716,37.32,37.34,34.43,40.25,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3716
+acc_9064-XYUSI,1,0.2471,78.09,76.35,73.62,79.08,Standard Engagement (Low Risk),0.2471
+acc_9071-MHIJK,0,0.065,63.92,65.23,61.72,68.74,Standard Engagement (Low Risk),0.065
+acc_9078-YFUXY,1,0.1444,57.98,58.17,54.61,61.73,Standard Engagement (Low Risk),0.1444
+acc_9085-XYVIS,0,0.045,64.29,63.37,60.88,65.86,Standard Engagement (Low Risk),0.045
+acc_9092-HNGDQ,0,0.045,117.04,118.75,116.53,120.97,Standard Engagement (Low Risk),0.045
+acc_9099-QYZXR,0,0.0686,79.65,79.99,77.28,82.7,Standard Engagement (Low Risk),0.0686
+acc_9106-CRZYV,1,0.5336,75.64,77.41,73.58,81.24,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4336
+acc_9113-UJYOP,0,0.3657,47.26,47.25,44.38,50.12,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2657
+acc_9120-CGDJY,1,0.3604,42.54,39.03,35.93,42.13,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2604
+acc_9127-IGXQF,0,0.2587,31.82,30.8,26.84,34.76,Standard Engagement (Low Risk),0.2587
+acc_9134-CWARP,0,0.1321,86.71,86.91,84.55,89.27,Standard Engagement (Low Risk),0.1321
+acc_9141-VHSWP,0,0.5329,55.27,56.86,53.33,60.39,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4329
+acc_9148-XCBMB,0,0.045,108.56,109.14,106.16,112.12,Standard Engagement (Low Risk),0.045
+acc_9155-WWABZ,0,0.1533,81.4,80.81,78.42,83.2,Standard Engagement (Low Risk),0.1533
+acc_9162-PGQRR,0,0.0523,36.5,35.94,32.41,39.47,Standard Engagement (Low Risk),0.0523
+acc_9169-WZUMT,0,0.2028,52.5,50.63,48.55,52.71,Standard Engagement (Low Risk),0.2028
+acc_9176-TDQBA,0,0.6912,101.7,102.44,98.85,106.03,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 69% -> 25%),0.2532
+acc_9183-NBEPP,0,0.1764,52.68,52.12,50.02,54.22,Standard Engagement (Low Risk),0.1764
+acc_9190-AGYRE,0,0.4243,99.29,98.6,96.38,100.82,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3243
+acc_9197-JRCPV,0,0.329,66.99,66.43,63.92,68.94,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.229
+acc_9204-TFIXW,1,0.3855,35.23,31.94,29.04,34.84,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2855
+acc_9211-XAVIG,0,0.3101,43.52,44.78,41.41,48.15,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2101
+acc_9218-VUOGY,0,0.1358,101.0,99.42,97.34,101.5,Standard Engagement (Low Risk),0.1358
+acc_9225-DSHKB,0,0.1856,50.49,47.13,44.07,50.19,Standard Engagement (Low Risk),0.1856
+acc_9232-OGKAR,0,0.0608,51.65,52.37,50.04,54.7,Standard Engagement (Low Risk),0.0608
+acc_9239-IWFPX,0,0.2604,19.95,20.0,17.08,22.92,Standard Engagement (Low Risk),0.2604
+acc_9246-RQZTI,0,0.1217,32.85,32.54,29.95,35.13,Standard Engagement (Low Risk),0.1217
+acc_9253-KFKXK,1,0.6213,100.2,100.31,98.06,102.56,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 62% -> 20%),0.2014
+acc_9260-FVVIN,0,0.045,80.65,82.03,78.94,85.12,Standard Engagement (Low Risk),0.045
+acc_9267-MITJF,0,0.2271,99.06,99.48,95.6,103.36,Standard Engagement (Low Risk),0.2271
+acc_9274-YRJQF,1,0.4318,71.87,68.25,64.74,71.76,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3318
+acc_9281-BTTTR,0,0.7226,94.18,94.97,91.02,98.92,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 72% -> 31%),0.3073
+acc_9288-UDHAS,0,0.2822,87.41,86.42,82.83,90.01,Standard Engagement (Low Risk),0.2822
+acc_9295-MJYOO,0,0.1735,68.15,66.77,64.56,68.98,Standard Engagement (Low Risk),0.1735
+acc_9302-MGNJV,0,0.1322,48.55,46.18,43.68,48.68,Standard Engagement (Low Risk),0.1322
+acc_9309-ACSDE,1,0.4469,39.69,38.19,35.85,40.53,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3469
+acc_9316-YYHTI,0,0.3633,97.89,97.36,94.82,99.9,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2633
+acc_9323-ZOTSP,0,0.333,62.73,62.02,58.55,65.49,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.233
+acc_9330-KCEUR,0,0.3568,31.05,30.33,27.83,32.83,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2568
+acc_9337-BDMAK,0,0.1729,81.05,81.19,78.67,83.71,Standard Engagement (Low Risk),0.1729
+acc_9344-DNDMD,0,0.2063,63.45,61.93,58.47,65.39,Standard Engagement (Low Risk),0.2063
+acc_9351-DEXLQ,0,0.0669,75.37,73.04,69.57,76.51,Standard Engagement (Low Risk),0.0669
+acc_9358-QUOWY,0,0.045,18.0,20.0,16.57,23.43,Standard Engagement (Low Risk),0.045
+acc_9365-GVRHX,0,0.1563,119.4,118.75,115.58,121.92,Standard Engagement (Low Risk),0.1563
+acc_9372-YYZBI,0,0.2836,78.5,77.35,74.26,80.44,Standard Engagement (Low Risk),0.2836
+acc_9379-KBPVD,0,0.045,82.95,82.61,79.49,85.73,Standard Engagement (Low Risk),0.045
+acc_9386-TROHK,0,0.4797,77.8,79.84,75.92,83.76,Automated Loyalty Perk Notification (Simulated Risk: 48% -> 38%),0.3797
+acc_9393-RYSSZ,0,0.045,88.34,87.94,85.39,90.49,Standard Engagement (Low Risk),0.045
+acc_9400-CYSYM,0,0.1482,46.18,45.43,42.77,48.09,Standard Engagement (Low Risk),0.1482
+acc_9407-MGMHU,0,0.3398,68.65,68.01,65.84,70.18,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2398
+acc_9414-NPKXY,1,0.2527,53.43,53.26,51.15,55.37,Standard Engagement (Low Risk),0.2527
+acc_9421-PKVHL,1,0.1424,73.58,75.02,71.47,78.57,Standard Engagement (Low Risk),0.1424
+acc_9428-ECSNS,1,0.1807,51.21,51.01,48.01,54.01,Standard Engagement (Low Risk),0.1807
+acc_9435-BGRCZ,1,0.3583,106.88,105.07,102.42,107.72,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2583
+acc_9442-UBHKD,1,0.3824,89.32,91.47,88.3,94.64,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2824
+acc_9449-NCDTY,0,0.1191,58.73,58.71,56.04,61.38,Standard Engagement (Low Risk),0.1191
+acc_9456-OPQVR,0,0.045,54.63,57.48,54.15,60.81,Standard Engagement (Low Risk),0.045
+acc_9463-CXAPC,0,0.045,51.1,51.81,49.2,54.42,Standard Engagement (Low Risk),0.045
+acc_9470-JVILB,0,0.1789,81.88,82.62,79.01,86.23,Standard Engagement (Low Risk),0.1789
+acc_9477-GCTMF,0,0.045,69.96,69.6,65.87,73.33,Standard Engagement (Low Risk),0.045
+acc_9484-ERFDE,1,0.2471,87.23,89.4,86.76,92.04,Standard Engagement (Low Risk),0.2471
+acc_9491-URAON,1,0.6419,105.67,106.56,104.23,108.89,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 64% -> 20%),0.1953
+acc_9498-ECWWW,0,0.0638,38.36,38.5,35.41,41.59,Standard Engagement (Low Risk),0.0638
+acc_9505-GTYYL,0,0.2847,69.56,69.96,67.28,72.64,Standard Engagement (Low Risk),0.2847
+acc_9512-VJNXU,0,0.1956,62.82,62.4,59.03,65.77,Standard Engagement (Low Risk),0.1956
+acc_9519-NCCPQ,0,0.1634,105.94,103.39,100.51,106.27,Standard Engagement (Low Risk),0.1634
+acc_9526-WHMUF,0,0.3229,46.05,44.99,41.12,48.86,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2229
+acc_9533-JEASA,1,0.2517,66.51,66.68,64.28,69.08,Standard Engagement (Low Risk),0.2517
+acc_9540-JHGUX,1,0.2458,104.28,106.66,103.52,109.8,Standard Engagement (Low Risk),0.2458
+acc_9547-XRIXL,0,0.0979,50.81,48.75,45.72,51.78,Standard Engagement (Low Risk),0.0979
+acc_9554-GTSGC,1,0.5233,63.41,65.43,62.32,68.54,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4233
+acc_9561-EGRSB,0,0.3892,47.51,48.15,45.51,50.79,Automated Loyalty Perk Notification (Simulated Risk: 39% -> 29%),0.2892
+acc_9568-VMLPT,1,0.6753,84.27,82.6,80.16,85.04,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 68% -> 22%),0.2242
+acc_9575-MDSVI,0,0.2681,50.95,51.55,47.63,55.47,Standard Engagement (Low Risk),0.2681
+acc_9582-LDSSQ,1,0.5355,103.06,104.7,101.37,108.03,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4355
+acc_9589-MWLQM,1,0.5893,24.37,25.89,22.39,29.39,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.4893
+acc_9596-ZSPEQ,0,0.2109,51.76,49.13,45.28,52.98,Standard Engagement (Low Risk),0.2109
+acc_9603-ADXEH,0,0.3373,59.24,60.86,56.96,64.76,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2373
+acc_9610-VRCWP,1,0.7591,57.29,56.24,52.43,60.05,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 76% -> 33%),0.3268
+acc_9617-HIPCR,1,0.0906,58.18,57.28,53.93,60.63,Standard Engagement (Low Risk),0.0906
+acc_9624-ENQDW,0,0.1532,29.94,28.15,25.31,30.99,Standard Engagement (Low Risk),0.1532
+acc_9631-UTSNJ,0,0.1143,118.82,118.75,115.93,121.57,Standard Engagement (Low Risk),0.1143
+acc_9638-IDUSB,0,0.0522,59.43,58.08,54.85,61.31,Standard Engagement (Low Risk),0.0522
+acc_9645-DCUNH,0,0.2528,83.12,84.15,80.53,87.77,Standard Engagement (Low Risk),0.2528
+acc_9652-FMODS,1,0.2156,47.95,44.64,41.78,47.5,Standard Engagement (Low Risk),0.2156
+acc_9659-KPHFM,1,0.8277,58.53,56.41,54.31,58.51,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 83% -> 25%),0.2454
+acc_9666-WUSMX,0,0.1232,72.87,74.58,70.96,78.2,Standard Engagement (Low Risk),0.1232
+acc_9673-DDDDO,1,0.3391,66.96,67.21,65.01,69.41,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2391
+acc_9680-YJTHK,0,0.4445,44.23,45.62,42.06,49.18,Automated Loyalty Perk Notification (Simulated Risk: 44% -> 34%),0.3445
+acc_9687-CWHFR,0,0.0521,42.03,39.88,37.79,41.97,Standard Engagement (Low Risk),0.0521
+acc_9694-QINMT,0,0.127,57.11,56.79,54.19,59.39,Standard Engagement (Low Risk),0.127
+acc_9701-NSBWO,0,0.0527,60.16,59.95,56.06,63.84,Standard Engagement (Low Risk),0.0527
+acc_9708-MBHUJ,0,0.3542,98.87,100.29,97.27,103.31,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2542
+acc_9715-VKEYE,0,0.4178,35.29,37.85,34.56,41.14,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3178
+acc_9722-BYSOR,0,0.1665,33.37,31.65,27.82,35.48,Standard Engagement (Low Risk),0.1665
+acc_9729-SSEFJ,0,0.1696,43.95,44.37,41.18,47.56,Standard Engagement (Low Risk),0.1696
+acc_9736-QVQCW,0,0.0751,101.7,100.46,97.3,103.62,Standard Engagement (Low Risk),0.0751
+acc_9743-JCVPX,0,0.6891,121.69,118.75,115.51,121.99,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 69% -> 21%),0.2085
+acc_9750-LBSBF,1,0.6106,83.59,82.2,79.88,84.52,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 61% -> 30%),0.2988
+acc_9757-LSHCC,0,0.4189,95.39,96.14,92.85,99.43,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3189
+acc_9764-SIFGX,0,0.0611,53.43,56.28,53.18,59.38,Standard Engagement (Low Risk),0.0611
+acc_9771-NDEGG,1,0.4115,40.0,36.68,33.33,40.03,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3115
+acc_9778-IDUNU,0,0.1727,34.9,35.52,32.55,38.49,Standard Engagement (Low Risk),0.1727
+acc_9785-LMRMM,1,0.3598,61.0,61.04,57.67,64.41,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2598
+acc_9792-MMBCW,0,0.0542,57.89,56.09,53.43,58.75,Standard Engagement (Low Risk),0.0542
+acc_9799-DVULR,1,0.5544,79.53,78.93,75.74,82.12,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4544
+acc_9806-HCHKK,0,0.3182,100.95,99.68,96.48,102.88,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2182
+acc_9813-QENPC,0,0.2479,99.11,97.7,95.34,100.06,Standard Engagement (Low Risk),0.2479
+acc_9820-NGLRE,0,0.5253,106.48,107.98,104.24,111.72,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4253
+acc_9827-FBWPF,1,0.6399,58.07,55.56,52.53,58.59,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 64% -> 26%),0.2595
+acc_9834-HFBQJ,1,0.594,109.47,110.3,107.19,113.41,Automated Loyalty Perk Notification (Simulated Risk: 59% -> 49%),0.494
+acc_9841-VHJXI,0,0.045,61.73,63.85,60.81,66.89,Standard Engagement (Low Risk),0.045
+acc_9848-AEXHQ,1,0.1129,92.05,92.88,90.28,95.48,Standard Engagement (Low Risk),0.1129
+acc_9855-YFLLL,0,0.1684,77.87,79.04,75.02,83.06,Standard Engagement (Low Risk),0.1684
+acc_9862-YXJHZ,1,0.4321,96.63,96.99,94.86,99.12,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3321
+acc_9869-YMCCG,0,0.0479,63.55,62.13,59.67,64.59,Standard Engagement (Low Risk),0.0479
+acc_9876-BGRCL,0,0.1711,69.18,66.34,63.11,69.57,Standard Engagement (Low Risk),0.1711
+acc_9883-VKGHR,0,0.1149,76.92,76.59,73.87,79.31,Standard Engagement (Low Risk),0.1149
+acc_9890-VQRPJ,1,0.2239,40.13,40.15,37.02,43.28,Standard Engagement (Low Risk),0.2239
+acc_9897-YOIFJ,0,0.1969,87.57,87.98,84.16,91.8,Standard Engagement (Low Risk),0.1969
+acc_9904-EKMZM,0,0.1864,61.76,60.49,58.41,62.57,Standard Engagement (Low Risk),0.1864
+acc_9911-XCTOH,0,0.1316,79.11,78.52,75.82,81.22,Standard Engagement (Low Risk),0.1316
+acc_9918-ZBIYJ,1,0.7433,61.49,62.31,58.32,66.3,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 74% -> 24%),0.2426
+acc_9925-JUFBJ,1,0.3148,95.75,96.38,94.16,98.6,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2148
+acc_9932-WNSKQ,0,0.5969,50.14,49.21,46.95,51.47,Automated Loyalty Perk Notification (Simulated Risk: 60% -> 50%),0.4969
+acc_9939-PCYCT,0,0.045,34.22,32.56,29.84,35.28,Standard Engagement (Low Risk),0.045
+acc_9946-OODFD,0,0.5385,34.95,34.46,31.64,37.28,Automated Loyalty Perk Notification (Simulated Risk: 54% -> 44%),0.4385
+acc_9953-YPSSS,0,0.0619,47.54,46.01,42.37,49.65,Standard Engagement (Low Risk),0.0619
+acc_9960-QSEXP,0,0.0699,91.42,88.09,84.53,91.65,Standard Engagement (Low Risk),0.0699
+acc_9967-VBVUN,0,0.0577,52.62,50.9,47.93,53.87,Standard Engagement (Low Risk),0.0577
+acc_9974-OKKBG,0,0.4173,35.91,36.28,33.78,38.78,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3173
+acc_9981-PHTPN,0,0.045,52.08,51.51,48.44,54.58,Standard Engagement (Low Risk),0.045
+acc_9988-PPXUE,1,0.2974,50.28,49.86,46.11,53.61,Standard Engagement (Low Risk),0.2974
+acc_9995-AEPPF,0,0.2059,56.98,56.07,53.17,58.97,Standard Engagement (Low Risk),0.2059
+acc_1002-LRGGU,0,0.2143,92.44,94.25,90.99,97.51,Standard Engagement (Low Risk),0.2143
+acc_1009-MRYWU,0,0.2235,18.94,20.0,16.46,23.54,Standard Engagement (Low Risk),0.2235
+acc_1016-YKKCO,0,0.183,38.09,37.3,34.56,40.04,Standard Engagement (Low Risk),0.183
+acc_1023-USGSI,1,0.455,78.32,80.07,77.75,82.39,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.355
+acc_1030-FANDX,0,0.4723,56.08,56.53,53.56,59.5,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3723
+acc_1037-UWVWT,0,0.3196,69.39,69.52,66.18,72.86,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2196
+acc_1044-TFFGQ,1,0.2682,68.08,68.27,66.01,70.53,Standard Engagement (Low Risk),0.2682
+acc_1051-AOFDO,0,0.1544,94.92,94.59,92.49,96.69,Standard Engagement (Low Risk),0.1544
+acc_1058-HZUIP,0,0.1324,34.12,34.4,32.22,36.58,Standard Engagement (Low Risk),0.1324
+acc_1065-VNHOO,0,0.3288,63.75,66.62,63.72,69.52,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2288
+acc_1072-EJQQO,1,0.22,93.2,93.97,90.19,97.75,Standard Engagement (Low Risk),0.22
+acc_1079-CTBKD,0,0.0758,83.6,85.65,81.93,89.37,Standard Engagement (Low Risk),0.0758
+acc_1086-HMSQA,1,0.3481,36.67,37.48,34.39,40.57,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2481
+acc_1093-TDNEV,0,0.0792,70.03,71.67,68.44,74.9,Standard Engagement (Low Risk),0.0792
+acc_1100-XPGOD,1,0.3769,83.03,83.65,81.47,85.83,Automated Loyalty Perk Notification (Simulated Risk: 38% -> 28%),0.2769
+acc_1107-TEHJT,1,0.473,47.13,43.84,40.71,46.97,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.373
+acc_1114-SWCJY,1,0.7109,60.47,61.45,59.22,63.68,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 71% -> 25%),0.2523
+acc_1121-PLHNH,0,0.3145,77.86,78.19,75.59,80.79,Automated Loyalty Perk Notification (Simulated Risk: 31% -> 21%),0.2145
+acc_1128-EDFKP,0,0.2475,87.66,90.05,86.7,93.4,Standard Engagement (Low Risk),0.2475
+acc_1135-KBIVK,0,0.1054,82.31,80.92,78.84,83.0,Standard Engagement (Low Risk),0.1054
+acc_1142-NOHJR,0,0.045,22.05,20.0,17.23,22.77,Standard Engagement (Low Risk),0.045
+acc_1149-GCUFN,0,0.1737,30.08,33.14,29.64,36.64,Standard Engagement (Low Risk),0.1737
+acc_1156-KJGWH,1,0.7778,118.08,116.94,114.47,119.41,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 78% -> 24%),0.2413
+acc_1163-YTIZW,0,0.2143,98.55,97.41,93.72,101.1,Standard Engagement (Low Risk),0.2143
+acc_1170-UGPJH,0,0.4283,72.47,70.3,67.55,73.05,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.3283
+acc_1177-APIFV,1,0.7497,61.61,58.63,56.16,61.1,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 75% -> 18%),0.1797
+acc_1184-JXVJS,0,0.1947,64.18,65.6,63.35,67.85,Standard Engagement (Low Risk),0.1947
+acc_1191-KETNR,0,0.1249,63.67,65.03,61.64,68.42,Standard Engagement (Low Risk),0.1249
+acc_1198-PBXQI,1,0.5537,41.72,43.04,40.65,45.43,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4537
+acc_1205-XUJAL,1,0.4709,47.84,45.92,42.78,49.06,Automated Loyalty Perk Notification (Simulated Risk: 47% -> 37%),0.3709
+acc_1212-VTNLE,0,0.3658,86.2,85.99,82.24,89.74,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2658
+acc_1219-STKDU,0,0.1024,67.82,69.38,65.49,73.27,Standard Engagement (Low Risk),0.1024
+acc_1226-VHOET,0,0.0964,96.51,98.61,96.52,100.7,Standard Engagement (Low Risk),0.0964
+acc_1233-OVJGB,0,0.1977,36.79,40.32,37.1,43.54,Standard Engagement (Low Risk),0.1977
+acc_1240-LOXNK,0,0.2283,81.54,81.05,77.77,84.33,Standard Engagement (Low Risk),0.2283
+acc_1247-GVKTP,0,0.1641,45.59,44.97,42.67,47.27,Standard Engagement (Low Risk),0.1641
+acc_1254-GIJYC,1,0.1924,88.0,87.02,83.71,90.33,Standard Engagement (Low Risk),0.1924
+acc_1261-CRYAY,0,0.2745,101.49,103.51,100.58,106.44,Standard Engagement (Low Risk),0.2745
+acc_1268-JJEJR,0,0.2406,67.78,66.96,63.88,70.04,Standard Engagement (Low Risk),0.2406
+acc_1275-UJMPS,1,0.6308,35.33,32.19,28.61,35.77,Upgrade to Pro Tier + Onboarding Specialist (Simulated Risk: 63% -> 24%),0.2425
+acc_1282-HLVSB,0,0.0805,30.52,30.33,26.88,33.78,Standard Engagement (Low Risk),0.0805
+acc_1289-DGFWO,0,0.0846,85.57,83.5,81.3,85.7,Standard Engagement (Low Risk),0.0846
+acc_1296-BFCZG,0,0.3207,112.37,111.88,108.09,115.67,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2207
+acc_1303-TBFXB,0,0.1528,72.22,71.69,68.84,74.54,Standard Engagement (Low Risk),0.1528
+acc_1310-NVFQS,1,0.428,57.82,57.49,54.94,60.04,Automated Loyalty Perk Notification (Simulated Risk: 43% -> 33%),0.328
+acc_1317-GTYCQ,0,0.0994,86.9,87.18,83.51,90.85,Standard Engagement (Low Risk),0.0994
+acc_1324-HSSSM,1,0.2671,56.17,56.71,54.08,59.34,Standard Engagement (Low Risk),0.2671
+acc_1331-UQDKH,0,0.1456,53.32,50.39,46.84,53.94,Standard Engagement (Low Risk),0.1456
+acc_1338-SPCFK,0,0.1372,73.61,73.41,70.41,76.41,Standard Engagement (Low Risk),0.1372
+acc_1345-TIWDU,0,0.2053,37.92,39.11,36.66,41.56,Standard Engagement (Low Risk),0.2053
+acc_1352-GLLSP,0,0.5012,95.84,94.96,92.86,97.06,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4012
+acc_1359-TBNEO,0,0.5253,86.19,85.32,82.35,88.29,Automated Loyalty Perk Notification (Simulated Risk: 53% -> 43%),0.4253
+acc_1366-DXVDZ,1,0.5578,92.67,92.99,90.86,95.12,Automated Loyalty Perk Notification (Simulated Risk: 56% -> 46%),0.4578
+acc_1373-ZHXPI,0,0.094,19.3,20.0,16.56,23.44,Standard Engagement (Low Risk),0.094
+acc_1380-XAQRP,0,0.3213,87.56,86.88,83.44,90.32,Automated Loyalty Perk Notification (Simulated Risk: 32% -> 22%),0.2213
+acc_1387-CLBLG,0,0.342,106.78,107.11,104.48,109.74,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.242
+acc_1394-DIIAB,0,0.2259,41.45,40.46,38.22,42.7,Standard Engagement (Low Risk),0.2259
+acc_1401-MAHLX,1,0.5202,55.24,55.36,51.45,59.27,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4202
+acc_1408-GGUYM,0,0.3387,76.08,76.53,74.33,78.73,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2387
+acc_1415-APUAA,1,0.867,75.55,76.81,73.49,80.13,Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 87% -> 26%),0.2649
+acc_1422-ANCTE,0,0.1576,22.75,21.83,19.31,24.35,Standard Engagement (Low Risk),0.1576
+acc_1429-OAYOH,0,0.0933,72.31,72.95,69.91,75.99,Standard Engagement (Low Risk),0.0933
+acc_1436-SGBJL,0,0.3342,64.22,64.88,61.29,68.47,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2342
+acc_1443-ENWPD,0,0.0928,85.45,85.28,81.9,88.66,Standard Engagement (Low Risk),0.0928
+acc_1450-OFDLR,0,0.3301,108.04,107.85,105.41,110.29,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2301
+acc_1457-YJCCC,0,0.1373,46.48,46.79,43.13,50.45,Standard Engagement (Low Risk),0.1373
+acc_1464-LWLVR,0,0.1837,46.2,44.93,41.33,48.53,Standard Engagement (Low Risk),0.1837
+acc_1471-DPWBI,0,0.0733,51.39,49.4,45.95,52.85,Standard Engagement (Low Risk),0.0733
+acc_1478-EVWTP,0,0.4114,87.59,85.68,81.67,89.69,Automated Loyalty Perk Notification (Simulated Risk: 41% -> 31%),0.3114
+acc_1485-SQATY,1,0.2494,69.77,68.22,64.94,71.5,Standard Engagement (Low Risk),0.2494
+acc_1492-NMDSP,0,0.1827,19.91,20.42,16.41,24.43,Standard Engagement (Low Risk),0.1827
+acc_1499-HSTSX,0,0.352,85.29,87.57,84.71,90.43,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.252
+acc_1506-ABXMQ,0,0.498,30.71,30.74,27.37,34.11,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.398
+acc_1513-QJUQB,0,0.6454,109.65,109.79,106.74,112.84,Convert Trial to Paid + Enterprise SLA Guarantee (Simulated Risk: 65% -> 19%),0.1943
+acc_1520-KBTHW,0,0.1845,55.71,56.79,52.81,60.77,Standard Engagement (Low Risk),0.1845
+acc_1527-ZMHWW,0,0.0847,41.45,42.09,39.18,45.0,Standard Engagement (Low Risk),0.0847
+acc_1534-AUCOE,0,0.3503,65.12,66.6,63.51,69.69,Automated Loyalty Perk Notification (Simulated Risk: 35% -> 25%),0.2503
+acc_1541-SLUPD,0,0.045,63.57,62.3,60.06,64.54,Standard Engagement (Low Risk),0.045
+acc_1548-UWKZE,0,0.4987,54.49,53.22,49.57,56.87,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.3987
+acc_1555-NYHLE,0,0.0854,101.72,97.2,94.51,99.89,Standard Engagement (Low Risk),0.0854
+acc_1562-PCCAF,0,0.1983,37.4,36.58,33.34,39.82,Standard Engagement (Low Risk),0.1983
+acc_1569-HQHQA,0,0.4035,92.19,94.87,91.74,98.0,Automated Loyalty Perk Notification (Simulated Risk: 40% -> 30%),0.3035
+acc_1576-FXZPM,0,0.2276,56.91,58.07,55.63,60.51,Standard Engagement (Low Risk),0.2276
+acc_1583-QLJEX,1,0.5997,90.29,90.3,88.04,92.56,Automated Loyalty Perk Notification (Simulated Risk: 60% -> 50%),0.4997
+acc_1590-LSWKR,0,0.1916,78.86,79.99,77.5,82.48,Standard Engagement (Low Risk),0.1916
+acc_1597-QYHON,0,0.1826,76.99,75.22,71.27,79.17,Standard Engagement (Low Risk),0.1826
+acc_1604-VJYAV,0,0.0906,96.96,96.49,92.65,100.33,Standard Engagement (Low Risk),0.0906
+acc_1611-ECITK,1,0.2314,65.4,65.0,62.91,67.09,Standard Engagement (Low Risk),0.2314
+acc_1618-SEALM,0,0.0562,65.32,63.85,61.08,66.62,Standard Engagement (Low Risk),0.0562
+acc_1625-UMSVR,0,0.4645,29.88,32.4,28.42,36.38,Automated Loyalty Perk Notification (Simulated Risk: 46% -> 36%),0.3645
+acc_1632-CVNII,0,0.045,96.29,96.53,93.79,99.27,Standard Engagement (Low Risk),0.045
+acc_1639-FGXEI,0,0.5483,88.61,86.52,84.22,88.82,Automated Loyalty Perk Notification (Simulated Risk: 55% -> 45%),0.4483
+acc_1646-UILZM,0,0.045,61.58,63.84,60.36,67.32,Standard Engagement (Low Risk),0.045
+acc_1653-DAZXE,0,0.2515,48.96,49.93,46.17,53.69,Standard Engagement (Low Risk),0.2515
+acc_1660-BZHUR,0,0.3704,50.07,51.02,48.34,53.7,Automated Loyalty Perk Notification (Simulated Risk: 37% -> 27%),0.2704
+acc_1667-DXYNL,0,0.0502,64.43,63.89,61.3,66.48,Standard Engagement (Low Risk),0.0502
+acc_1674-HEZAS,0,0.045,42.47,42.15,38.98,45.32,Standard Engagement (Low Risk),0.045
+acc_1681-DTTIZ,1,0.5017,41.09,44.47,40.6,48.34,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4017
+acc_1688-JHQSS,0,0.1217,100.86,99.11,96.93,101.29,Standard Engagement (Low Risk),0.1217
+acc_1695-RCFQU,1,0.2576,95.89,94.25,91.11,97.39,Standard Engagement (Low Risk),0.2576
+acc_1702-XCJHK,1,0.3395,75.28,77.37,74.2,80.54,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2395
+acc_1709-LERZQ,0,0.1477,76.53,76.39,73.1,79.68,Standard Engagement (Low Risk),0.1477
+acc_1716-ACKVE,0,0.1843,54.79,55.78,53.63,57.93,Standard Engagement (Low Risk),0.1843
+acc_1723-WONNL,0,0.5229,83.39,84.37,81.95,86.79,Automated Loyalty Perk Notification (Simulated Risk: 52% -> 42%),0.4229
+acc_1730-ZCJKU,1,0.6899,59.09,58.08,55.29,60.87,Enable Auto-Renew + Apply 10% Annual Discount (Simulated Risk: 69% -> 29%),0.2877
+acc_1737-ZJONL,0,0.1292,112.43,110.66,107.8,113.52,Standard Engagement (Low Risk),0.1292
+acc_1744-UANFU,1,0.3407,42.07,41.7,38.0,45.4,Automated Loyalty Perk Notification (Simulated Risk: 34% -> 24%),0.2407
+acc_1751-RYFUP,1,0.4986,76.97,77.58,75.47,79.69,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.3986
+acc_1758-LNKEK,0,0.045,78.06,76.18,73.54,78.82,Standard Engagement (Low Risk),0.045
+acc_1765-QEKTX,0,0.2357,88.99,87.93,85.53,90.33,Standard Engagement (Low Risk),0.2357
+acc_1772-ESXRQ,1,0.4472,73.32,72.58,69.5,75.66,Automated Loyalty Perk Notification (Simulated Risk: 45% -> 35%),0.3472
+acc_1779-QGVXD,0,0.2182,24.33,20.0,16.58,23.42,Standard Engagement (Low Risk),0.2182
+acc_1786-PYFJU,1,0.1523,115.66,118.75,115.12,122.38,Standard Engagement (Low Risk),0.1523
+acc_1793-MFYLT,1,0.1891,93.1,92.45,89.02,95.88,Standard Engagement (Low Risk),0.1891
+acc_1800-CDNAE,0,0.1095,67.92,67.8,65.3,70.3,Standard Engagement (Low Risk),0.1095
+acc_1807-PNRYT,0,0.1883,63.41,63.62,61.51,65.73,Standard Engagement (Low Risk),0.1883
+acc_1814-KWXYK,1,0.0814,32.03,32.05,29.95,34.15,Standard Engagement (Low Risk),0.0814
+acc_1821-DEYUI,0,0.225,47.84,47.89,44.34,51.44,Standard Engagement (Low Risk),0.225
+acc_1828-EMRBN,0,0.045,48.21,49.96,47.6,52.32,Standard Engagement (Low Risk),0.045
+acc_1835-QMYYQ,0,0.5047,39.75,40.07,37.5,42.64,Automated Loyalty Perk Notification (Simulated Risk: 50% -> 40%),0.4047
+acc_1842-UWCKD,0,0.3284,60.69,59.11,55.32,62.9,Automated Loyalty Perk Notification (Simulated Risk: 33% -> 23%),0.2284
+acc_1849-LRPUD,0,0.3634,52.05,50.71,46.75,54.67,Automated Loyalty Perk Notification (Simulated Risk: 36% -> 26%),0.2634
+acc_1856-TSDQT,0,0.4176,89.12,86.65,83.43,89.87,Automated Loyalty Perk Notification (Simulated Risk: 42% -> 32%),0.3176
