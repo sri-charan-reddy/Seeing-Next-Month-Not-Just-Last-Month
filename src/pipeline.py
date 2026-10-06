@@ -28,6 +28,9 @@ from src.config import (
     PROCESSED_DATA_DIR,
     PROCESSED_SNAPSHOTS_CSV,
     RAW_DATASET_DIR,
+    SALES_FEATURE_COLUMNS,
+    SALES_NUMERICAL_FEATURES,
+    SALES_TARGET_COLUMN,
     SNAPSHOT_END,
     SNAPSHOT_START,
     SUBSCRIPTIONS_CSV,
@@ -128,6 +131,28 @@ def calculate_target(
     ).astype(int)
     is_churn.name = TARGET_COLUMN
     return is_churn
+
+
+def calculate_forward_sales_target(
+    active_subs_df: pd.DataFrame,
+    cutoff_date: pd.Timestamp,
+    horizon_days: int = PREDICTION_HORIZON_DAYS,
+) -> pd.Series:
+    """
+    Calculates forward 30-day / next-month MRR target:
+    - 0.0 if the subscription terminates/churns within (cutoff_date, cutoff_date + horizon_days]
+    - current mrr_amount if the subscription remains active through the next 30 days
+    Uses only ground-truth future subscription status as the regression target y.
+    """
+    target_window_end = cutoff_date + pd.Timedelta(days=horizon_days)
+    is_terminating = (
+        active_subs_df["end_date"].notna()
+        & (active_subs_df["end_date"] > cutoff_date)
+        & (active_subs_df["end_date"] <= target_window_end)
+    )
+    future_mrr = np.where(is_terminating, 0.0, active_subs_df["mrr_amount"].astype(float))
+    return pd.Series(future_mrr, index=active_subs_df.index, name=SALES_TARGET_COLUMN)
+
 
 
 def compute_account_features(
@@ -352,8 +377,9 @@ def build_monthly_snapshot(
     if active_subs.empty:
         return pd.DataFrame()
 
-    # 1. Target calculation
-    target_series = calculate_target(active_subs, cutoff_date)
+    # 1. Target calculations
+    churn_target = calculate_target(active_subs, cutoff_date)
+    sales_target = calculate_forward_sales_target(active_subs, cutoff_date)
 
     # 2. Subscriptions features
     sub_feats = compute_subscription_features(active_subs, cutoff_date)
@@ -377,10 +403,13 @@ def build_monthly_snapshot(
     )
 
     snapshot["cutoff_date"] = cutoff_date.strftime("%Y-%m-%d")
-    snapshot[TARGET_COLUMN] = target_series.values
+    snapshot[TARGET_COLUMN] = churn_target.values
+    snapshot[SALES_TARGET_COLUMN] = sales_target.values
 
-    # Reorder columns: Identifiers + Features + Target
-    ordered_cols = IDENTIFIER_COLUMNS + MODEL_FEATURE_COLUMNS + [TARGET_COLUMN]
+    # Reorder columns: Identifiers + Features + Targets
+    ordered_cols = (
+        IDENTIFIER_COLUMNS + MODEL_FEATURE_COLUMNS + [TARGET_COLUMN, SALES_TARGET_COLUMN]
+    )
     return snapshot[ordered_cols]
 
 
@@ -395,7 +424,11 @@ def audit_leakage(df: pd.DataFrame) -> None:
     for prohibited in LEAKAGE_COLUMNS:
         if prohibited in feature_columns:
             raise ValueError(f"Leakage Audit FAILED: '{prohibited}' is present in MODEL_FEATURE_COLUMNS.")
-        if prohibited in df_columns and prohibited not in IDENTIFIER_COLUMNS and prohibited != TARGET_COLUMN:
+        if (
+            prohibited in df_columns
+            and prohibited not in IDENTIFIER_COLUMNS
+            and prohibited not in [TARGET_COLUMN, SALES_TARGET_COLUMN]
+        ):
             raise ValueError(f"Leakage Audit FAILED: Prohibited column '{prohibited}' found in dataset.")
 
     if "churn_flag" in df_columns:
@@ -465,6 +498,29 @@ def get_preprocessor() -> ColumnTransformer:
         remainder="drop",
     )
     return preprocessor
+
+
+def get_sales_preprocessor() -> ColumnTransformer:
+    """
+    Creates and returns an unfitted scikit-learn ColumnTransformer configured
+    specifically for the forward Sales/MRR Forecaster.
+    Excludes current contract revenue features (mrr_amount, arr_amount) to prevent
+    identity-shortcut artifacts while predicting future 30-day MRR.
+    """
+    preprocessor = ColumnTransformer(
+        transformers=[
+            ("num", StandardScaler(), SALES_NUMERICAL_FEATURES),
+            (
+                "cat",
+                OneHotEncoder(handle_unknown="ignore", sparse_output=False),
+                CATEGORICAL_FEATURES,
+            ),
+            ("bool", "passthrough", BOOLEAN_FEATURES),
+        ],
+        remainder="drop",
+    )
+    return preprocessor
+
 
 
 def save_processed_data(

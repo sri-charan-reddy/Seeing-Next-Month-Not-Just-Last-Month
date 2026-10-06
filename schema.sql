@@ -10,14 +10,32 @@ CREATE TABLE IF NOT EXISTS model_telemetry (
         CHECK (sales_mape >= 0.0000),
     sales_rmse NUMERIC(8,2) NOT NULL
         CHECK (sales_rmse >= 0.00),
+    sales_mae NUMERIC(8,2)
+        CHECK (sales_mae >= 0.00),
+    sales_wmape NUMERIC(5,4)
+        CHECK (sales_wmape >= 0.0000),
     psi_score NUMERIC(5,4) NOT NULL
         CHECK (psi_score >= 0.0000),
     drift_flag BOOLEAN NOT NULL DEFAULT FALSE,
     test_sample_count INTEGER NOT NULL
         CHECK (test_sample_count > 0),
+    risk_threshold NUMERIC(7,6),
+    risk_queue_count INTEGER,
+    risk_queue_recall NUMERIC(5,4),
+    risk_queue_precision NUMERIC(5,4),
+    risk_queue_lift NUMERIC(6,2),
     notes TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT timezone('utc', now())
 );
+
+-- Backward-compatibility migrations for existing tables
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS sales_mae NUMERIC(8,2);
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS sales_wmape NUMERIC(5,4);
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS risk_threshold NUMERIC(7,6);
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS risk_queue_count INTEGER;
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS risk_queue_recall NUMERIC(5,4);
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS risk_queue_precision NUMERIC(5,4);
+ALTER TABLE model_telemetry ADD COLUMN IF NOT EXISTS risk_queue_lift NUMERIC(6,2);
 
 CREATE TABLE IF NOT EXISTS customer_predictions (
     id BIGSERIAL PRIMARY KEY,
@@ -77,8 +95,12 @@ WITH latest_run AS (
         churn_auc,
         sales_mape,
         sales_rmse,
+        sales_mae,
+        sales_wmape,
         psi_score,
         drift_flag,
+        risk_threshold,
+        risk_queue_lift,
         created_at AS run_timestamp
     FROM model_telemetry
     ORDER BY created_at DESC
@@ -91,13 +113,19 @@ SELECT
     lr.churn_auc,
     lr.sales_mape,
     lr.sales_rmse,
+    lr.sales_mae,
+    lr.sales_wmape,
     lr.psi_score,
     lr.drift_flag,
+    lr.risk_threshold,
+    lr.risk_queue_lift,
     lr.run_timestamp,
     cp.customer_id,
     cp.actual_churn,
     cp.churn_probability,
     CASE
+        WHEN lr.risk_threshold IS NOT NULL AND cp.churn_probability >= lr.risk_threshold
+            THEN 'Top-10% Operational Risk Queue'
         WHEN cp.churn_probability >= 0.75
             THEN 'Tier 1 - Critical Risk (>75%)'
         WHEN cp.churn_probability >= 0.50
@@ -115,8 +143,8 @@ SELECT
     cp.prescribed_risk_drop,
     cp.churn_probability - cp.prescribed_risk_drop AS risk_reduction_delta,
     CASE
-        WHEN cp.churn_probability >= 0.50
-         AND cp.prescribed_risk_drop < 0.35
+        WHEN cp.churn_probability >= COALESCE(lr.risk_threshold, 0.50)
+         AND cp.prescribed_risk_drop < cp.churn_probability
             THEN TRUE
         ELSE FALSE
     END AS is_recoverable_revenue,
@@ -132,8 +160,15 @@ SELECT
     churn_auc,
     sales_mape,
     sales_rmse,
+    sales_mae,
+    sales_wmape,
     psi_score,
     drift_flag,
+    risk_threshold,
+    risk_queue_count,
+    risk_queue_recall,
+    risk_queue_precision,
+    risk_queue_lift,
     CASE
         WHEN psi_score < 0.10
             THEN 'Stable (No Shift)'
@@ -142,6 +177,7 @@ SELECT
         ELSE 'Critical Drift (Action Required)'
     END AS drift_status_label,
     test_sample_count,
+    notes,
     created_at AS run_timestamp
 FROM model_telemetry
 ORDER BY created_at DESC;
@@ -158,7 +194,9 @@ SELECT
     cp.run_id,
     cp.created_at
 FROM customer_predictions cp
-WHERE cp.churn_probability >= 0.50
+LEFT JOIN model_telemetry mt
+    ON cp.run_id = mt.run_id
+WHERE cp.churn_probability >= COALESCE(mt.risk_threshold, 0.50)
 ORDER BY cp.churn_probability * cp.predicted_sales DESC;
 
 ALTER TABLE model_telemetry

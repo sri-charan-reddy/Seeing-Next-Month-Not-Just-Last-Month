@@ -103,23 +103,23 @@ Create a dedicated measure table named `_Measures` in Power BI:
 
 Add the following DAX calculations:
 
-### Measure 1: Total Expected Sales
+### Measure 1: Total Expected Next-Month MRR
 Calculates the aggregate point forecast for next-month billing across the evaluated customer base.
 ```dax
-Total Expected Sales = 
+Total Expected Next-Month MRR = 
 SUM(customer_predictions[predicted_sales])
 ```
 - **Format:** Currency (`$#,##0.00`)
 
 ---
 
-### Measure 2: Total Revenue At Risk
-Aggregates the sales forecast for customers exhibiting a churn probability of 50% or higher.
+### Measure 2: Revenue In Operational Risk Queue
+Aggregates the forward MRR forecast for customers in the training-derived Top-10% operational risk queue.
 ```dax
-Total Revenue At Risk = 
+Revenue In Operational Risk Queue = 
 CALCULATE(
     SUM(customer_predictions[predicted_sales]), 
-    customer_predictions[churn_probability] >= 0.50
+    customer_predictions[churn_probability] >= MAX(model_telemetry[risk_threshold])
 )
 ```
 - **Format:** Currency (`$#,##0.00`)
@@ -127,55 +127,48 @@ CALCULATE(
 ---
 
 ### Measure 3: Total Recoverable Revenue
-Quantifies the portion of revenue at risk that can realistically be salvaged through counterfactual prescriptive interventions (where post-intervention simulated risk falls below 35%).
+Quantifies forward MRR in the operational risk queue where counterfactual intervention achieves genuine risk reduction.
 ```dax
 Total Recoverable Revenue = 
 CALCULATE(
     SUM(customer_predictions[predicted_sales]), 
-    customer_predictions[churn_probability] >= 0.50, 
-    customer_predictions[prescribed_risk_drop] < 0.35
+    customer_predictions[churn_probability] >= MAX(model_telemetry[risk_threshold]), 
+    customer_predictions[prescribed_risk_drop] < customer_predictions[churn_probability]
 )
 ```
 - **Format:** Currency (`$#,##0.00`)
 
 ---
 
-### Measure 4: Drift Status Text
-Dynamic operational alert card indicating whether feature drift (Population Stability Index > 0.20) has degraded model reliability.
+### Measure 4: Drift Status & Calendar Aging Disclosure
+Dynamic operational alert card indicating model stability and calendar aging status.
 ```dax
 Drift Status Text = 
 IF(
     SELECTEDVALUE(model_telemetry[drift_flag], FALSE), 
     "⚠️ CRITICAL DRIFT DETECTED", 
-    "✅ MODELS STABLE (PSI < 0.20)"
+    "✅ MODELS STABLE (Overall PSI < 0.20; Calendar Aging Documented)"
 )
 ```
 - **Conditional Formatting:**
-  - Font Color: Red (`#DC2626`) if drift detected, Emerald Green (`#059669`) if stable.
+  - Font Color: Red (`#DC2626`) if overall drift detected, Emerald Green (`#059669`) if stable.
 
 ---
 
 ### Additional Executive DAX Measures
 
-#### Measure 5: Recoverable Revenue Ratio (%)
+#### Measure 5: Operational Queue Selection Rate (%)
 ```dax
-Recoverable Revenue Ratio = 
-DIVIDE([Total Recoverable Revenue], [Total Revenue At Risk], 0)
-```
-- **Format:** Percentage (`0.0%`)
-
-#### Measure 6: Churn Rate % (Projected)
-```dax
-Projected High-Risk Churn Rate = 
+Queue Selection Rate % = 
 DIVIDE(
-    CALCULATE(COUNTROWS(customer_predictions), customer_predictions[churn_probability] >= 0.50),
+    CALCULATE(COUNTROWS(customer_predictions), customer_predictions[churn_probability] >= MAX(model_telemetry[risk_threshold])),
     COUNTROWS(customer_predictions),
     0
 )
 ```
 - **Format:** Percentage (`0.0%`)
 
-#### Measure 7: Average Prediction Interval Width ($ Spread)
+#### Measure 6: Average Prediction Interval Width ($ Spread)
 ```dax
 Avg Interval Spread = 
 AVERAGEX(
@@ -193,88 +186,94 @@ The executive dashboard layout is organized into 5 primary visual zones:
 
 ```
 +-------------------------------------------------------------------------------------------------------------+
-| [HEADER] Enterprise Churn Intelligence & Next-Month Sales Forecaster | Model: v1.0-histgradboost            |
+| [HEADER] Enterprise Churn Intelligence & Next-Month Sales Forecaster | Model: Dual Pipeline (HistGB + Ridge)|
 +-------------------------------------------------------------------------------------------------------------+
-| [KPI 1] Total Expected Sales    [KPI 2] Revenue At Risk    [KPI 3] Recoverable Revenue   [KPI 4] Drift Status|
-|        $96,063.80                     $13,455.75 (14.0%)         $5,426.17 (40.3%)           MODELS STABLE   |
+| [KPI 1] Expected Next MRR       [KPI 2] Risk Queue MRR    [KPI 3] Recoverable MRR    [KPI 4] Drift & Aging  |
+|        Forward 30-Day Sum             Top-10% Cohort            Actionable Drop            STABLE (PSI <0.20)|
 +-------------------------------------------------------------+-----------------------------------------------+
 | [VISUAL A] 95% Confidence Sales Prediction Band             | [VISUAL B] Population Stability Drift Gauge   |
 |  - Line & Clustered Column Chart                            |  - Gauge Visual (PSI Target: 0.10, Max: 0.25) |
-|  - Y: Lower Bound, Predicted Sales, Upper Bound             |  - Current PSI: 0.0845 (Healthy Baseline)     |
+|  - Y: Lower Bound, Predicted Sales, Upper Bound             |  - Overall PSI vs Threshold 0.20              |
 +-------------------------------------------------------------+-----------------------------------------------+
-| [VISUAL C] Counterfactual Retention Action Priority Queue   | [VISUAL D] Mandatory Honest Accuracy Note     |
-|  - Columns: Customer ID, Churn %, Forecast, Recourse, Drop  |  - Verified Leakage Prevention                |
-|  - Conditional Heatmap highlighting high-yield interventions|  - Temporal Split Validation Summary          |
+| [VISUAL C] Top-10% Operational Retention Priority Queue     | [VISUAL D] Mandatory Honest Accuracy Note     |
+|  - Columns: Customer ID, Churn %, Forecast, Recourse, Drop  |  - Leakage-Free Point-In-Time Pipeline        |
+|  - Sorted by churn_probability Descending                   |  - Expected Calendar Aging Governance         |
 +-------------------------------------------------------------------------------------------------------------+
 ```
 
 ### Visual A: KPI Metric Cards (Top Ribbon)
 - **Visual Type:** New Card Visual or Multi-row Card.
-- **Card 1:** `[Total Expected Sales]` (Callout value: `$96.1K`, Subtitle: "Holdout 1,409 Accounts").
-- **Card 2:** `[Total Revenue At Risk]` (Callout value: `$13.5K`, Color: Soft Crimson `#E11D48`).
-- **Card 3:** `[Total Recoverable Revenue]` (Callout value: `$5.4K`, Subtitle: "40.3% Recovery Potential", Color: Emerald `#10B981`).
-- **Card 4:** `[Drift Status Text]` (Dynamic status with green/red pill background).
+- **Card 1:** `[Total Expected Next-Month MRR]` (Forward 30-day forecast).
+- **Card 2:** `[Revenue In Operational Risk Queue]` (Top-10% cohort forward MRR).
+- **Card 3:** `[Total Recoverable Revenue]` (Cohort with validated simulated risk reduction).
+- **Card 4:** `[Drift Status Text]` (Dynamic status with green/amber pill background).
 
 ---
 
 ### Visual B: Sales Forecast with Shaded 95% Prediction Interval Band
 - **Visual Type:** **Line Chart** or **Area Chart**.
-- **X-Axis:** `customer_id` (Sorted by `predicted_sales` Ascending) or Sub-cohort Spend deciles.
+- **X-Axis:** `customer_id` (Sorted by `predicted_sales` Ascending) or Spend deciles.
 - **Values:**
   1. `sales_upper_bound` (Line: Light Slate, Stroke Width: 1)
   2. `predicted_sales` (Line: Primary Microsoft Blue `#0078D4`, Stroke Width: 3)
-  3. `sales_lower_bound` (Line: Light Slate, Stroke Width: 1)
+  3. `sales_lower_bound` (Line: Light Slate, Stroke Width: 1, bounded at $0)
 - **Shaded Band Technique:**
   - In Power BI Analytics pane -> Turn on **Error Bars** on `predicted_sales`:
     - Upper Bound: `sales_upper_bound`
     - Lower Bound: `sales_lower_bound`
     - Marker: Off, Bar: Off, **Shaded Area:** On (Transparency: 80%, Color: `#0078D4`).
-  - This displays the exact $\pm 1.96\sigma$ uncertainty band ($4-$8 interval width).
+  - This displays the empirical $\pm 1.96\sigma$ uncertainty band.
 
 ---
 
-### Visual C: Retention Action Table (Executive Priority Queue)
+### Visual C: Top-10% Operational Retention Action Table
 - **Visual Type:** **Table** or **Matrix**.
 - **Data Source:** `vw_high_risk_retention_queue` or `customer_predictions`.
 - **Columns Included:**
   1. `customer_id`
-  2. `churn_probability` (Format as `0.0%`, Data Bars: Red gradient)
-  3. `predicted_sales` (Format as `$#,##0.00`)
-  4. `prescriptive_action` (Full counterfactual prescription text, e.g., *"Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 82% -> 27%)"*)
-  5. `prescribed_risk_drop` (Format as `0.0%`, Color font: Green `#047857`)
-- **Filters on Visual:** `churn_probability >= 0.50`.
+  2. `churn_probability` (Format as `0.00%`, Data Bars: Red gradient)
+  3. `predicted_sales` (Next-month MRR point forecast, `$#,##0.00`)
+  4. `prescriptive_action` (Full counterfactual prescription text, e.g., *"Switch to Annual Billing Plan with 15% Discount (Simulated Risk: 1.84% -> 1.02%)"*)
+  5. `prescribed_risk_drop` (Post-intervention simulated risk, `0.00%`)
+- **Filters on Visual:** Filtered to the Top-10% operational risk queue (`churn_probability >= risk_threshold`).
 - **Default Sort:** `churn_probability` Descending.
 
 ---
 
-### Visual D: PSI Drift Gauge (Model Governance & Reliability)
+### Visual D: PSI Drift Gauge & Governance
 - **Visual Type:** **Gauge Visual**.
-- **Value:** `SELECTEDVALUE(model_telemetry[psi_score])` (e.g., `0.0845`).
+- **Value:** `SELECTEDVALUE(model_telemetry[psi_score])`.
 - **Minimum Value:** `0.00`.
 - **Maximum Value:** `0.30`.
-- **Target Value:** `0.10` (Safe threshold).
+- **Target Value:** `0.10` (Safe threshold; alarm at `0.20`).
 - **Conditional Color Coding:**
-  - Value `< 0.10`: `#10B981` (Green — No Shift)
+  - Value `< 0.10`: `#10B981` (Green — Stable)
   - Value `0.10 - 0.20`: `#F59E0B` (Amber — Moderate Shift)
   - Value `> 0.20`: `#EF4444` (Red — Critical Drift Flagged)
 
 ---
 
-### Visual E: The Mandatory "Honest Accuracy Note" Card
-Place a dedicated Text/Card component prominently in the governance section of the dashboard:
+### Visual E: Mandatory Model Governance & Transparency Disclosure
+Place a dedicated Card or Callout component prominently in the dashboard:
 
 ```text
 ========================================================================================
                       [GOVERNANCE & VALIDATION AUDIT TRAIL]
 ========================================================================================
-* Temporal Leakage Prevention: Features engineered strictly on pre-cutoff historical
-  windows. Velocity aggregations omit future billing cycles to avoid lookahead bias.
-* Calibrated Probabilities: Churn likelihood calibrated via Isotonic Regression;
-  raw tree probabilities mapped to real frequentist risk. Holdout AUC: 0.8812.
-* Dual-Model Uncertainty: Next-month sales generated via Ridge Regressor (MAPE: 3.82%,
-  RMSE: $14.65) with empirical 95% prediction intervals (±1.96*sigma spread $4 to $8).
-* Drift Monitoring: Real-time Population Stability Index (PSI = 0.0845) actively
-  benchmarked against training distribution. Drift threshold established at PSI = 0.20.
+* Forward Target Formulation: Regression target is NEXT 30-DAY MRR (0 if churned,
+  contract MRR if retained). Current contract mrr_amount/arr_amount are strictly
+  excluded from feature inputs to eliminate identity-shortcut artifacts.
+* Operational Churn Policy: Base churn rate is low (~1.6%). Operational risk queue
+  targets the Top-10% highest-risk cohort using a frozen threshold derived strictly
+  from the training risk distribution, without touching holdout labels.
+* Defensible Sales Metrics: Sales performance tracked via RMSE, MAE, Non-zero MAPE
+  (calculated strictly where y > 0 to eliminate division-by-zero artifacts), and WMAPE.
+* Expected Calendar Aging: Overall Population Stability Index (PSI) remains stable
+  (< 0.10). Higher feature-level PSI in account_age_days and active_tenure_days is
+  explicitly classified as Expected Calendar Aging rather than data corruption.
+* Honest Model Reporting: Features are strictly pre-cutoff trailing point-in-time
+  aggregations with 0 lookahead leakage. Model scores reflect genuine signal without
+  synthetic inflation.
 ========================================================================================
 ```
 
@@ -283,7 +282,7 @@ Place a dedicated Text/Card component prominently in the governance section of t
 ## 6. Performance Optimization Tips for Supabase & DirectQuery
 
 1. **Leverage the Indexed View:** Direct Power BI to `vw_latest_customer_predictions`. It automatically limits reads to the single most recent model run, leveraging the `idx_customer_predictions_run_churn` index.
-2. **Turn on Query Folding:** Ensure filters (such as `churn_probability >= 0.50`) are applied in Power Query steps so they fold into PostgreSQL `WHERE` clauses executed server-side in Supabase.
+2. **Turn on Query Folding:** Ensure filters (such as `churn_probability >= risk_threshold`) are applied in Power Query steps so they fold into PostgreSQL `WHERE` clauses executed server-side in Supabase.
 3. **Connection Mode Recommendation:**
    - For hackathon demonstration: Use **Import Mode** with a scheduled refresh or manual refresh on trigger.
    - For real-time production: Connect via the Supabase **Connection Pooler (port 6543)** in **DirectQuery** mode.

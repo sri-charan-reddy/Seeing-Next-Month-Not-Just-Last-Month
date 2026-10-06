@@ -21,6 +21,7 @@ from sklearn.metrics import (
     brier_score_loss,
     confusion_matrix,
     f1_score,
+    mean_absolute_error,
     mean_absolute_percentage_error,
     precision_score,
     recall_score,
@@ -30,11 +31,13 @@ from sklearn.metrics import (
 from sklearn.pipeline import Pipeline
 
 from src.config import (
+    CHURN_FEATURE_COLUMNS,
     IDENTIFIER_COLUMNS,
     MODEL_FEATURE_COLUMNS,
+    SALES_FEATURE_COLUMNS,
     TARGET_COLUMN,
 )
-from src.pipeline import get_preprocessor
+from src.pipeline import get_preprocessor, get_sales_preprocessor
 
 
 def temporal_train_test_split(
@@ -120,6 +123,7 @@ class ChurnModel:
             ]
         )
         self.is_fitted = False
+        self.risk_threshold: Optional[float] = None
 
     def fit(self, X: pd.DataFrame, y: pd.Series) -> "ChurnModel":
         """
@@ -130,6 +134,18 @@ class ChurnModel:
         self.pipeline.fit(X[feat_cols], y)
         self.is_fitted = True
         return self
+
+    def compute_training_risk_threshold(
+        self, X_train: pd.DataFrame, percentile: float = 0.90
+    ) -> float:
+        """
+        Determines the operational risk queue threshold from the training risk score distribution.
+        Strictly leakage-safe: uses training data only, never untouched holdout data.
+        """
+        train_probs = self.predict_proba(X_train)
+        threshold = float(np.quantile(train_probs, percentile))
+        self.risk_threshold = threshold
+        return threshold
 
     def predict_proba(self, X: pd.DataFrame) -> np.ndarray:
         """
@@ -183,15 +199,19 @@ class SalesModel:
     """
     Revenue / MRR Forecaster using Ridge Regression with feature preprocessing
     and non-negative prediction projection.
+    Strictly excludes current contract revenue features (mrr_amount, arr_amount) to prevent
+    identity-function shortcuts and force genuine forward prediction from usage/tenure/tier.
     """
 
     def __init__(
         self,
         preprocessor: Optional[ColumnTransformer] = None,
+        feature_columns: Optional[List[str]] = None,
         alpha: float = 1.0,
         random_state: int = 42,
     ):
-        self.preprocessor = preprocessor or get_preprocessor()
+        self.feature_columns = feature_columns or SALES_FEATURE_COLUMNS
+        self.preprocessor = preprocessor or get_sales_preprocessor()
         self.alpha = alpha
         self.random_state = random_state
 
@@ -208,7 +228,7 @@ class SalesModel:
         """
         Fits the preprocessor and Ridge regressor on training data.
         """
-        feat_cols = [c for c in MODEL_FEATURE_COLUMNS if c in X.columns]
+        feat_cols = [c for c in self.feature_columns if c in X.columns]
         self.pipeline.fit(X[feat_cols], y)
         self.is_fitted = True
         return self
@@ -219,23 +239,48 @@ class SalesModel:
         """
         if not self.is_fitted:
             raise RuntimeError("SalesModel must be fitted before calling predict.")
-        feat_cols = [c for c in MODEL_FEATURE_COLUMNS if c in X.columns]
+        feat_cols = [c for c in self.feature_columns if c in X.columns]
         raw_preds = self.pipeline.predict(X[feat_cols])
         return np.maximum(0.0, raw_preds)
 
     def evaluate(self, X: pd.DataFrame, y: pd.Series) -> Dict[str, float]:
         """
-        Calculates MAPE and RMSE regression metrics on holdout test data.
+        Calculates regression metrics on holdout test data:
+        - RMSE: root mean squared error
+        - MAE: mean absolute error
+        - MAPE: calculated defensibly on non-zero actual future revenue (y > 0)
+        - WMAPE: weighted MAPE sum(|y - pred|) / sum(|y|)
         """
         preds = self.predict(X)
-        y_true = np.maximum(0.01, y.values)  # Guard against division by 0 in MAPE
+        y_true = y.values.astype(float)
 
-        mape = float(mean_absolute_percentage_error(y_true, preds))
-        rmse = float(root_mean_squared_error(y.values, preds))
+        rmse = float(root_mean_squared_error(y_true, preds))
+        mae = float(mean_absolute_error(y_true, preds))
+
+        # Defensible MAPE on non-zero actuals
+        non_zero_mask = y_true > 0
+        if np.any(non_zero_mask):
+            mape = float(
+                np.mean(
+                    np.abs(y_true[non_zero_mask] - preds[non_zero_mask])
+                    / y_true[non_zero_mask]
+                )
+            )
+        else:
+            mape = 0.0
+
+        # WMAPE
+        sum_actual = float(np.sum(np.abs(y_true)))
+        if sum_actual > 0:
+            wmape = float(np.sum(np.abs(y_true - preds)) / sum_actual)
+        else:
+            wmape = 0.0
 
         return {
             "sales_mape": round(mape, 4),
             "sales_rmse": round(rmse, 2),
+            "sales_mae": round(mae, 2),
+            "sales_wmape": round(wmape, 4),
             "sample_count": len(y),
         }
 

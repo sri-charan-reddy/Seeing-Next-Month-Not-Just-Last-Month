@@ -135,3 +135,18 @@ class DriftMonitor:
             return "Moderate Shift (Monitor)"
         else:
             return "Critical Drift (Action Required)"
+
+    def classify_feature_drift(self, feature_name: str, psi: float) -> str:
+        """
+        Classifies feature-level drift, distinguishing expected chronological aging
+        (monotonic tenure/age features) from genuine data/system drift.
+        """
+        if feature_name in ["account_age_days", "active_tenure_days"] and psi > self.CRITICAL_DRIFT_THRESHOLD:
+            return "Expected Calendar Aging"
+        elif psi < self.STABILITY_THRESHOLD:
+            return "Stable"
+        elif psi <= self.CRITICAL_DRIFT_THRESHOLD:
+            return "Moderate Shift"
+        else:
+            return "Critical Drift"
+

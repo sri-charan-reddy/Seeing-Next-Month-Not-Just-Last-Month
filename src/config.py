@@ -40,6 +40,7 @@ IDENTIFIER_COLUMNS: List[str] = [
 ]
 
 TARGET_COLUMN: str = "churn_next_30d"
+SALES_TARGET_COLUMN: str = "future_mrr_30d"
 
 NUMERICAL_FEATURES: List[str] = [
     "account_age_days",
@@ -62,6 +63,13 @@ NUMERICAL_FEATURES: List[str] = [
     "satisfaction_response_count_60d",
 ]
 
+# Forward Sales/Revenue Model Features:
+# Current contract revenue features (mrr_amount, arr_amount) are strictly excluded
+# to prevent identity-feature shortcuts when predicting forward 30-day MRR.
+SALES_NUMERICAL_FEATURES: List[str] = [
+    c for c in NUMERICAL_FEATURES if c not in ["mrr_amount", "arr_amount"]
+]
+
 CATEGORICAL_FEATURES: List[str] = [
     "industry",
     "country",
@@ -78,6 +86,12 @@ BOOLEAN_FEATURES: List[str] = [
 
 MODEL_FEATURE_COLUMNS: List[str] = (
     NUMERICAL_FEATURES + CATEGORICAL_FEATURES + BOOLEAN_FEATURES
+)
+
+CHURN_FEATURE_COLUMNS: List[str] = MODEL_FEATURE_COLUMNS
+
+SALES_FEATURE_COLUMNS: List[str] = (
+    SALES_NUMERICAL_FEATURES + CATEGORICAL_FEATURES + BOOLEAN_FEATURES
 )
 
 # Known Leakage / Prohibited Feature Columns

@@ -220,6 +220,19 @@ class TelemetryLogger:
             "created_at": metrics_dict.get("created_at", datetime.now(timezone.utc).isoformat())
         }
 
+        # Add optional extended metrics if provided
+        for opt_key in [
+            "sales_mae",
+            "sales_wmape",
+            "risk_threshold",
+            "risk_queue_count",
+            "risk_queue_recall",
+            "risk_queue_precision",
+            "risk_queue_lift",
+        ]:
+            if opt_key in metrics_dict and metrics_dict[opt_key] is not None:
+                record[opt_key] = metrics_dict[opt_key]
+
         logger.info(
             f"Logging telemetry for run_id='{run_id}', version='{record['model_version']}', "
             f"AUC={record['churn_auc']}, MAPE={record['sales_mape']}, PSI={record['psi_score']} "
@@ -245,10 +258,13 @@ class TelemetryLogger:
             try:
                 conn = psycopg2.connect(self.database_url)
                 with conn.cursor() as cur:
-                    insert_query = """
-                        INSERT INTO model_telemetry 
-                        (run_id, model_version, churn_auc, sales_mape, sales_rmse, psi_score, drift_flag, test_sample_count, notes, created_at)
-                        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+                    cols = list(record.keys())
+                    vals = [record[c] for c in cols]
+                    placeholders = ", ".join(["%s"] * len(cols))
+                    col_names = ", ".join(cols)
+                    insert_query = f"""
+                        INSERT INTO model_telemetry ({col_names})
+                        VALUES ({placeholders})
                         ON CONFLICT (run_id) DO UPDATE SET
                             churn_auc = EXCLUDED.churn_auc,
                             sales_mape = EXCLUDED.sales_mape,
@@ -256,21 +272,10 @@ class TelemetryLogger:
                             psi_score = EXCLUDED.psi_score,
                             drift_flag = EXCLUDED.drift_flag;
                     """
-                    cur.execute(insert_query, (
-                        record["run_id"],
-                        record["model_version"],
-                        record["churn_auc"],
-                        record["sales_mape"],
-                        record["sales_rmse"],
-                        record["psi_score"],
-                        record["drift_flag"],
-                        record["test_sample_count"],
-                        record["notes"],
-                        record["created_at"]
-                    ))
-                conn.commit()
+                    cur.execute(insert_query, vals)
+                    conn.commit()
                 conn.close()
-                logger.info(f"Successfully committed run_id='{run_id}' to model_telemetry via direct psycopg2.")
+                logger.info(f"Successfully committed run_id='{run_id}' to model_telemetry via psycopg2.")
                 return run_id
             except Exception as e:
                 logger.error(f"Error inserting model_telemetry via psycopg2: {str(e)}")

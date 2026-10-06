@@ -163,16 +163,15 @@ class RecourseEngine:
                 best_simulated_risk = new_prob
                 best_action = action_name
 
-        # Check if successful intervention was found meeting the target risk bound (< 0.35)
-        orig_pct = int(round(current_probability * 100))
-        if best_action and best_simulated_risk < self.target_risk_bound:
-            new_pct = int(round(best_simulated_risk * 100))
-            action_text = f"{best_action} (Simulated Risk: {orig_pct}% -> {new_pct}%)"
+        # Check if successful intervention was found meeting target risk or achieving validated drop
+        orig_fmt = f"{current_probability * 100:.2f}%"
+        new_fmt = f"{best_simulated_risk * 100:.2f}%"
+
+        if best_action and self.target_risk_bound and best_simulated_risk < self.target_risk_bound:
+            action_text = f"{best_action} (Simulated Risk: {orig_fmt} -> {new_fmt})"
             return action_text, round(best_simulated_risk, 4)
         elif best_action and best_simulated_risk < current_probability:
-            # Reduced risk but did not fully drop below 0.35
-            new_pct = int(round(best_simulated_risk * 100))
-            action_text = f"{best_action} [Partial Drop] (Simulated Risk: {orig_pct}% -> {new_pct}%)"
+            action_text = f"{best_action} (Simulated Risk: {orig_fmt} -> {new_fmt})"
             return action_text, round(best_simulated_risk, 4)
         else:
             return "No validated intervention found (Risk exceeds actionable threshold)", current_probability

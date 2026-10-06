@@ -156,20 +156,22 @@ python simulate_ingestion.py
   - Output: `churn_probability` strictly bounded in $[0.0000, 1.0000]$
   - Evaluation: ROC-AUC (primary metric), precision, recall, F1, Brier score
 - **Sales / MRR Regressor (`SalesModel`):**
-  - Model: `Ridge(alpha=1.0)` with $L_2$ regularization predicting `mrr_amount`
+  - Model: `Ridge(alpha=1.0)` with $L_2$ regularization predicting `future_mrr_30d` (forward 30-day MRR; $0 if terminating within 30 days, current MRR if retained)
+  - Features: 23 features (`mrr_amount` and `arr_amount` strictly excluded to eliminate identity-shortcut artifacts)
   - Output: `predicted_sales` with non-negative projection ($\max(0.0, \hat{y})$)
-  - Evaluation: MAPE and RMSE
+  - Evaluation: RMSE, MAE, Non-zero MAPE ($y > 0$), and WMAPE
 - **95% Residual Prediction Intervals:**
   - Bounds: $[\max(0.0, \hat{y} - 1.96\sigma), \hat{y} + 1.96\sigma]$ based on holdout residual standard deviation $\sigma$.
 - **Temporal Validation:** `temporal_train_test_split()` enforces strict chronological snapshot splitting across cutoff dates (no future snapshots in training).
 - **Prescriptive Counterfactual Recourse Engine (`RecourseEngine`):**
-  - Triggers for high-risk accounts ($P(\text{churn}) > 0.60$).
+  - Triggers for the Top-10% operational risk queue ($P(\text{churn}) \ge \text{risk\_threshold}$, derived from training 90th percentile).
   - Modifies strictly mutable subscription fields (`billing_frequency`, `auto_renew_flag`, `plan_tier`, `is_trial`).
   - Preserves all immutable features (demographics, tenure, historical usage, past tickets).
-  - Recalculates churn probability through the fitted pipeline targeting risk $< 0.35$.
+  - Recalculates churn probability through the fitted pipeline and verifies genuine risk reduction.
 - **Population Stability Index (PSI) Drift Monitor (`DriftMonitor`):**
   - Evaluates feature-level PSI across all 25 features between training baseline and holdout/production cohorts.
   - Governance thresholds: Stable ($< 0.10$), Moderate Shift ($0.10 - 0.20$), Critical Drift ($> 0.20 \rightarrow \text{drift\_flag} = \text{True}$).
+  - Explicitly documents natural drift in `account_age_days` and `active_tenure_days` as "Expected Calendar Aging".
 
 ---
 
@@ -178,11 +180,11 @@ python simulate_ingestion.py
 - **PostgreSQL DDL Schema (`schema.sql`):** Creates `model_telemetry` and `customer_predictions` tables with B-tree indexes, foreign keys, check constraints, and RLS policies.
 - **Analytical Views:**
   - `vw_latest_customer_predictions`: Joins latest model run with customer-level predictions, risk tiers, and recoverable revenue flags.
-  - `vw_model_drift_governance`: Tracks run-level AUC, MAPE, RMSE, PSI score, and drift labels.
-  - `vw_high_risk_retention_queue`: Prioritizes accounts with $P \ge 0.50$ by expected revenue loss.
+  - `vw_model_drift_governance`: Tracks run-level AUC, MAPE, RMSE, MAE, WMAPE, PSI score, and drift labels.
+  - `vw_high_risk_retention_queue`: Prioritizes accounts in the operational risk queue ($P \ge \text{risk\_threshold}$) by expected revenue loss.
 - **Telemetry Logger (`supabase_manager.py`):** Dual-engine client supporting both Supabase PostgREST API and psycopg2 direct pooler bulk ingestion.
-- **Power BI DAX Specifications (`powerbi_setup_guide.md`):** Core DAX measures for Total Expected Sales, Total Revenue At Risk, Total Recoverable Revenue, and Drift Status Text.
-- **Uncertainty & Disclosure Cards:** Dedicated dashboard cards for model accuracy metrics (AUC, MAPE, RMSE) and prediction interval ranges.
+- **Power BI DAX Specifications (`powerbi_setup_guide.md`):** Core DAX measures for Total Expected Next-Month MRR, Revenue In Operational Risk Queue, Total Recoverable Revenue, and Drift Status Text.
+- **Uncertainty & Disclosure Cards:** Dedicated dashboard cards for model performance metrics (AUC, MAE, RMSE, WMAPE, non-zero MAPE) and prediction interval ranges.
 
 ---
 
