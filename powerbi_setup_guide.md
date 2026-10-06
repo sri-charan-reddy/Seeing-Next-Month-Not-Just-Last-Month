@@ -12,7 +12,7 @@
 ```mermaid
 graph LR
     subgraph Data & Feature Pipeline (Member 1 & 2)
-        A[Raw Telco Ingestion] --> B[Temporal Velocity Pipeline]
+        A[Raw SaaS / RavenStack Ingestion] --> B[Temporal Velocity Pipeline]
         B --> C[Calibrated Churn Classifier]
         B --> D[Ridge Sales Regressor ±1.96σ]
         C --> E[Counterfactual Recourse Engine]
@@ -240,7 +240,7 @@ The executive dashboard layout is organized into 5 primary visual zones:
   1. `customer_id`
   2. `churn_probability` (Format as `0.0%`, Data Bars: Red gradient)
   3. `predicted_sales` (Format as `$#,##0.00`)
-  4. `prescriptive_action` (Full counterfactual prescription text, e.g., *"Offer 1-Yr Contract + Add Tech Support (Simulated Risk: 82% -> 27%)"*)
+  4. `prescriptive_action` (Full counterfactual prescription text, e.g., *"Switch to Annual Billing + Assign Dedicated CSM (Simulated Risk: 82% -> 27%)"*)
   5. `prescribed_risk_drop` (Format as `0.0%`, Color font: Green `#047857`)
 - **Filters on Visual:** `churn_probability >= 0.50`.
 - **Default Sort:** `churn_probability` Descending.

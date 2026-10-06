@@ -3,8 +3,33 @@
 
 ### 📌 Architecture Summary & Role Scope
 In our 3-member enterprise architecture:
-- **Member 1 & 2:** Feature engineering (temporal velocity, leakage prevention), model training (Calibrated Churn Classifier, Ridge Sales Regressor with 95% prediction intervals, and Counterfactual Prescriptive Recourse Engine).
-- **Member 3 (This Module):** Cloud Data Persistence & Monitoring Layer using **Supabase (PostgreSQL)**, automated pipeline ingestion scripts, and structured views/DAX specifications for the **Microsoft Power BI executive dashboard**.
+- **Member 1 (Data Engineering):** Point-in-time snapshot feature engineering on raw RavenStack SaaS data, leakage prevention, and temporal velocity metrics.
+- **Member 2 (ML Models & Recourse):** Dual ML modeling (Calibrated Churn Classifier, Ridge Sales Regressor with 95% prediction intervals), Counterfactual Prescriptive Recourse Engine, and Population Stability Index (PSI) drift monitoring.
+- **Member 3 (This Module - Persistence & Serving):** Cloud Data Persistence & Monitoring Layer using **Supabase (PostgreSQL)**, automated pipeline ingestion scripts, and structured views/DAX specifications for the **Microsoft Power BI executive dashboard**.
+
+---
+
+### 🔄 Production Flow vs. Offline Testing
+
+#### 1. Production Pipeline Flow:
+```text
+Raw RavenStack Data (4 CSVs)
+  │
+  ▼ [Member 1: src/pipeline.py]
+Point-in-Time Features & Preprocessor (25 features, zero leakage)
+  │
+  ▼ [Member 2: src/inference.py -> run_member_2_pipeline()]
+Trained Models, Uncertainty Intervals, Counterfactual Recourse & Drift
+  │
+  ▼ [Member 3: supabase_manager.py -> TelemetryLogger]
+Supabase Cloud PostgreSQL (customer_predictions & model_telemetry)
+  │
+  ▼ [Member 3: powerbi_setup_guide.md]
+Microsoft Power BI DirectQuery Executive Dashboard
+```
+
+#### 2. Offline Simulation Flow (`simulate_ingestion.py`):
+`simulate_ingestion.py` is **STRICTLY an offline testing utility** for validating database connection pooling, table schemas, and Power BI DirectQuery mappings without requiring raw SaaS data or trained ML weights. It does **NOT** represent production model predictions.
 
 ---
 
@@ -13,7 +38,7 @@ In our 3-member enterprise architecture:
 ```text
 ├── schema.sql                         # Production-grade idempotent PostgreSQL DDL schema & views
 ├── supabase_manager.py                # TelemetryLogger module (supabase-py & psycopg2 dual-engine)
-├── simulate_ingestion.py              # Synthetic holdout test ingestion pipeline (N=1,409)
+├── simulate_ingestion.py              # Offline holdout test ingestion simulation utility
 ├── powerbi_setup_guide.md             # Complete Power BI setup, DAX measures, and visual specs
 ├── synthetic_holdout_predictions.csv  # Pre-generated holdout inference payload for offline testing
 ├── .env.example                       # Environment variable template
@@ -46,13 +71,29 @@ DATABASE_URL="postgresql://postgres:<password>@db.<your-project-id>.supabase.co:
 ```
 
 ### Step 3: Run Ingestion or Simulation
-To simulate the full holdout ingestion ($N = 1,409$ customers):
-```bash
-# Live Ingestion into Supabase:
-python simulate_ingestion.py
 
+**Option A: Real Production Pipeline Ingestion** (Requires raw RavenStack data & trained Member 2 models):
+```bash
+python simulate_ingestion.py --production
+```
+*Or call programmatically:*
+```python
+from src.inference import run_member_2_pipeline
+from supabase_manager import TelemetryLogger
+
+predictions_df, telemetry = run_member_2_pipeline()
+logger = TelemetryLogger()
+run_id = logger.log_run_telemetry(telemetry)
+logger.log_customer_predictions(run_id, predictions_df)
+```
+
+**Option B: Offline Mock Simulation** (For testing database connectivity & Power BI DirectQuery mappings):
+```bash
 # Offline Dry-Run & CSV Export:
 python simulate_ingestion.py --dry-run --export-csv
+
+# Live Ingestion into Supabase with mock payload:
+python simulate_ingestion.py
 ```
 
 ---
@@ -87,7 +128,7 @@ logger.log_customer_predictions(
 ```
 
 ### Required Columns in `predictions_df`:
-- `customer_id` (`str`): Anonymized Telco customer ID (e.g., `'7590-VHVEG'`)
+- `customer_id` (`str`): Unique Customer / Account ID (e.g., `'acc_00123'`)
 - `actual_churn` (`int`, optional): 0 or 1 ground truth
 - `churn_probability` (`float`): Calibrated probability in $[0.0000, 1.0000]$
 - `actual_sales` (`float`, optional): Actual billed amount

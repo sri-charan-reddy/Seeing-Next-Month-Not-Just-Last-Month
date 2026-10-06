@@ -1,13 +1,24 @@
 """
+[OFFLINE / DEMO TESTING UTILITY ONLY]
 Simulate Ingestion Pipeline: Customer Churn & Next-Month Sales Forecasting
-Microsoft Hackathon - Member 3: Cloud Data Persistence & Monitoring Layer
+Member 3: Cloud Data Persistence & Monitoring Layer
 
-Generates realistic synthetic holdout test inferences (N = 1,409 Telco customers)
-matching Member 1 & 2's feature and model pipeline specifications:
-- Calibrated Churn Classifier probabilities (right-skewed distribution)
-- Ridge Sales Regressor with 95% prediction intervals (±1.96*sigma, $4-$8 spread)
-- Counterfactual Prescriptive Recourse Engine recommendations
-- Ingests into Supabase PostgreSQL (model_telemetry + customer_predictions)
+================================================================================
+CRITICAL ARCHITECTURAL DISTINCTION:
+- PRODUCTION INFERENCE PATH:
+    Production model training, inference, and governance are executed via:
+    `src.inference.run_member_2_pipeline()`
+    using real features from Member 1's point-in-time RavenStack SaaS pipeline.
+
+- OFFLINE / DEMO SIMULATION PATH (THIS SCRIPT):
+    This script (`simulate_ingestion.py`) is STRICTLY an offline testing and demo
+    utility used to verify Supabase table schemas, connection pooling, and
+    Power BI DirectQuery mappings when raw RavenStack data or trained ML models
+    are not present in the runtime environment.
+    
+    The synthetic generator in this file produces mock benchmark records for
+    infrastructure testing ONLY and does NOT represent production model predictions.
+================================================================================
 """
 
 import sys
@@ -39,65 +50,69 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-def generate_telco_customer_id(index: int) -> str:
-    """Generate realistic Telco format Customer ID: 4 digits + '-' + 5 uppercase letters."""
+
+def generate_mock_customer_id(index: int) -> str:
+    """Generate deterministic mock Customer / Account ID for offline testing."""
     chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     prefix = f"{1000 + (index * 7) % 9000:04d}"
-    # Seeded pseudo-random suffix for deterministic reproducibility
     random_gen = random.Random(index * 1337)
     suffix = "".join(random_gen.choice(chars) for _ in range(5))
-    return f"{prefix}-{suffix}"
+    return f"acc_{prefix}-{suffix}"
 
 
-def generate_synthetic_telco_holdout(n_samples: int = 1409, seed: int = 42) -> pd.DataFrame:
+# Backwards compatibility alias
+generate_telco_customer_id = generate_mock_customer_id
+
+
+def generate_mock_holdout_predictions(n_samples: int = 1409, seed: int = 42) -> pd.DataFrame:
     """
-    Synthesize realistic holdout predictions matching Member 2's model outputs.
+    [OFFLINE / MOCK UTILITY ONLY]
+    Synthesize mock holdout predictions for testing Supabase schema constraints,
+    direct PostgreSQL pooler batching, and Power BI DirectQuery mappings.
+
+    NOTE: This is strictly a synthetic testing generator and does NOT execute
+    Member 2's trained ML models or use real RavenStack data. Production predictions
+    must be generated using `src.inference.run_member_2_pipeline()`.
     
     Args:
-        n_samples: Holdout test sample size (default 1,409 to match standard Telco 80/20 split)
+        n_samples: Mock test sample size (default 1,409)
         seed: Random seed for deterministic validation
 
     Returns:
-        pd.DataFrame containing all schema columns for `customer_predictions`.
+        pd.DataFrame conforming to `customer_predictions` database schema.
     """
     np.random.seed(seed)
     random.seed(seed)
 
-    logger.info(f"Generating synthetic inference payload for N={n_samples} holdout customers...")
+    logger.info(f"[OFFLINE MOCK] Generating mock inference payload for N={n_samples} accounts...")
 
     # 1. Calibrated Churn Probabilities: Right-skewed distribution (Beta distribution)
-    # Most telco customers are loyal (p < 0.3), with a smaller subset in churn danger
     raw_probs = np.random.beta(a=1.4, b=3.8, size=n_samples)
-    # Clip between 0.0450 and 0.9550 for calibrated realism
     churn_probabilities = np.clip(raw_probs, 0.0450, 0.9550).round(4)
 
-    # 2. Predicted Sales: Telco monthly bills typically range between $20 and $118
-    # Baseline correlated with churn probability (high monthly spend customers often churn at higher rates)
+    # 2. Predicted Sales / MRR
     base_sales = np.random.normal(loc=65.0, scale=24.0, size=n_samples) + (churn_probabilities * 15.0)
     predicted_sales = np.clip(base_sales, 20.00, 118.75).round(2)
 
-    # 3. 95% Prediction Interval: ±1.96 * sigma, where sigma ~ Uniform(2.0, 4.0) ($4 to $8 spread)
-    # Spread = upper - lower = 2 * 1.96 * sigma = 3.92 * sigma
-    sigma = np.random.uniform(1.05, 2.05, size=n_samples)  # Half-width = 1.96 * sigma in [$2.05, $4.01], spread ~$4.10 to $8.02
+    # 3. 95% Prediction Interval: ±1.96 * sigma
+    sigma = np.random.uniform(1.05, 2.05, size=n_samples)
     half_width = (1.96 * sigma).round(2)
     sales_lower_bound = np.maximum(5.00, predicted_sales - half_width).round(2)
     sales_upper_bound = (predicted_sales + half_width).round(2)
 
     # 4. Actual Churn & Actual Sales (Ground truth for holdout evaluation)
-    # Actual churn drawn probabilistically using calibrated churn_probability
     actual_churn = (np.random.rand(n_samples) < churn_probabilities).astype(int)
-    # Actual sales fluctuates around predicted with slight noise
     actual_sales = np.clip(predicted_sales + np.random.normal(0, sigma, size=n_samples), 18.00, 125.00).round(2)
 
-    # 5. Counterfactual Prescriptive Recourse Interventions
+    # 5. Prescriptive Recourse Interventions (Aligned with SaaS mutable actions)
     prescriptive_actions = []
     prescribed_risk_drops = []
 
     intervention_catalog = [
-        ("Offer 1-Yr Contract + Add Tech Support", 0.24, 0.29),
-        ("Apply 10% Loyalty Credit + Senior Agent Outreach", 0.28, 0.33),
-        ("Bundle Streaming & Security + Waive Device Fee", 0.22, 0.27),
-        ("Lock-In 2-Yr Fiber Guarantee + Free Wi-Fi 6 Router", 0.16, 0.22),
+        ("Switch to Annual Billing + Assign Dedicated CSM", 0.24, 0.29),
+        ("Enable Auto-Renew + Apply 10% Annual Discount", 0.28, 0.33),
+        ("Upgrade to Pro Tier + Onboarding Specialist", 0.22, 0.27),
+        ("Convert Trial to Paid + Enterprise SLA Guarantee", 0.16, 0.22),
     ]
 
     for p in churn_probabilities:
@@ -105,7 +120,6 @@ def generate_synthetic_telco_holdout(n_samples: int = 1409, seed: int = 42) -> p
             # High risk: trigger counterfactual prescription engine
             chosen_action, min_risk, max_risk = random.choice(intervention_catalog)
             simulated_new_risk = round(random.uniform(min_risk, max_risk), 4)
-            # Ensure post-intervention risk is strictly lower than current risk
             simulated_new_risk = min(simulated_new_risk, round(p - 0.25, 4))
             simulated_new_risk = max(0.1200, simulated_new_risk)
             
@@ -124,12 +138,12 @@ def generate_synthetic_telco_holdout(n_samples: int = 1409, seed: int = 42) -> p
             prescriptive_actions.append(action_text)
             prescribed_risk_drops.append(simulated_new_risk)
         else:
-            # Low risk: no costly intervention recommended
+            # Low risk: standard engagement
             action_text = "Standard Engagement (Low Risk)"
             prescriptive_actions.append(action_text)
             prescribed_risk_drops.append(p)
 
-    customer_ids = [generate_telco_customer_id(i) for i in range(n_samples)]
+    customer_ids = [generate_mock_customer_id(i) for i in range(n_samples)]
 
     df = pd.DataFrame({
         "customer_id": customer_ids,
@@ -146,35 +160,65 @@ def generate_synthetic_telco_holdout(n_samples: int = 1409, seed: int = 42) -> p
     return df
 
 
-def run_pipeline_simulation(dry_run: bool = False, export_csv: bool = False) -> None:
+# Backwards compatibility alias
+generate_synthetic_telco_holdout = generate_mock_holdout_predictions
+
+
+def run_pipeline_simulation(
+    dry_run: bool = False,
+    export_csv: bool = False,
+    use_production: bool = False,
+) -> None:
     """
-    Executes end-to-end ingestion pipeline:
-    1. Verifies database connectivity.
-    2. Logs run-level telemetry to `model_telemetry`.
-    3. Ingests customer inference payload to `customer_predictions`.
-    4. Prints executive audit confirmation.
+    Executes ingestion pipeline:
+    - If `use_production=True`: Executes `src.inference.run_member_2_pipeline()`
+      using real Member 2 models and features.
+    - If `use_production=False`: Runs offline mock simulation for database schema
+      and DirectQuery validation.
     """
     load_dotenv()
     
     print("\n" + "="*80)
-    print("[*] MICROSOFT HACKATHON: CLOUD INGESTION & MONITORING PIPELINE")
+    print("[*] CLOUD INGESTION & MONITORING PIPELINE")
     print("    Member 3: Supabase PostgreSQL Persistence & Governance Layer")
     print("="*80)
 
-    # 1. Define Model Governance Metrics (Member 2's validated outputs)
-    governance_telemetry = {
-        "model_version": "v1.0-histgradboost",
-        "churn_auc": 0.8812,
-        "sales_mape": 0.0382,
-        "sales_rmse": 14.65,
-        "psi_score": 0.0845,  # PSI < 0.10: Stable, no feature drift
-        "drift_flag": False,
-        "test_sample_count": 1409,
-        "notes": "Holdout validation run. Temporal split without leakage. Calibrated isotonic regression."
-    }
+    if use_production:
+        print("\n[+] MODE: PRODUCTION INFERENCE INGESTION")
+        print("    Invoking Member 2 inference pipeline: src.inference.run_member_2_pipeline()")
+        try:
+            from src.inference import run_member_2_pipeline
+        except ImportError:
+            logger.error(
+                "Production pipeline ('src.inference.run_member_2_pipeline') not available. "
+                "Ensure src/ is on PYTHONPATH."
+            )
+            sys.exit(1)
 
-    # 2. Synthesize Predictions
-    predictions_df = generate_synthetic_telco_holdout(n_samples=1409, seed=2026)
+        predictions_df, governance_telemetry = run_member_2_pipeline()
+    else:
+        print("\n" + "="*80)
+        print("[!] NOTICE: OFFLINE INFRASTRUCTURE TESTING / SIMULATION MODE ONLY")
+        print("    This script generates mock benchmark test records to validate Supabase")
+        print("    connectivity, table schemas, and Power BI DirectQuery mappings.")
+        print("    It does NOT execute trained ML models or represent real customer predictions.")
+        print("    Production Flow:")
+        print("      Raw RavenStack data -> Member 1 pipeline -> Member 2 inference")
+        print("      -> run_member_2_pipeline() -> Supabase -> Power BI")
+        print("    Pass --production to execute the real Member 2 pipeline.")
+        print("="*80)
+
+        governance_telemetry = {
+            "model_version": "v1.0-offline-simulation",
+            "churn_auc": 0.8812,
+            "sales_mape": 0.0382,
+            "sales_rmse": 14.65,
+            "psi_score": 0.0845,  # PSI < 0.10: Stable, no feature drift
+            "drift_flag": False,
+            "test_sample_count": 1409,
+            "notes": "Offline mock simulation for schema and Power BI DirectQuery validation."
+        }
+        predictions_df = generate_mock_holdout_predictions(n_samples=1409, seed=2026)
 
     # Quick metric calculations
     high_risk_count = (predictions_df["churn_probability"] >= 0.50).sum()
@@ -252,9 +296,32 @@ def run_pipeline_simulation(dry_run: bool = False, export_csv: bool = False) -> 
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Ingest simulated customer churn & sales predictions to Supabase.")
-    parser.add_argument("--dry-run", action="store_true", help="Run simulation and validation without inserting into database.")
-    parser.add_argument("--export-csv", action="store_true", help="Save the generated synthetic holdout predictions to a CSV file.")
+    parser = argparse.ArgumentParser(
+        description=(
+            "Supabase Ingestion Layer. By default, runs in offline/mock simulation mode "
+            "for schema and DirectQuery validation. Use --production to execute the real "
+            "Member 2 inference pipeline (run_member_2_pipeline)."
+        )
+    )
+    parser.add_argument(
+        "--production",
+        action="store_true",
+        help="Execute real Member 2 production inference (run_member_2_pipeline) instead of offline mock simulation.",
+    )
+    parser.add_argument(
+        "--dry-run",
+        action="store_true",
+        help="Run simulation and validation without inserting into database.",
+    )
+    parser.add_argument(
+        "--export-csv",
+        action="store_true",
+        help="Save the generated synthetic holdout predictions to a CSV file.",
+    )
     args = parser.parse_args()
 
-    run_pipeline_simulation(dry_run=args.dry_run, export_csv=args.export_csv)
+    run_pipeline_simulation(
+        dry_run=args.dry_run,
+        export_csv=args.export_csv,
+        use_production=args.production,
+    )
