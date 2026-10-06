@@ -1,78 +1,116 @@
-# Enterprise Cloud Persistence & Monitoring Layer (Member 3)
-## Customer Churn & Next-Month Sales Forecasting Platform (Microsoft Hackathon)
+# "Seeing Next Month, Not Just Last Month" — Predictive Dashboard
+## Microsoft Hackathon Project
 
-### 📌 Architecture Summary & Role Scope
-In our 3-member enterprise architecture:
+### Overview
+A forward-looking enterprise predictive platform providing SaaS subscription dynamics, dual ML forecasts (Calibrated Churn & Ridge MRR), counterfactual prescriptive retention recourse, and live cloud persistence for Microsoft Power BI.
+
+---
+
+### 📌 Architecture Summary & 3-Member Role Scope
 - **Member 1 (Data Engineering):** Point-in-time snapshot feature engineering on raw RavenStack SaaS data, leakage prevention, and temporal velocity metrics.
 - **Member 2 (ML Models & Recourse):** Dual ML modeling (Calibrated Churn Classifier, Ridge Sales Regressor with 95% prediction intervals), Counterfactual Prescriptive Recourse Engine, and Population Stability Index (PSI) drift monitoring.
-- **Member 3 (This Module - Persistence & Serving):** Cloud Data Persistence & Monitoring Layer using **Supabase (PostgreSQL)**, automated pipeline ingestion scripts, and structured views/DAX specifications for the **Microsoft Power BI executive dashboard**.
+- **Member 3 (Persistence & Serving):** Cloud Data Persistence & Monitoring Layer using **Supabase (PostgreSQL)**, automated pipeline ingestion scripts, and structured views/DAX specifications for the **Microsoft Power BI executive dashboard**.
 
 ---
 
-### 🔄 Production Flow vs. Offline Testing
-
-#### 1. Production Pipeline Flow:
-```text
-Raw RavenStack Data (4 CSVs)
-  │
-  ▼ [Member 1: src/pipeline.py]
-Point-in-Time Features & Preprocessor (25 features, zero leakage)
-  │
-  ▼ [Member 2: src/inference.py -> run_member_2_pipeline()]
-Trained Models, Uncertainty Intervals, Counterfactual Recourse & Drift
-  │
-  ▼ [Member 3: supabase_manager.py -> TelemetryLogger]
-Supabase Cloud PostgreSQL (customer_predictions & model_telemetry)
-  │
-  ▼ [Member 3: powerbi_setup_guide.md]
-Microsoft Power BI DirectQuery Executive Dashboard
-```
-
-#### 2. Offline Simulation Flow (`simulate_ingestion.py`):
-`simulate_ingestion.py` is **STRICTLY an offline testing utility** for validating database connection pooling, table schemas, and Power BI DirectQuery mappings without requiring raw SaaS data or trained ML weights. It does **NOT** represent production model predictions.
-
----
-
-## 📂 Repository File Structure
+### 🔄 End-to-End Production Flow
 
 ```text
-├── schema.sql                         # Production-grade idempotent PostgreSQL DDL schema & views
-├── supabase_manager.py                # TelemetryLogger module (supabase-py & psycopg2 dual-engine)
-├── simulate_ingestion.py              # Offline holdout test ingestion simulation utility
-├── powerbi_setup_guide.md             # Complete Power BI setup, DAX measures, and visual specs
-├── synthetic_holdout_predictions.csv  # Pre-generated holdout inference payload for offline testing
-├── .env.example                       # Environment variable template
-├── requirements.txt                   # Production Python dependencies
-└── README.md                          # Architecture documentation & execution guide
+RavenStack SaaS Data (data/raw/)
+        │
+        ▼
+Member 1: Data Engineering (src/pipeline.py)
+        │
+        ▼
+Point-in-Time Features (21 cutoffs, 25 features, zero leakage)
+        │
+        ▼
+Member 2: ML + Recourse + Drift (src/inference.py)
+        │
+        ▼
+Predictions / Intervals / Actions / Telemetry
+        │
+        ▼
+Member 3: Supabase (supabase_manager.py -> PostgreSQL)
+        │
+        ▼
+Power BI Dashboard (DirectQuery Views & Executive DAX)
 ```
 
 ---
 
-## ⚡ Quick Start: 3-Step Setup
+### Repository File Structure
 
-### Step 1: Initialize Database Schema in Supabase
-1. Open your **Supabase Dashboard** -> **SQL Editor**.
-2. Copy and paste the contents of [`schema.sql`](file:///c:/Users/btash/OneDrive/Desktop/microsoft%20hackathon/schema.sql).
-3. Click **Run**. This creates:
-   - `model_telemetry` table (run-level governance, AUC, MAPE, RMSE, PSI score, drift flag).
-   - `customer_predictions` table (customer-level predictions, intervals, counterfactual recourse).
-   - B-tree indexes for high-speed Power BI queries.
-   - Analytical Views: `vw_latest_customer_predictions`, `vw_model_drift_governance`, `vw_high_risk_retention_queue`.
-   - Row-Level Security (RLS) policies.
-
-### Step 2: Configure Environment Variables
-Create a `.env` file in the project root (copied from [`.env.example`](file:///c:/Users/btash/OneDrive/Desktop/microsoft%20hackathon/.env.example)):
-```env
-SUPABASE_URL="https://<your-project-id>.supabase.co"
-SUPABASE_SERVICE_KEY="<your-supabase-service-role-key>"
-
-# Optional for ultra-fast direct pooler bulk ingestion
-DATABASE_URL="postgresql://postgres:<password>@db.<your-project-id>.supabase.co:5432/postgres"
+```text
+Microsoft hackathon project/
+│
+├── data/
+│   ├── raw/                           # Raw RavenStack SaaS CSVs (omitted from git for privacy)
+│   └── processed/                     # Cleaned, leakage-free point-in-time snapshot tables
+│
+├── src/                               # Core Python Modules
+│   ├── __init__.py                    # Package initializer
+│   ├── config.py                      # Global paths, features, and leakage configurations
+│   ├── pipeline.py                    # Member 1: Point-in-time snapshot feature engineering
+│   ├── models.py                      # Member 2: Dual ML models (Calibrated Churn + Ridge Sales)
+│   ├── recourse.py                    # Member 2: Counterfactual Prescriptive Recourse Engine
+│   ├── drift.py                       # Member 2: Population Stability Index (PSI) drift monitoring
+│   └── inference.py                   # Member 2: End-to-end inference & Member 3 schema alignment
+│
+├── tests/                             # Automated Test Suites (27 tests)
+│   ├── test_pipeline.py               # Member 1 pipeline tests (12 tests)
+│   └── test_models.py                 # Member 2 ML, recourse, and drift tests (15 tests)
+│
+├── outputs/                           # Generated inference outputs & model telemetry
+│   ├── customer_predictions.csv
+│   └── model_telemetry.json
+│
+├── schema.sql                         # Member 3: Supabase PostgreSQL DDL schema & views
+├── supabase_manager.py                # Member 3: TelemetryLogger module (Supabase & psycopg2)
+├── simulate_ingestion.py              # Member 3: Offline ingestion simulation & testing utility
+├── dashboard.py                       # Member 3: Executive Streamlit monitoring dashboard
+├── powerbi_setup_guide.md             # Member 3: Power BI DirectQuery DAX & visual specs
+├── synthetic_holdout_predictions.csv  # Member 3: Offline test inference fixture
+├── requirements.txt                   # Unified project dependencies
+├── README.md                          # Comprehensive project documentation
+├── .gitignore                         # Git ignore rules
+├── .env.example                       # Environment template for cloud persistence
+└── main.py                            # Main pipeline entry point
 ```
 
-### Step 3: Run Ingestion or Simulation
+---
 
-**Option A: Real Production Pipeline Ingestion** (Requires raw RavenStack data & trained Member 2 models):
+## ⚡ Setup & Execution
+
+### 1. Installation
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Run Complete Automated Test Suite (27 Tests)
+```bash
+PYTHONPATH=. pytest -v
+```
+
+### 3. Run Member 1 Feature Pipeline
+When raw RavenStack data is available in `data/raw/`:
+```bash
+python -m src.pipeline
+```
+
+### 4. Run Member 2 ML Modeling & Inference Pipeline
+```bash
+python -m src.inference
+```
+
+### 5. Run Full End-to-End Pipeline
+```bash
+python main.py
+```
+
+### 6. Cloud Ingestion & Testing (Member 3)
+
+**Option A: Real Production Ingestion** (Requires processed SaaS data & trained models):
 ```bash
 python simulate_ingestion.py --production
 ```
@@ -87,7 +125,7 @@ run_id = logger.log_run_telemetry(telemetry)
 logger.log_customer_predictions(run_id, predictions_df)
 ```
 
-**Option B: Offline Mock Simulation** (For testing database connectivity & Power BI DirectQuery mappings):
+**Option B: Offline Mock Simulation** (Validates Supabase schemas & DirectQuery views):
 ```bash
 # Offline Dry-Run & CSV Export:
 python simulate_ingestion.py --dry-run --export-csv
@@ -98,76 +136,58 @@ python simulate_ingestion.py
 
 ---
 
-## 🔌 Integration Contract with Member 1 & 2
+## 🧱 Member 1: Data Engineering, Leakage Guard & Velocity Features
 
-When Member 2 completes model evaluation, integrate the pipeline in Python with just **3 lines of code**:
-
-```python
-from supabase_manager import TelemetryLogger
-
-# 1. Initialize Logger
-logger = TelemetryLogger()
-
-# 2. Log Model Governance Telemetry
-run_id = logger.log_run_telemetry({
-    "model_version": "v1.0-histgradboost",
-    "churn_auc": 0.8812,
-    "sales_mape": 0.0382,
-    "sales_rmse": 14.65,
-    "psi_score": 0.0845,
-    "test_sample_count": len(test_df),
-    "notes": "Calibrated dual-model with counterfactual recourse"
-})
-
-# 3. Batch-Insert Granular Inferences & Prescriptions
-logger.log_customer_predictions(
-    run_id=run_id,
-    predictions_df=member_2_output_df, # Must contain required schema columns
-    batch_size=500
-)
-```
-
-### Required Columns in `predictions_df`:
-- `customer_id` (`str`): Unique Customer / Account ID (e.g., `'acc_00123'`)
-- `actual_churn` (`int`, optional): 0 or 1 ground truth
-- `churn_probability` (`float`): Calibrated probability in $[0.0000, 1.0000]$
-- `actual_sales` (`float`, optional): Actual billed amount
-- `predicted_sales` (`float`): Point forecast
-- `sales_lower_bound` (`float`): $\text{pred} - 1.96\sigma$
-- `sales_upper_bound` (`float`): $\text{pred} + 1.96\sigma$
-- `prescriptive_action` (`str`): Counterfactual recommendation text
-- `prescribed_risk_drop` (`float`): Simulated risk post-intervention
+- **Ingestion & Point-in-Time Cutoffs:** Constructs monthly snapshots across 21 month-end cutoffs (`2023-03-31` to `2024-11-30`).
+- **Target Formulation:** `churn_next_30d` formulated strictly looking forward 30 days post-cutoff.
+- **Strict Leakage Prevention:** Audits and excludes prohibited columns (`end_date`, `churn_flag`, `upgrade_flag`, `downgrade_flag`) and future-dated usage/tickets.
+- **Velocity Features:** `usage_growth_14d_vs_prior14d` captures short-term vs. prior usage momentum safely without division-by-zero errors.
+- **Service Depth:** Tracks `unique_features_30d` and `beta_feature_ratio_30d`.
+- **25 Model Features:** Exactly 18 numerical, 5 categorical, and 2 boolean features.
+- **Scikit-Learn Preprocessing:** Unfitted `ColumnTransformer` with `StandardScaler` (numerical), `OneHotEncoder(handle_unknown="ignore")` (categorical), and passthrough (boolean).
 
 ---
 
-## 📊 Power BI DirectQuery & DAX Configuration
+## 🤖 Member 2: Dual ML Models, Prescriptive Recourse & Drift Governance
 
-Refer to [`powerbi_setup_guide.md`](file:///c:/Users/btash/OneDrive/Desktop/microsoft%20hackathon/powerbi_setup_guide.md) for full dashboard design specifications:
+- **Calibrated Churn Classifier (`ChurnModel`):**
+  - Base Estimator: `HistGradientBoostingClassifier(learning_rate=0.08, max_leaf_nodes=31)`
+  - Calibration: `CalibratedClassifierCV(method="sigmoid", cv=3)`
+  - Output: `churn_probability` strictly bounded in $[0.0000, 1.0000]$
+  - Evaluation: ROC-AUC (primary metric), precision, recall, F1, Brier score
+- **Sales / MRR Regressor (`SalesModel`):**
+  - Model: `Ridge(alpha=1.0)` with $L_2$ regularization predicting `mrr_amount`
+  - Output: `predicted_sales` with non-negative projection ($\max(0.0, \hat{y})$)
+  - Evaluation: MAPE and RMSE
+- **95% Residual Prediction Intervals:**
+  - Bounds: $[\max(0.0, \hat{y} - 1.96\sigma), \hat{y} + 1.96\sigma]$ based on holdout residual standard deviation $\sigma$.
+- **Temporal Validation:** `temporal_train_test_split()` enforces strict chronological snapshot splitting across cutoff dates (no future snapshots in training).
+- **Prescriptive Counterfactual Recourse Engine (`RecourseEngine`):**
+  - Triggers for high-risk accounts ($P(\text{churn}) > 0.60$).
+  - Modifies strictly mutable subscription fields (`billing_frequency`, `auto_renew_flag`, `plan_tier`, `is_trial`).
+  - Preserves all immutable features (demographics, tenure, historical usage, past tickets).
+  - Recalculates churn probability through the fitted pipeline targeting risk $< 0.35$.
+- **Population Stability Index (PSI) Drift Monitor (`DriftMonitor`):**
+  - Evaluates feature-level PSI across all 25 features between training baseline and holdout/production cohorts.
+  - Governance thresholds: Stable ($< 0.10$), Moderate Shift ($0.10 - 0.20$), Critical Drift ($> 0.20 \rightarrow \text{drift\_flag} = \text{True}$).
 
-### Core DAX Measures:
-1. **Total Expected Sales:**
-   ```dax
-   Total Expected Sales = SUM(customer_predictions[predicted_sales])
-   ```
-2. **Total Revenue At Risk:**
-   ```dax
-   Total Revenue At Risk = 
-   CALCULATE(
-       SUM(customer_predictions[predicted_sales]), 
-       customer_predictions[churn_probability] >= 0.50
-   )
-   ```
-3. **Total Recoverable Revenue:**
-   ```dax
-   Total Recoverable Revenue = 
-   CALCULATE(
-       SUM(customer_predictions[predicted_sales]), 
-       customer_predictions[churn_probability] >= 0.50, 
-       customer_predictions[prescribed_risk_drop] < 0.35
-   )
-   ```
-4. **Drift Status Text:**
-   ```dax
-   Drift Status Text = 
-   IF(SELECTEDVALUE(model_telemetry[drift_flag], FALSE), "⚠️ CRITICAL DRIFT DETECTED", "✅ MODELS STABLE")
-   ```
+---
+
+## ☁️ Member 3: Cloud Persistence & Power BI Infrastructure
+
+- **PostgreSQL DDL Schema (`schema.sql`):** Creates `model_telemetry` and `customer_predictions` tables with B-tree indexes, foreign keys, check constraints, and RLS policies.
+- **Analytical Views:**
+  - `vw_latest_customer_predictions`: Joins latest model run with customer-level predictions, risk tiers, and recoverable revenue flags.
+  - `vw_model_drift_governance`: Tracks run-level AUC, MAPE, RMSE, PSI score, and drift labels.
+  - `vw_high_risk_retention_queue`: Prioritizes accounts with $P \ge 0.50$ by expected revenue loss.
+- **Telemetry Logger (`supabase_manager.py`):** Dual-engine client supporting both Supabase PostgREST API and psycopg2 direct pooler bulk ingestion.
+- **Power BI DAX Specifications (`powerbi_setup_guide.md`):** Core DAX measures for Total Expected Sales, Total Revenue At Risk, Total Recoverable Revenue, and Drift Status Text.
+- **Uncertainty & Disclosure Cards:** Dedicated dashboard cards for model accuracy metrics (AUC, MAPE, RMSE) and prediction interval ranges.
+
+---
+
+## 📊 Limitations & Real-Data Availability Disclosure
+
+- **Data Availability:** The proprietary raw RavenStack SaaS CSV tables (`ravenstack_accounts.csv`, `ravenstack_subscriptions.csv`, `ravenstack_feature_usage.csv`, `ravenstack_support_tickets.csv`) are omitted from this repository in accordance with data privacy guidelines.
+- **Performance Metrics Disclosure:** Real-data model performance metrics (e.g. production ROC-AUC, MAPE, RMSE) have **not** been computed and remain pending until the raw RavenStack dataset is provided in `data/raw/` and processed.
+- **Deterministic Validation:** All 27 automated unit and integration tests are executed and validated against deterministic test fixtures conforming exactly to the Member 1 schema.
